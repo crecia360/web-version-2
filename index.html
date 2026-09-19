@@ -299,12 +299,6 @@ a:focus-visible, button:focus-visible {
     linear-gradient(0deg, #0A1628 0%, rgba(10, 22, 40, 0) 24%),
     linear-gradient(90deg, rgba(10, 22, 40, 0.85) 0%, rgba(10, 22, 40, 0) 70%);
 }
-.hero-services {
-  grid-column: 1 / -1; grid-row: 1;
-  display: flex; flex-wrap: wrap; gap: 4px 20px;
-  font: 400 13px/1.6 var(--font-body); color: rgba(255, 255, 255, 0.8);
-}
-.hero-services li::before { content: "/"; margin-right: 0.6em; color: var(--ceniza); }
 .hero-main { grid-column: 1; grid-row: 3; align-self: end; max-width: 760px; }
 .hero .eyebrow { margin-bottom: 28px; }
 .h1 {
@@ -489,8 +483,7 @@ a:focus-visible, button:focus-visible {
     display: flex; flex-direction: column; min-height: 0;
     padding: calc(var(--nav-h) + 32px) var(--pad) 48px;
   }
-  .hero-services { order: 1; margin-bottom: 48px; }
-  .hero-main { order: 2; max-width: none; align-self: stretch; min-width: 0; }
+    .hero-main { order: 2; max-width: none; align-self: stretch; min-width: 0; }
   .hero-media {
     position: relative; inset: auto; z-index: 0; order: 3;
     align-self: stretch;
@@ -548,8 +541,7 @@ a:focus-visible, button:focus-visible {
     height: auto; min-height: 52px; padding: 14px 20px;
   }
 
-  .hero-services { margin-bottom: 36px; }
-  .hero-cta { flex-direction: column; align-items: stretch; }
+    .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { width: 100%; }
   .hero-cta .micro { text-align: center; }
   .auth { margin-top: 32px; }
@@ -651,12 +643,6 @@ a:focus-visible, button:focus-visible {
   </div>
   <div class="hero-shade" aria-hidden="true"></div>
 
-  <ul class="hero-services r" aria-label="Servicios">
-    <li>Automatización con IA</li>
-    <li>RPA</li>
-    <li>Integración de sistemas</li>
-    <li>Agentes de IA</li>
-  </ul>
 
   <div class="hero-main">
     <p class="eyebrow r">01 — Automatización con IA y RPA · Lima, Perú</p>
