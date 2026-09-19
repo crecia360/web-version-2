@@ -512,8 +512,9 @@ a:focus-visible, button:focus-visible {
   .phrases li:nth-child(odd) { border-left: 0; padding-left: 0; }
   .phrases li:nth-child(n + 3) { border-top: 1px solid var(--hueso); }
 
-  .met-grid { display: block; }
-  .met-media { position: relative; top: auto; height: 200px; margin-bottom: 56px; }
+  .met-grid { display: flex; flex-direction: column; }
+  .met-main { min-width: 0; }
+  .met-media { order: -1; position: relative; top: auto; height: 200px; margin-bottom: 56px; }
   .m-rows { margin-top: 56px; }
 
   .cases { gap: 20px; }
@@ -565,6 +566,7 @@ a:focus-visible, button:focus-visible {
   .case--big, .case--a, .case--b { grid-column: 1 / -1; padding: 32px 24px; }
   .case--big { min-height: 0; gap: 40px; }
 
+  .met-media { display: none; }
   .edu-art { display: none; }
   .topics { grid-template-columns: 1fr; }
 
