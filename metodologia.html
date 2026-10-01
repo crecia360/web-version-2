@@ -173,7 +173,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   transition: opacity 0.8s ease-out, transform 0.8s var(--ease);
   transition-delay: calc(var(--i, 0) * 80ms);
 }
-.js-reveal .is-visible .r { opacity: 1; transform: translate(0); }
+.js-reveal .is-visible .r, .js-reveal .r.is-in { opacity: 1; transform: translate(0); }
 
 /* ---------- Navbar ---------- */
 .nav {
@@ -1503,6 +1503,16 @@ const CONFIG = {
     }, { threshold: [0, 0.15, 0.3] });
     secs.forEach((s) => io.observe(s));
     requestAnimationFrame(() => show($('.top')));
+    /* Secciones muy altas (p. ej. Cómo trabajamos en móvil) nunca llegan al 15 % visible:
+       cada bloque se revela también por su cuenta al entrar en pantalla */
+    const io2 = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-in');
+        io2.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    $$('.r').forEach((el) => io2.observe(el));
   }
   /* Si se entra con un ancla (#calculadora), mostrar todo lo anterior sin esperar */
   if (location.hash) secs.forEach(show);
