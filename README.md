@@ -4,6 +4,7 @@ Sitio estático (HTML + CSS + JS vanilla, un solo `index.html`). Sin build, sin 
 
 ```
 index.html          landing completa (CSS y JS incluidos)
+metodologia.html    /metodologia: método, ejemplo de ROI y calculadora. Textos y cifras editables en el bloque CONFIG al final del archivo
 vercel.json         caché de assets y cabeceras básicas
 favicon.ico
 assets/             video del hero, imágenes, logo y favicons
