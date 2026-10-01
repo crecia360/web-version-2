@@ -491,19 +491,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .calc-priv { margin-top: 16px; font-size: 13px; color: var(--tinta-65); }
 .calc-out .btn { margin-top: 24px; }
 
-/* ---------- 8. Entregables ---------- */
-.deliv { margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-.deliv li {
-  display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; align-items: start;
-  padding: 24px; border-radius: 8px; border: 1px solid var(--escarcha); background: rgba(255, 255, 255, 0.03);
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-.deliv li:hover { border-color: rgba(255, 122, 61, 0.5); background: rgba(222, 84, 12, 0.06); }
-.deliv-i { width: 40px; height: 40px; border-radius: 8px; display: grid; place-items: center; background: var(--brasa); color: var(--papel); }
-.deliv b { display: block; font: 600 17px/1.35 var(--font-body); color: var(--papel); }
-.deliv span { display: block; margin-top: 4px; font-size: 14px; color: rgba(255, 255, 255, 0.75); }
 
 /* ---------- 9. Preguntas frecuentes ---------- */
+#preguntas { border-top: 1px solid var(--hueso); }
 .faq-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
 .faq-grid .faq-head { grid-column: 1 / span 4; }
 .faq-list { grid-column: 6 / span 7; border-top: 1px solid var(--hueso); }
@@ -677,8 +667,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js-reveal .r { opacity: 1; transform: none; transition: none; }
-  .btn, .btn .arr, .nav-links a::after, .faq-ico::before, .faq-ico::after, .mnav, .wa-float, .kpi, .deliv li, .tbl tbody tr { transition: none; }
-}
+  .btn, .btn .arr, .nav-links a::after, .faq-ico::before, .faq-ico::after, .mnav, .wa-float, .kpi, }
 
 /* ---------- Impresión ---------- */
 @media print {
@@ -1032,20 +1021,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   </div>
 </section>
 
-<!-- ===================== 8. ENTREGABLES ===================== -->
-<section class="sec sec--marea" id="entregables" data-sec>
-  <div class="wrap">
-    <p class="eyebrow r">07 — Qué recibe</p>
-    <h2 class="h2 r">Lo que queda en sus manos, <em>paso a paso.</em></h2>
-    <ul class="deliv r" id="entregables-list"></ul>
-  </div>
-</section>
-
 <!-- ===================== 9. PREGUNTAS ===================== -->
 <section class="sec sec--light" id="preguntas" data-sec>
   <div class="wrap faq-grid">
     <div class="faq-head">
-      <p class="eyebrow r">08 — Dudas</p>
+      <p class="eyebrow r">07 — Dudas</p>
       <h2 class="h2 r">Preguntas <em>frecuentes.</em></h2>
     </div>
     <div class="faq-list r" id="faq-list"></div>
@@ -1059,7 +1039,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   </div>
   <div class="close-shade" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="eyebrow r">09 — El siguiente paso</p>
+    <p class="eyebrow r">08 — El siguiente paso</p>
     <h2 class="h2 r">Cada mes que un proceso sigue manual, <em>es dinero que no vuelve.</em></h2>
     <p class="body-l r">Cuéntenos qué procesos tiene su equipo. Le decimos cuál conviene automatizar primero y cuánto podría recuperar, antes de que invierta un sol.</p>
     <div class="close-cta r">
@@ -1182,18 +1162,7 @@ const CONFIG = {
     }
   ],
 
-  /* Entregables (sección 7) */
-  entregables: [
-    { titulo: 'Ranking de procesos', texto: 'Qué automatizar primero y qué descartar.' },
-    { titulo: 'As-is y to-be', texto: 'Cómo se hace hoy y cómo se hará, documentado.' },
-    { titulo: 'Estimación de ROI', texto: 'Ahorro, recuperación y ROI en soles, con sus datos.' },
-    { titulo: 'Cotización y cronograma', texto: 'Inversión, costo mensual y un Gantt estimado, por escrito.' },
-    { titulo: 'MVP', texto: 'Una primera versión funcionando con sus datos, aprobada por usted.' },
-    { titulo: 'Solución probada en producción', texto: 'Probada por su equipo antes de operar.' },
-    { titulo: 'Medición del ROI real', texto: 'El ahorro medido frente al estimado.' }
-  ],
-
-  /* Preguntas frecuentes (sección 8) */
+  /* Preguntas frecuentes (sección 7) */
   preguntas: [
     { p: '¿Cuánto demora?', r: 'Depende de cada proceso. Por eso, con el as-is y el to-be armamos un cronograma estimado (diagrama de Gantt) con las fechas de cada paso, y lo recibe junto con la cotización, antes de aprobar nada.' },
     { p: '¿Qué pasa si el ahorro real es menor al estimado?', r: 'Lo medimos en el paso 11 y se lo mostramos tal cual, frente a lo estimado. Si hay diferencia, revisamos la causa (volumen, tiempos, excepciones) y qué ajustes la cierran. Por eso estimamos con sus datos y no con promedios.' },
@@ -1295,11 +1264,6 @@ const CONFIG = {
       '<td><div class="bar"><div class="bar-track"><div class="bar-fill" style="width:' + Math.round(r.puntaje / 60 * 100) + '%"></div></div>' +
       '<span class="num"><b>' + r.puntaje + '</b> / 60</span></div></td></tr>').join('');
 
-
-  /* ---------- Entregables ---------- */
-  $('#entregables-list').innerHTML = CONFIG.entregables.map((e) =>
-    '<li><span class="deliv-i" aria-hidden="true"><svg width="20" height="20"><use href="#i-check"></use></svg></span>' +
-    '<p><b>' + esc(e.titulo) + '</b><span>' + esc(e.texto) + '</span></p></li>').join('');
 
   /* ---------- Preguntas frecuentes ---------- */
   $('#faq-list').innerHTML = CONFIG.preguntas.map((q) =>
