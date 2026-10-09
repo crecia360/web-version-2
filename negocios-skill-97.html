@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Skill 97 de Crecia360: revisa tu lista de oportunidades, detecta los negocios estancados y las inconsistencias, y arma un resumen de forecast en lenguaje de negocio.">
+<link rel="icon" href="/favicon.ico">
+<title>Pipeline y Forecast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: una columna de 640px; cabecera azul noche + cuerpo arena con tarjetas blancas. Identidad Crecia360, look único (no cambia con el tema). */
+:root {
+  --naranja: #DE540C;
+  --naranja-claro: #FF7A3D;
+  --noche: #0A1628;
+  --medio: #1E2D45;
+  --arena: #F5F0EC;
+  --blanco: #FFFFFF;
+  --borde: #E8E3DF;
+  --gris: #9B9B9B;
+  --texto: #1A1A2E;
+  --texto-suave: #4A4A5E;
+  --font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--arena);
+  color: var(--texto);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+}
+a { color: inherit; }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--naranja-claro); outline-offset: 3px; }
+.wrap { max-width: 640px; margin: 0 auto; padding-inline: 20px; }
+
+/* Tira de contacto */
+.tira { background: var(--noche); border-bottom: 1px solid var(--medio); }
+.tira .wrap {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px;
+  padding-block: 10px; font-size: 13px; font-weight: 500;
+}
+.tira a { color: #C9CFD9; text-decoration: none; }
+.tira a:hover { color: var(--naranja-claro); }
+
+/* Cabecera */
+.hero { background: var(--noche); color: var(--blanco); }
+.hero .wrap { padding-block: 40px 48px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+.badge {
+  display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--naranja-claro); background: rgba(222, 84, 12, .15); border: 1px solid var(--naranja);
+  border-radius: 999px; padding: 4px 12px;
+}
+h1 {
+  margin: 0; font-size: clamp(28px, 6.4vw, 40px); line-height: 1.15; font-weight: 800;
+  letter-spacing: -.01em; text-wrap: balance;
+}
+h1 em { font-style: normal; color: var(--naranja); }
+.bajada { margin: 0; color: #C9CFD9; font-size: 17px; max-width: 34em; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: var(--font); font-weight: 600; font-size: 16px; text-decoration: none;
+  border-radius: 12px; padding: 14px 26px; transition: background .15s, color .15s, transform .15s;
+}
+.btn-primario { background: var(--naranja); color: var(--blanco); box-shadow: 0 6px 18px rgba(222, 84, 12, .35); }
+.btn-primario:hover { background: var(--naranja-claro); transform: translateY(-1px); }
+.btn-secundario { border: 2px solid var(--naranja); color: var(--naranja); background: transparent; }
+.btn-secundario:hover { background: var(--naranja); color: var(--blanco); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.hero .btn { margin-top: 8px; }
+
+/* Cuerpo */
+main .wrap { padding-block: 40px 24px; display: flex; flex-direction: column; gap: 24px; }
+.card {
+  background: var(--blanco); border: 1px solid var(--borde); border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(10, 22, 40, .06); padding: 28px 24px;
+}
+.etiqueta { margin: 0 0 4px; font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--gris); }
+h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text-wrap: balance; }
+.pasos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 20px; }
+.paso { display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start; }
+.num {
+  width: 40px; height: 40px; border-radius: 10px; background: var(--naranja); color: var(--blanco);
+  display: grid; place-items: center; font-weight: 700; font-size: 17px;
+}
+.paso-texto { min-width: 0; }
+.paso h3 { margin: 6px 0 2px; font-size: 16px; font-weight: 600; }
+.paso p { margin: 0; color: var(--texto-suave); font-size: 15px; }
+.ruta { font-weight: 500; color: var(--texto); }
+.paso .pedido {
+  margin: 12px 0 0; background: var(--medio); color: var(--blanco); border-left: 4px solid var(--naranja);
+  border-radius: 8px; padding: 14px 16px; font-size: 15px; line-height: 1.55;
+}
+.pedido-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 6px; }
+.pedido-top span { font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--naranja-claro); }
+.paso .pedido p { margin: 0; color: var(--blanco); }
+.pedido code { display: block; font-family: var(--font); font-weight: 500; color: var(--blanco); overflow-wrap: anywhere; }
+.copiar {
+  font-family: var(--font); font-size: 12px; font-weight: 600; color: var(--blanco); cursor: pointer;
+  background: transparent; border: 1px solid var(--naranja); border-radius: 8px; padding: 4px 12px; flex: none;
+}
+.copiar:hover { background: var(--naranja); }
+.copiar:focus-visible { outline: 2px solid var(--naranja-claro); outline-offset: 2px; }
+.paso p.tras { margin-top: 12px; }
+
+.comunidad p { margin: 0 0 18px; color: var(--texto-suave); }
+.comunidad h2 { margin-bottom: 8px; }
+
+/* Cierre */
+.cierre { background: var(--noche); color: var(--blanco); margin-top: 16px; }
+.cierre .wrap { padding-block: 36px; display: flex; flex-direction: column; gap: 18px; }
+.firma strong { display: block; font-size: 18px; font-weight: 600; }
+.firma a { color: var(--naranja-claro); text-decoration: none; font-weight: 500; }
+.contacto { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.contacto a {
+  display: flex; flex-direction: column; gap: 2px; text-decoration: none;
+  background: var(--medio); border-radius: 12px; padding: 12px 14px; min-width: 0;
+}
+.contacto a:hover { background: #26385A; }
+.contacto small { font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--gris); }
+.contacto b { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
+.pie { font-size: 12px; color: var(--gris); margin: 0; }
+
+@media (max-width: 420px) {
+  .contacto { grid-template-columns: 1fr; }
+  .hero .btn, .comunidad .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn-primario:hover { transform: none; } }
+</style>
+</head>
+<body>
+
+<nav class="tira" aria-label="Contacto">
+  <div class="wrap">
+    <a href="https://crecia360.com" target="_blank" rel="noopener">crecia360.com</a>
+    <a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a>
+    <a href="https://chat.whatsapp.com/C68Q8FFDj139dN5dusodYT" target="_blank" rel="noopener">Grupo de WhatsApp</a>
+    <a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener">Agenda tu cita</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">Skill 97 · Negocios</span>
+    <h1>Limpia tu pipeline y <em>proyecta tus ventas con confianza</em></h1>
+    <p class="bajada">Pega tu lista de oportunidades o expórtala de tu CRM y detecta los negocios estancados, las etapas que no cuadran con su probabilidad y un resumen de forecast listo para presentar.</p>
+    <a class="btn btn-primario" href="https://drive.google.com/drive/folders/1cY7U_VfEmO3imdXLI3UL6QAoB0vLKk2O?usp=sharing" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+      Descargar
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="card" aria-labelledby="t-uso">
+      <p class="etiqueta">En 3 pasos</p>
+      <h2 id="t-uso">Cómo usarla</h2>
+      <ol class="pasos">
+        <li class="paso">
+          <div class="num" aria-hidden="true">1</div>
+          <div class="paso-texto">
+            <h3>Descarga el archivo</h3>
+            <p>Usa el botón Descargar. No hace falta descomprimirlo.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <div class="num" aria-hidden="true">2</div>
+          <div class="paso-texto">
+            <h3>Súbela a Claude</h3>
+            <p>Haz clic arriba a la izquierda en <span class="ruta">Personalizar &gt; Habilidades &gt; Tuyo &gt; Agregar (+) &gt; Subir habilidad</span> y selecciona el archivo descargado tal cual, sin descomprimirlo.</p>
+          </div>
+        </li>
+        <li class="paso">
+          <div class="num" aria-hidden="true">3</div>
+          <div class="paso-texto">
+            <h3>Úsala y pide tu primer caso</h3>
+            <p>Abre un chat nuevo en Claude, selecciona la skill y al costado escribe <span class="ruta">¿qué puedes hacer?</span></p>
+            <div class="pedido">
+              <div class="pedido-top"><span>Primer mensaje</span><button type="button" class="copiar" data-copiar="cmd">Copiar</button></div>
+              <code id="cmd">/negocios-skill-97-pipeline-y-forecast ¿qué puedes hacer?</code>
+            </div>
+            <p class="tras">Claude te explicará qué hace. Después pídele tu primer caso, por ejemplo:</p>
+            <div class="pedido">
+              <div class="pedido-top"><span>Ejemplo de pedido</span><button type="button" class="copiar" data-copiar="ejemplo">Copiar</button></div>
+              <p id="ejemplo">Revisa mi pipeline de este trimestre. Te paso la tabla exportada del CRM con cada oportunidad, su etapa, probabilidad, monto, fecha estimada de cierre y última actividad. Dime qué negocios están estancados, cuáles tienen una probabilidad que no cuadra con su etapa y arma el resumen de forecast.</p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="card comunidad" aria-labelledby="t-grupo">
+      <p class="etiqueta">Comunidad</p>
+      <h2 id="t-grupo">Únete al grupo de Negocios</h2>
+      <p>Comparte tus resultados, resuelve dudas y recibe las próximas skills del área antes que nadie.</p>
+      <a class="btn btn-secundario" href="https://chat.whatsapp.com/C68Q8FFDj139dN5dusodYT" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+        Entrar al grupo de WhatsApp
+      </a>
+    </section>
+  </div>
+</main>
+
+<footer class="cierre">
+  <div class="wrap">
+    <div class="firma">
+      <strong>Eduardo Hernández</strong>
+      <a href="https://crecia360.com" target="_blank" rel="noopener">crecia360.com</a>
+    </div>
+    <div class="contacto">
+      <a href="https://crecia360.com" target="_blank" rel="noopener"><small>Web</small><b>crecia360.com</b></a>
+      <a href="mailto:crecia360@gmail.com"><small>Correo</small><b>crecia360@gmail.com</b></a>
+      <a href="https://chat.whatsapp.com/C68Q8FFDj139dN5dusodYT" target="_blank" rel="noopener"><small>Comunidad</small><b>Grupo de WhatsApp</b></a>
+      <a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener"><small>Reunión</small><b>Agenda tu cita</b></a>
+    </div>
+    <p class="pie">Crecia360 · Skill 97 · Pipeline y forecast</p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll(".copiar").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var el = document.getElementById(btn.dataset.copiar);
+    var listo = function () { btn.textContent = "Copiado"; setTimeout(function () { btn.textContent = "Copiar"; }, 1800); };
+    var seleccionar = function () {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = "Selecciónalo y copia";
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText(el.textContent.trim()).then(listo, seleccionar);
+    else seleccionar();
+  });
+});
+</script>
+</body>
+</html>
