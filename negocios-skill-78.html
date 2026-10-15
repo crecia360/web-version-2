@@ -95,10 +95,11 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
   margin: 12px 0 0; background: var(--medio); color: var(--blanco); border-left: 4px solid var(--naranja);
   border-radius: 8px; padding: 14px 16px; font-size: 15px; line-height: 1.55;
 }
+.pedido { overflow-wrap: anywhere; }
 .pedido span { display: block; font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--naranja-claro); margin-bottom: 4px; }
 
-.comunidad p { margin: 0 0 18px; color: var(--texto-suave); }
-.comunidad h2 { margin-bottom: 8px; }
+.btn-whatsapp { background: #25D366; color: var(--noche); margin-top: 14px; }
+.btn-whatsapp:hover { background: #4BE083; }
 
 /* Cierre */
 .cierre { background: var(--noche); color: var(--blanco); margin-top: 16px; }
@@ -117,7 +118,8 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
 
 @media (max-width: 420px) {
   .contacto { grid-template-columns: 1fr; }
-  .hero .btn, .comunidad .btn { width: 100%; }
+  .hero .btn { width: 100%; }
+  .paso .btn-whatsapp { margin-left: -56px; width: calc(100% + 56px); }
 }
 @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn-primario:hover { transform: none; } }
 </style>
@@ -148,7 +150,7 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
 <main>
   <div class="wrap">
     <section class="card" aria-labelledby="t-uso">
-      <p class="etiqueta">En 4 pasos</p>
+      <p class="etiqueta">En 5 pasos</p>
       <h2 id="t-uso">Cómo usarla</h2>
       <ol class="pasos">
         <li class="paso">
@@ -181,17 +183,18 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
             <p class="pedido"><span>Ejemplo de pedido</span>“Mañana tengo reunión con [nombre de la empresa]. Prepárame un brief: a qué se dedican, qué retos tiene su sector y quiénes serían las personas clave para contactar. Su web es [enlace].”</p>
           </div>
         </li>
+        <li class="paso">
+          <div class="num" aria-hidden="true">5</div>
+          <div class="paso-texto">
+            <h3>Únete a la comunidad de Negocios</h3>
+            <p>Automatiza hasta el 95% de tus tareas y ahorra dinero. Compartimos más skills y en la descripción del grupo está la carpeta con todo lo que ya tenemos.</p>
+            <a class="btn btn-whatsapp" href="https://chat.whatsapp.com/C68Q8FFDj139dN5dusodYT" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+              Unirme a la comunidad
+            </a>
+          </div>
+        </li>
       </ol>
-    </section>
-
-    <section class="card comunidad" aria-labelledby="t-grupo">
-      <p class="etiqueta">Comunidad</p>
-      <h2 id="t-grupo">Únete al grupo de Negocios</h2>
-      <p>Comparte tus resultados, resuelve dudas y recibe las próximas skills del área antes que nadie.</p>
-      <a class="btn btn-secundario" href="https://chat.whatsapp.com/C68Q8FFDj139dN5dusodYT" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
-        Entrar al grupo de WhatsApp
-      </a>
     </section>
   </div>
 </main>
