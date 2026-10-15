@@ -103,7 +103,6 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
 }
 .copiar:hover { background: var(--naranja); }
 .copiar:focus-visible { outline: 2px solid var(--naranja-claro); outline-offset: 2px; }
-.paso p.tras { margin-top: 12px; }
 
 .btn-whatsapp { background: #25D366; color: var(--noche); margin-top: 14px; }
 .btn-whatsapp:hover { background: #4BE083; }
@@ -157,7 +156,7 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
 <main>
   <div class="wrap">
     <section class="card" aria-labelledby="t-uso">
-      <p class="etiqueta">En 4 pasos</p>
+      <p class="etiqueta">En 5 pasos</p>
       <h2 id="t-uso">Cómo usarla</h2>
       <ol class="pasos">
         <li class="paso">
@@ -170,20 +169,26 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
         <li class="paso">
           <div class="num" aria-hidden="true">2</div>
           <div class="paso-texto">
-            <h3>Súbela a Claude</h3>
+            <h3>Súbelo a Claude</h3>
             <p>Haz clic arriba a la izquierda en <span class="ruta">Personalizar &gt; Habilidades &gt; Tuyo &gt; Agregar (+) &gt; Subir habilidad</span> y selecciona el archivo descargado tal cual, sin descomprimirlo.</p>
           </div>
         </li>
         <li class="paso">
           <div class="num" aria-hidden="true">3</div>
           <div class="paso-texto">
-            <h3>Úsala y pide tu primer caso</h3>
-            <p>Abre un chat nuevo en Claude, selecciona la skill y al costado escribe <span class="ruta">¿qué puedes hacer?</span></p>
+            <h3>Actívala en un chat nuevo</h3>
+            <p>Abre un chat nuevo en Claude, selecciona la skill y al costado escribe “¿qué puedes hacer?”:</p>
             <div class="pedido">
               <div class="pedido-top"><span>Primer mensaje</span><button type="button" class="copiar" data-copiar="cmd">Copiar</button></div>
               <code id="cmd">/negocios-skill-91-analisis-win-loss ¿qué puedes hacer?</code>
             </div>
-            <p class="tras">Claude te explicará qué hace. Después pídele tu primer caso, por ejemplo:</p>
+          </div>
+        </li>
+        <li class="paso">
+          <div class="num" aria-hidden="true">4</div>
+          <div class="paso-texto">
+            <h3>Pide tu primer análisis</h3>
+            <p>Claude te explicará qué hace. Después pídele tu primer caso, por ejemplo:</p>
             <div class="pedido">
               <div class="pedido-top"><span>Ejemplo de pedido</span><button type="button" class="copiar" data-copiar="ejemplo">Copiar</button></div>
               <p id="ejemplo">Analiza mis ventas del último trimestre. Te paso la lista de negocios ganados y perdidos con el sector, el monto y el motivo de cada uno. Dime dónde cierro más, por qué pierdo y qué objeciones debo trabajar.</p>
@@ -191,7 +196,7 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
           </div>
         </li>
         <li class="paso">
-          <div class="num" aria-hidden="true">4</div>
+          <div class="num" aria-hidden="true">5</div>
           <div class="paso-texto">
             <h3>Únete a la comunidad de Negocios</h3>
             <p>Automatiza hasta el 95% de tus tareas y ahorra dinero. Compartimos más skills y en la descripción del grupo está la carpeta con todo lo que ya tenemos.</p>
