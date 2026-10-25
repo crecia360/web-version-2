@@ -24,5 +24,8 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    { "source": "/negocios-skill-77", "destination": "/skill-negocios-77", "permanent": true }
   ]
 }
