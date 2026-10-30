@@ -29,6 +29,8 @@
     { "source": "/negocios-skill-77", "destination": "/skill-negocios-77", "permanent": true },
     { "source": "/negocios-skill-78", "destination": "/skill-negocios-78", "permanent": true },
     { "source": "/negocios-skill-90", "destination": "/skill-negocios-90", "permanent": true },
-    { "source": "/negocios-skill-91", "destination": "/skill-negocios-91", "permanent": true }
+    { "source": "/negocios-skill-91", "destination": "/skill-negocios-91", "permanent": true },
+    { "source": "/negocios-skill-93", "destination": "/skill-negocios-93", "permanent": true },
+    { "source": "/negocios-skill-97", "destination": "/skill-negocios-97", "permanent": true }
   ]
 }
