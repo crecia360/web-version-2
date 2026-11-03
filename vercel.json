@@ -32,6 +32,7 @@
     { "source": "/negocios-skill-91", "destination": "/skill-negocios-91", "permanent": true },
     { "source": "/negocios-skill-93", "destination": "/skill-negocios-93", "permanent": true },
     { "source": "/negocios-skill-97", "destination": "/skill-negocios-97", "permanent": true },
-    { "source": "/ventas-skills", "destination": "/skills-grupo-ventas-702", "permanent": false }
+    { "source": "/ventas-skills", "destination": "/skills-grupo-ventas-702", "permanent": false },
+    { "source": "/ventas-claude-skills", "destination": "/skills-grupo-ventas-702", "permanent": false }
   ]
 }
