@@ -135,11 +135,22 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
 }
 @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn-primario:hover { transform: none; } }
 
-.lista{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.sk{border:1px solid var(--borde);border-radius:12px;padding:14px 16px;background:#fff}
-.sk h3{margin:0 0 2px;font-size:16px;font-weight:600}
-.sk p{margin:0;color:var(--texto-suave);font-size:14.5px}
-.sk code{display:inline-block;margin-top:6px;font-size:12.5px;color:var(--gris);overflow-wrap:anywhere}
+/* Lista de skills: numeración naranja Crecia360, fondo arena, 2 columnas en pantallas anchas */
+.lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: sk; }
+.sk {
+  counter-increment: sk; position: relative; display: flex; align-items: center; gap: 12px;
+  background: var(--arena); border: 1px solid var(--borde); border-left: 3px solid var(--naranja);
+  border-radius: 12px; padding: 10px 14px 10px 12px; transition: background .15s, border-color .15s, transform .15s;
+}
+.sk::before {
+  content: counter(sk, decimal-leading-zero); flex: none;
+  width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center;
+  background: var(--noche); color: var(--naranja-claro); font-weight: 700; font-size: 13px; letter-spacing: .02em;
+}
+.sk:hover { background: var(--blanco); border-color: rgba(222, 84, 12, .45); border-left-color: var(--naranja); transform: translateY(-1px); }
+.sk h3 { margin: 0; font-size: 14.5px; font-weight: 600; line-height: 1.35; color: var(--texto); }
+@media (min-width: 560px) { .lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) { .sk { transition: none; } .sk:hover { transform: none; } }
 </style>
 </head>
 <body>
@@ -170,7 +181,7 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
     <section class="card" aria-labelledby="t-skills">
       <p class="etiqueta">Incluye</p>
       <h2 id="t-skills">Las 10 skills del grupo</h2>
-      <ul class="lista"><li class="sk"><h3>Explicar variaciones presupuestarias</h3><p>Explica las diferencias entre presupuesto y real por partida, separando efecto volumen, precio y timing, y redacta la lectura para la gerencia.</p><code>/skill-finanzas-321-explicar-variaciones-presupuestarias</code></li><li class="sk"><h3>Preparar plantilla de supuestos del presupuesto</h3><p>Prepara la plantilla de supuestos que las áreas deben completar para el presupuesto (volúmenes, precios, inflación, tipo de cambio, personal, inversiones) con instrucciones y validaciones.</p><code>/skill-finanzas-322-preparar-plantilla-supuestos-presupuesto</code></li><li class="sk"><h3>Consolidar presupuestos de varias áreas</h3><p>Consolida los presupuestos enviados por distintas áreas en uno solo, detecta inconsistencias entre ellos y compara con la meta global.</p><code>/skill-finanzas-323-consolidar-presupuestos-varias-areas</code></li><li class="sk"><h3>Modelado financiero y escenarios (Financial Modeling Support)</h3><p>Ayuda a diseñar la estructura de un modelo financiero (flujo de caja, DCF, análisis de sensibilidad) y a definir supuestos y escenarios, sin reemplazar el modelo en Excel.</p><code>/skill-finanzas-324-modelado-y-escenarios</code></li><li class="sk"><h3>Elaborar proyección de ingresos y gastos</h3><p>Elabora una proyección de ingresos y gastos a partir del histórico y supuestos explícitos, con escenarios base, alto y bajo.</p><code>/skill-finanzas-325-elaborar-proyeccion-ingresos-gastos</code></li><li class="sk"><h3>Calcular y comentar KPIs de gestión</h3><p>Calcula los KPIs de gestión de un área, define su fórmula y semáforo, y redacta un comentario con tendencia y acciones.</p><code>/skill-finanzas-326-calcular-comentar-kpis-gestion-area</code></li><li class="sk"><h3>Explicar desviaciones entre real y meta</h3><p>Explica las desviaciones entre resultados reales y metas (ventas, margen, producción, plazos) identificando los factores que las explican.</p><code>/skill-finanzas-327-explicar-desviaciones-entre-real-meta</code></li><li class="sk"><h3>Resumir condiciones de préstamos y covenants</h3><p>Resume un contrato de préstamo: monto, tasa, plazo, garantías, obligaciones y covenants financieros con cómo se calculan.</p><code>/skill-finanzas-328-resumir-condiciones-prestamos-covenants</code></li><li class="sk"><h3>Calendarizar vencimientos y pagos de deuda</h3><p>Arma el calendario de vencimientos de deuda con capital, intereses, comisiones y fechas, y su impacto mes a mes en la caja.</p><code>/skill-finanzas-329-calendarizar-vencimientos-pagos-deuda</code></li><li class="sk"><h3>Comparar propuestas de crédito y tasas</h3><p>Compara propuestas de crédito de distintos bancos por costo efectivo total, plazo, garantías, comisiones y flexibilidad, y recomienda la más conveniente.</p><code>/skill-finanzas-330-comparar-propuestas-credito-tasas</code></li></ul>
+      <ul class="lista"><li class="sk"><h3>Explicar variaciones presupuestarias</h3></li><li class="sk"><h3>Preparar plantilla de supuestos del presupuesto</h3></li><li class="sk"><h3>Consolidar presupuestos de varias áreas</h3></li><li class="sk"><h3>Modelado financiero y escenarios (Financial Modeling Support)</h3></li><li class="sk"><h3>Elaborar proyección de ingresos y gastos</h3></li><li class="sk"><h3>Calcular y comentar KPIs de gestión</h3></li><li class="sk"><h3>Explicar desviaciones entre real y meta</h3></li><li class="sk"><h3>Resumir condiciones de préstamos y covenants</h3></li><li class="sk"><h3>Calendarizar vencimientos y pagos de deuda</h3></li><li class="sk"><h3>Comparar propuestas de crédito y tasas</h3></li></ul>
     </section>
 
     <section class="card" aria-labelledby="t-uso">
