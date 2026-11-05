@@ -139,9 +139,9 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
 /* Lista de skills: numeración naranja Crecia360, fondo arena, 2 columnas en pantallas anchas */
 .lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: sk; }
 .sk {
-  counter-increment: sk; position: relative; display: flex; align-items: flex-start; gap: 12px;
+  counter-increment: sk; position: relative; display: flex; align-items: center; gap: 12px;
   background: var(--arena); border: 1px solid var(--borde); border-left: 3px solid var(--naranja);
-  border-radius: 12px; padding: 14px 14px 14px 12px; transition: background .15s, border-color .15s, transform .15s;
+  border-radius: 12px; padding: 10px 14px 10px 12px; transition: background .15s, border-color .15s, transform .15s;
 }
 .sk p { margin: 4px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--texto-suave); }
 .btn-secundario { background: transparent; color: var(--naranja); border: 2px solid var(--naranja); margin-top: 14px; padding: 12px 24px; }
@@ -186,16 +186,16 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
       <p class="etiqueta">Incluye</p>
       <h2 id="t-skills">Las 10 skills del grupo</h2>
       <ul class="lista">
-        <li class="sk"><div><h3>Redactar propuestas comerciales</h3><p>Redacta una propuesta comercial clara y persuasiva: contexto del cliente, solución, alcance, inversión, plazos y siguientes pasos.</p></div></li>
-        <li class="sk"><div><h3>Armar plan de cuenta corporativa</h3><p>Arma un plan de cuenta para un cliente corporativo: mapa de decisores, situación actual, oportunidades, objetivos y acciones por trimestre.</p></div></li>
-        <li class="sk"><div><h3>Resumen de deals</h3><p>Convierte el historial de una oportunidad en un memo ejecutivo con estado, riesgos, próximos pasos y contexto competitivo.</p></div></li>
-        <li class="sk"><div><h3>Notas y seguimiento</h3><p>A partir de las notas de una reunión comercial, genera un resumen, la lista de acuerdos y tareas, y un borrador de correo de seguimiento.</p></div></li>
-        <li class="sk"><div><h3>Preparación de reuniones</h3><p>Genera una hoja de preparación para una reunión comercial, con objetivos probables del cliente, preguntas de apertura y objeciones esperadas.</p></div></li>
-        <li class="sk"><div><h3>Generar preguntas de descubrimiento</h3><p>Genera preguntas para entender la situación, el problema, el impacto, la decisión y el presupuesto de un prospecto.</p></div></li>
-        <li class="sk"><div><h3>Sugerir próximos pasos</h3><p>Sugiere los próximos pasos concretos para avanzar un deal o cliente a partir de su estado actual, con responsable y fecha.</p></div></li>
-        <li class="sk"><div><h3>Preparar reuniones comerciales</h3><p>Prepara una reunión comercial: objetivo, agenda, información del cliente, mensajes clave, preguntas y posibles objeciones.</p></div></li>
-        <li class="sk"><div><h3>Resumir llamadas y reuniones</h3><p>Resume una llamada o reunión comercial a partir de notas o transcripción: puntos clave, decisiones, compromisos y tareas.</p></div></li>
-        <li class="sk"><div><h3>Crear guiones de llamadas</h3><p>Crea guiones de llamada de ventas con apertura, descubrimiento, propuesta de valor, manejo de dudas y cierre.</p></div></li>
+        <li class="sk"><h3>Redactar propuestas comerciales</h3></li>
+        <li class="sk"><h3>Armar plan de cuenta corporativa</h3></li>
+        <li class="sk"><h3>Resumen de deals</h3></li>
+        <li class="sk"><h3>Notas y seguimiento</h3></li>
+        <li class="sk"><h3>Preparación de reuniones</h3></li>
+        <li class="sk"><h3>Generar preguntas de descubrimiento</h3></li>
+        <li class="sk"><h3>Sugerir próximos pasos</h3></li>
+        <li class="sk"><h3>Preparar reuniones comerciales</h3></li>
+        <li class="sk"><h3>Resumir llamadas y reuniones</h3></li>
+        <li class="sk"><h3>Crear guiones de llamadas</h3></li>
       </ul>
     </section>
 
