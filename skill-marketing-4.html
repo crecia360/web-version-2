@@ -3,139 +3,86 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Skill 4 de Crecia360 para Claude: analiza encuestas, reseñas y entrevistas de tus clientes y obtén buyer personas con necesidades, objeciones y mensajes clave.">
+<meta name="description" content="Skill de Investigación de Clientes de Crecia360 para Claude. Pide acceso por WhatsApp y recibe las 10 skills del grupo de marketing.">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_PE">
-<meta property="og:site_name" content="Crecia360">
-<meta property="og:title" content="Investigación de Clientes · Skill 4 de Crecia360">
-<meta property="og:description" content="Skill 4 de Crecia360 para Claude: analiza encuestas, reseñas y entrevistas de tus clientes y obtén buyer personas con necesidades, objeciones y mensajes clave.">
+<meta property="og:title" content="Skill de Investigación de Clientes · Crecia360">
+<meta property="og:description" content="Skill de Investigación de Clientes de Crecia360 para Claude. Pide acceso por WhatsApp y recibe las 10 skills del grupo de marketing.">
 <meta property="og:url" content="https://crecia360.com/skill-marketing-4">
 <meta property="og:image" content="https://crecia360.com/assets/og-crecia360.jpg">
+<meta property="og:locale" content="es_PE">
 <link rel="canonical" href="https://crecia360.com/skill-marketing-4">
 <link rel="icon" href="/favicon.ico">
-<title>Investigación de Clientes</title>
+<title>Skill de Investigación de Clientes · Crecia360</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
 <style>
-/* Layout: una columna de 640px; cabecera azul noche + cuerpo arena con tarjetas blancas. Identidad Crecia360, look único (no cambia con el tema). */
-:root {
-  --naranja: #DE540C;
-  --naranja-claro: #FF7A3D;
-  --noche: #0A1628;
-  --medio: #1E2D45;
-  --arena: #F5F0EC;
-  --blanco: #FFFFFF;
-  --borde: #E8E3DF;
-  --gris: #9B9B9B;
-  --texto: #1A1A2E;
-  --texto-suave: #4A4A5E;
-  --font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  color-scheme: light;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: var(--arena);
-  color: var(--texto);
-  font-family: var(--font);
-  font-size: 16px;
-  line-height: 1.6;
-}
-a { color: inherit; }
-a:focus-visible, .btn:focus-visible { outline: 3px solid var(--naranja-claro); outline-offset: 3px; }
-.wrap { max-width: 640px; margin: 0 auto; padding-inline: 20px; }
+:root{--naranja:#DE540C;--naranja-claro:#FF7A3D;--noche:#0A1628;--medio:#1E2D45;--arena:#F5F0EC;--blanco:#fff;--borde:#E8E3DF;--gris:#8A8FA0;--texto:#1A1A2E;--suave:#4A4A5E;--wa:#25D366;--wa-h:#4BE083;--font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--arena);color:var(--texto);font-family:var(--font);font-size:16px;line-height:1.55;padding-bottom:84px}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding-inline:20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;font-family:var(--font);font-weight:700;font-size:17px;text-decoration:none;background:var(--wa);color:var(--noche);border-radius:14px;padding:16px 22px;box-shadow:0 8px 22px rgba(37,211,102,.32);transition:background .15s,transform .15s}
+.btn:hover{background:var(--wa-h);transform:translateY(-1px)}
+.btn svg{width:22px;height:22px;flex:none}
+a:focus-visible{outline:3px solid var(--naranja-claro);outline-offset:3px}
 
-/* Tira de contacto */
-.tira { background: var(--noche); border-bottom: 1px solid var(--medio); }
-.tira .wrap {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px;
-  padding-block: 10px; font-size: 13px; font-weight: 500;
-}
-.tira a { color: #C9CFD9; text-decoration: none; }
-.tira a:hover { color: var(--naranja-claro); }
+.hero{background:var(--noche);color:var(--blanco);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(222,84,12,.35),transparent 70%)}
+.hero .wrap{position:relative;padding-block:30px 44px;display:flex;flex-direction:column;gap:14px}
+.marca{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C9CFD9}
+.marca b{color:var(--naranja-claro)}
+h1{margin:0;font-size:clamp(30px,8.4vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--naranja)}
+.ver{font-size:.4em;font-weight:700;color:var(--naranja-claro);vertical-align:middle;border:1px solid var(--naranja);border-radius:999px;padding:2px 9px;margin-left:6px;letter-spacing:0}
+.bajada{margin:0;color:#C9CFD9;font-size:17px;max-width:30em}
+.hero .btn{margin-top:6px}
+.micro{margin:0;text-align:center;font-size:13px;color:#9AA3B5}
 
-/* Cabecera */
-.hero { background: var(--noche); color: var(--blanco); }
-.hero .wrap { padding-block: 40px 48px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
-.badge {
-  display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--naranja-claro); background: rgba(222, 84, 12, .15); border: 1px solid var(--naranja);
-  border-radius: 999px; padding: 4px 12px;
-}
-h1 {
-  margin: 0; font-size: clamp(28px, 6.4vw, 40px); line-height: 1.15; font-weight: 800;
-  letter-spacing: -.01em; text-wrap: balance;
-}
-h1 em { font-style: normal; color: var(--naranja); }
-.bajada { margin: 0; color: #C9CFD9; font-size: 17px; max-width: 34em; }
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  font-family: var(--font); font-weight: 600; font-size: 16px; text-decoration: none;
-  border-radius: 12px; padding: 14px 26px; transition: background .15s, color .15s, transform .15s;
-}
-.btn-primario { background: var(--naranja); color: var(--blanco); box-shadow: 0 6px 18px rgba(222, 84, 12, .35); }
-.btn-primario:hover { background: var(--naranja-claro); transform: translateY(-1px); }
-.btn svg { width: 18px; height: 18px; flex: none; }
-.hero .btn { margin-top: 8px; }
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-52px;position:relative}
+.cifra{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:14px 8px;text-align:center;box-shadow:0 6px 18px rgba(10,22,40,.08)}
+.cifra b{display:block;font-size:28px;font-weight:800;line-height:1;color:var(--naranja)}
+.cifra span{display:block;margin-top:6px;font-size:12px;font-weight:600;color:var(--suave);line-height:1.25}
 
-/* Cuerpo */
-main .wrap { padding-block: 40px 24px; display: flex; flex-direction: column; gap: 24px; }
-.card {
-  background: var(--blanco); border: 1px solid var(--borde); border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(10, 22, 40, .06); padding: 28px 24px;
-}
-.etiqueta { margin: 0 0 4px; font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--gris); }
-h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text-wrap: balance; }
-.pasos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 20px; }
-.paso { display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start; }
-.num {
-  width: 40px; height: 40px; border-radius: 10px; background: var(--naranja); color: var(--blanco);
-  display: grid; place-items: center; font-weight: 700; font-size: 17px;
-}
-.paso-texto { min-width: 0; }
-.paso h3 { margin: 6px 0 2px; font-size: 16px; font-weight: 600; }
-.paso p { margin: 0; color: var(--texto-suave); font-size: 15px; }
-.ruta { font-weight: 500; color: var(--texto); }
-.paso .pedido {
-  margin: 12px 0 0; background: var(--medio); color: var(--blanco); border-left: 4px solid var(--naranja);
-  border-radius: 8px; padding: 14px 16px; font-size: 15px; line-height: 1.55;
-}
-.pedido-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 6px; }
-.pedido-top span { font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--naranja-claro); }
-.paso .pedido p { margin: 0; color: var(--blanco); }
-.pedido code { display: block; font-family: var(--font); font-weight: 500; color: var(--blanco); overflow-wrap: anywhere; }
-.copiar {
-  font-family: var(--font); font-size: 12px; font-weight: 600; color: var(--blanco); cursor: pointer;
-  background: transparent; border: 1px solid var(--naranja); border-radius: 8px; padding: 4px 12px; flex: none;
-}
-.copiar:hover { background: var(--naranja); }
-.copiar:focus-visible { outline: 2px solid var(--naranja-claro); outline-offset: 2px; }
+main .wrap{padding-block:0 8px;display:flex;flex-direction:column;gap:34px}
+.etiqueta{margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+h2{margin:0 0 16px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
 
-.btn-whatsapp { background: #25D366; color: var(--noche); margin-top: 14px; }
-.btn-whatsapp:hover { background: #4BE083; }
+.skills{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px;counter-reset:s}
+.skills li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:11px 14px;font-weight:500;font-size:15px;line-height:1.35}
+.skills li:before{content:counter(s);width:34px;height:34px;border-radius:9px;background:var(--noche);color:var(--blanco);display:grid;place-items:center;font-weight:700;font-size:14px}
 
-/* Cierre */
-.cierre { background: var(--noche); color: var(--blanco); margin-top: 16px; }
-.cierre .wrap { padding-block: 36px; display: flex; flex-direction: column; gap: 18px; }
-.firma strong { display: block; font-size: 18px; font-weight: 600; }
-.firma a { color: var(--naranja-claro); text-decoration: none; font-weight: 500; }
-.contacto { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-.contacto a {
-  display: flex; flex-direction: column; gap: 2px; text-decoration: none;
-  background: var(--medio); border-radius: 12px; padding: 12px 14px; min-width: 0;
-}
-.contacto a:hover { background: #26385A; }
-.contacto small { font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--gris); }
-.contacto b { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
-.pie { font-size: 12px; color: var(--gris); margin: 0; }
+.pasos{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.paso{display:grid;grid-template-columns:44px 1fr;gap:14px;padding-bottom:22px;position:relative}
+.paso:last-child{padding-bottom:0}
+.paso:not(:last-child):after{content:"";position:absolute;left:21px;top:48px;bottom:4px;width:2px;background:var(--borde)}
+.num{width:44px;height:44px;border-radius:50%;background:var(--naranja);color:var(--blanco);display:grid;place-items:center;font-weight:800;font-size:18px}
+.paso h3{margin:2px 0 2px;font-size:17px;font-weight:700}
+.paso p{margin:0;color:var(--suave);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{background:var(--blanco);border:1px solid var(--borde);border-radius:999px;padding:3px 11px;font-size:13px;font-weight:600}
+.chip.o{border-color:var(--naranja);color:var(--naranja)}
 
-@media (max-width: 420px) {
-  .contacto { grid-template-columns: 1fr; }
-  .hero .btn { width: 100%; }
-  .paso .btn-whatsapp { margin-left: -56px; width: calc(100% + 56px); }
+.final{background:var(--noche);color:var(--blanco);border-radius:20px;padding:28px 22px;display:flex;flex-direction:column;gap:14px;text-align:center}
+.final h2{margin:0;color:var(--blanco)}
+.final p{margin:0;color:#C9CFD9}
+footer{padding:26px 0 8px;text-align:center;font-size:13px;color:var(--gris)}
+footer a{color:var(--suave);font-weight:600;text-decoration:none;margin:0 6px}
+footer .links{margin-bottom:6px}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:10;background:rgba(10,22,40,.96);backdrop-filter:blur(6px);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.barra .btn{max-width:600px;margin:0 auto;padding:14px 20px;font-size:16px}
+
+@media (min-width:700px){
+  .skills{grid-template-columns:1fr 1fr}
+  .hero .wrap{padding-block:48px 64px}
+  .barra{display:none}
+  body{padding-bottom:0}
+  .btn{width:auto;align-self:flex-start;padding-inline:34px}
+  .final .btn{align-self:center}
 }
-@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn-primario:hover { transform: none; } }
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}html{scroll-behavior:auto}}
 </style>
   <!-- Microsoft Clarity (crecia360) -->
   <script type="text/javascript">
@@ -147,116 +94,68 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
   </script>
 </head>
 <body>
-
-<nav class="tira" aria-label="Contacto">
-  <div class="wrap">
-    <a href="https://crecia360.com" target="_blank" rel="noopener noreferrer">crecia360.com</a>
-    <a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a>
-    <a href="https://chat.whatsapp.com/I0IPbucXAaX2D94nmjbDwJ" target="_blank" rel="noopener noreferrer">Grupo de WhatsApp</a>
-    <a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener noreferrer">Agenda tu cita</a>
-  </div>
-</nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.660-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.410.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26C2.16 6.46 6.6 2.03 12.06 2.03c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.440 9.88-9.89 9.88Zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.180-1.24-6.16-3.48-8.41Z"/></symbol>
+</svg>
 
 <header class="hero">
   <div class="wrap">
-    <span class="badge">Skill 4 · Marketing</span>
-    <h1>Descubre <em>qué quieren tus clientes</em> y cómo hablarles</h1>
+    <div class="marca">Crecia360 · <b>Skill 4 · Marketing</b></div>
+    <h1>Skill de <em>Investigación de Clientes</em></h1>
     <p class="bajada">Convierte encuestas, reseñas o entrevistas en patrones de necesidades y objeciones, y en buyer personas con los mensajes clave para cada una.</p>
-    <a class="btn btn-primario" href="https://drive.google.com/drive/folders/1s0uv9mW4RufuwJ1fVUB7ZGaC-rUOQwXk?usp=sharing" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
-      Descargar
-    </a>
+    <a class="btn" href="https://link.crecia360.com/lpw4" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Sí, quiero las skills</a>
+    <p class="micro">Pides esta y recibes 9 skills más del grupo de Marketing</p>
   </div>
 </header>
 
 <main>
   <div class="wrap">
-    <section class="card" aria-labelledby="t-uso">
-      <p class="etiqueta">En 5 pasos</p>
-      <h2 id="t-uso">Cómo usarla</h2>
-      <ol class="pasos">
-        <li class="paso">
-          <div class="num" aria-hidden="true">1</div>
-          <div class="paso-texto">
-            <h3>Descarga el archivo</h3>
-            <p>Usa el botón Descargar. No hace falta descomprimirlo.</p>
-          </div>
-        </li>
-        <li class="paso">
-          <div class="num" aria-hidden="true">2</div>
-          <div class="paso-texto">
-            <h3>Súbelo a Claude</h3>
-            <p>Haz clic arriba a la izquierda en <span class="ruta">Personalizar &gt; Habilidades &gt; Tuyo &gt; Agregar (+) &gt; Subir habilidad</span> y selecciona el archivo descargado tal cual, sin descomprimirlo.</p>
-          </div>
-        </li>
-        <li class="paso">
-          <div class="num" aria-hidden="true">3</div>
-          <div class="paso-texto">
-            <h3>Actívala en un chat nuevo</h3>
-            <p>Abre un chat nuevo en Claude, selecciona la skill y al costado escribe “¿qué puedes hacer?”:</p>
-            <div class="pedido">
-              <div class="pedido-top"><span>Primer mensaje</span><button type="button" class="copiar" data-copiar="cmd">Copiar</button></div>
-              <code id="cmd">/skill-marketing-4-investigacion-de-clientes ¿qué puedes hacer?</code>
-            </div>
-          </div>
-        </li>
-        <li class="paso">
-          <div class="num" aria-hidden="true">4</div>
-          <div class="paso-texto">
-            <h3>Pide tu primer análisis</h3>
-            <p>Claude te explicará qué hace. Después pídele tu primer caso, por ejemplo:</p>
-            <div class="pedido">
-              <div class="pedido-top"><span>Ejemplo de pedido</span><button type="button" class="copiar" data-copiar="ejemplo">Copiar</button></div>
-              <p id="ejemplo">Analiza estos comentarios de clientes de [nombre de tu negocio], que vende [tu producto o servicio] a [tipo de cliente]: [pega aquí las respuestas de la encuesta, las reseñas o las notas de entrevistas]. Dime qué necesidades y objeciones se repiten y arma [número] buyer personas con los mensajes clave para cada una.</p>
-            </div>
-          </div>
-        </li>
-        <li class="paso">
-          <div class="num" aria-hidden="true">5</div>
-          <div class="paso-texto">
-            <h3>Únete a la comunidad de Marketing</h3>
-            <p>Automatiza hasta el 95% de tus tareas y ahorra dinero. Compartimos más skills y en la descripción del grupo está la carpeta con todo lo que ya tenemos.</p>
-            <a class="btn btn-whatsapp" href="https://chat.whatsapp.com/I0IPbucXAaX2D94nmjbDwJ" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
-              Unirme a la comunidad
-            </a>
-          </div>
-        </li>
+    <div class="cifras" aria-label="Lo que recibes">
+      <div class="cifra"><b>1</b><span>skill que pides</span></div><div class="cifra"><b>+9</b><span>skills más del grupo</span></div><div class="cifra"><b>10</b><span>en total, gratis</span></div>
+    </div>
+
+    <section aria-labelledby="t-skills">
+      <p class="etiqueta">El grupo de Marketing</p>
+      <h2 id="t-skills">Las 10 skills del grupo</h2>
+      <ol class="skills">
+        <li>Briefs de campaña</li>
+        <li>Generar borradores de campañas</li>
+        <li>Elaborar el plan de marketing trimestral</li>
+        <li>Investigación de clientes y buyer personas</li>
+        <li>Analizar entrevistas y encuestas</li>
+        <li>Analizar comentarios de clientes</li>
+        <li>Definir perfiles de cliente ideal</li>
+        <li>Adaptar mensajes a distintos segmentos</li>
+        <li>Revisar consistencia de tono en mensajes</li>
+        <li>Detectar cambios en la percepción de marca</li>
       </ol>
     </section>
 
+    <section aria-labelledby="t-como">
+      <p class="etiqueta">Cómo recibirlas</p>
+      <h2 id="t-como">Tres pasos y listo</h2>
+      <ol class="pasos">
+        <li class="paso"><div class="num" aria-hidden="true">1</div><div><h3>Escríbeme por WhatsApp</h3><p>Toca el botón y mándame el mensaje que ya está listo.</p></div></li>
+        <li class="paso"><div class="num" aria-hidden="true">2</div><div><h3>Te envío el acceso al grupo de Marketing</h3><p>En la descripción del grupo está la carpeta con las skills.</p></div></li>
+        <li class="paso"><div class="num" aria-hidden="true">3</div><div><h3>Súbela a Claude y úsala</h3><p>En Claude, ve a <b>Personalizar &gt; Habilidades &gt; Tuyo &gt; Agregar (+) &gt; Subir habilidad</b> y selecciona el archivo tal cual, sin descomprimirlo.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="final" aria-labelledby="t-fin">
+      <h2 id="t-fin">Pide tu acceso al grupo de Marketing</h2>
+      <p>Ahí compartimos más skills y novedades de marketing para usar con Claude.</p>
+      <a class="btn" href="https://link.crecia360.com/lpw4" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Escribir por WhatsApp</a>
+    </section>
   </div>
 </main>
 
-<footer class="cierre">
+<footer>
   <div class="wrap">
-    <div class="firma">
-      <strong>Eduardo Hernández</strong>
-      <a href="https://crecia360.com" target="_blank" rel="noopener noreferrer">crecia360.com</a>
-    </div>
-    <div class="contacto">
-      <a href="https://crecia360.com" target="_blank" rel="noopener noreferrer"><small>Web</small><b>crecia360.com</b></a>
-      <a href="mailto:crecia360@gmail.com"><small>Correo</small><b>crecia360@gmail.com</b></a>
-      <a href="https://chat.whatsapp.com/I0IPbucXAaX2D94nmjbDwJ" target="_blank" rel="noopener noreferrer"><small>Comunidad</small><b>Grupo de WhatsApp</b></a>
-      <a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener noreferrer"><small>Reunión</small><b>Agenda tu cita</b></a>
-    </div>
-    <p class="pie">Crecia360 · Skill 4 · Investigación de clientes</p>
+    <div class="links"><a href="https://crecia360.com" target="_blank" rel="noopener noreferrer">crecia360.com</a><a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a><a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener noreferrer">Agenda tu cita</a></div>
+    Eduardo Hernández · Crecia360 · Skill 4 · Investigación de clientes
   </div>
 </footer>
-<script>
-document.querySelectorAll(".copiar").forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    var el = document.getElementById(btn.dataset.copiar);
-    var listo = function () { btn.textContent = "Copiado"; setTimeout(function () { btn.textContent = "Copiar"; }, 1800); };
-    var seleccionar = function () {
-      var r = document.createRange(); r.selectNodeContents(el);
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-      btn.textContent = "Selecciónalo y copia";
-    };
-    if (navigator.clipboard) navigator.clipboard.writeText(el.textContent.trim()).then(listo, seleccionar);
-    else seleccionar();
-  });
-});
-</script>
+
+<div class="barra"><a class="btn" href="https://link.crecia360.com/lpw4" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Sí, quiero las skills</a></div>
 </body>
 </html>
