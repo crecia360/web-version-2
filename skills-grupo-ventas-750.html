@@ -17,135 +17,72 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
 <style>
-/* Layout: una columna de 640px; cabecera azul noche + cuerpo arena con tarjetas blancas. Identidad Crecia360, look único (no cambia con el tema). */
-:root {
-  --naranja: #DE540C;
-  --naranja-claro: #FF7A3D;
-  --noche: #0A1628;
-  --medio: #1E2D45;
-  --arena: #F5F0EC;
-  --blanco: #FFFFFF;
-  --borde: #E8E3DF;
-  --gris: #9B9B9B;
-  --texto: #1A1A2E;
-  --texto-suave: #4A4A5E;
-  --wa: #25D366;
-  --wa-hover: #1EBE5A;
-  --font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  color-scheme: light;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: var(--arena);
-  color: var(--texto);
-  font-family: var(--font);
-  font-size: 16px;
-  line-height: 1.6;
-}
-a { color: inherit; }
-a:focus-visible, .btn:focus-visible { outline: 3px solid var(--naranja-claro); outline-offset: 3px; }
-.wrap { max-width: 640px; margin: 0 auto; padding-inline: 20px; }
-.ico-wa { width: 16px; height: 16px; flex: none; color: var(--wa); }
+:root{--naranja:#DE540C;--naranja-claro:#FF7A3D;--noche:#0A1628;--medio:#1E2D45;--arena:#F5F0EC;--blanco:#fff;--borde:#E8E3DF;--gris:#8A8FA0;--texto:#1A1A2E;--suave:#4A4A5E;--wa:#25D366;--wa-h:#4BE083;--font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--arena);color:var(--texto);font-family:var(--font);font-size:16px;line-height:1.55;padding-bottom:84px}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding-inline:20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;font-family:var(--font);font-weight:700;font-size:17px;text-decoration:none;background:var(--wa);color:var(--noche);border-radius:14px;padding:16px 22px;box-shadow:0 8px 22px rgba(37,211,102,.32);transition:background .15s,transform .15s}
+.btn:hover{background:var(--wa-h);transform:translateY(-1px)}
+.btn svg{width:22px;height:22px;flex:none}
+a:focus-visible{outline:3px solid var(--naranja-claro);outline-offset:3px}
 
-/* Tira de contacto */
-.tira { background: var(--noche); border-bottom: 1px solid var(--medio); }
-.tira .wrap {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px;
-  padding-block: 10px; font-size: 13px; font-weight: 500;
-}
-.tira a { color: #C9CFD9; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
-.tira a:hover { color: var(--naranja-claro); }
-.tira .ico-wa { width: 14px; height: 14px; }
+.hero{background:var(--noche);color:var(--blanco);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(222,84,12,.35),transparent 70%)}
+.hero .wrap{position:relative;padding-block:30px 44px;display:flex;flex-direction:column;gap:14px}
+.marca{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C9CFD9}
+.marca b{color:var(--naranja-claro)}
+h1{margin:0;font-size:clamp(30px,8.4vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--naranja)}
+.ver{font-size:.4em;font-weight:700;color:var(--naranja-claro);vertical-align:middle;border:1px solid var(--naranja);border-radius:999px;padding:2px 9px;margin-left:6px;letter-spacing:0}
+.bajada{margin:0;color:#C9CFD9;font-size:17px;max-width:30em}
+.hero .btn{margin-top:6px}
+.micro{margin:0;text-align:center;font-size:13px;color:#9AA3B5}
 
-/* Cabecera */
-.hero { background: var(--noche); color: var(--blanco); }
-.hero .wrap { padding-block: 40px 44px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
-.badge {
-  display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--naranja-claro); background: rgba(222, 84, 12, .15); border: 1px solid var(--naranja);
-  border-radius: 999px; padding: 4px 12px;
-}
-h1 {
-  margin: 0; font-size: clamp(28px, 6.4vw, 40px); line-height: 1.15; font-weight: 800;
-  letter-spacing: -.01em; text-wrap: balance;
-}
-h1 em { font-style: normal; color: var(--naranja); }
-h1 .ver { font-size: .5em; font-weight: 600; color: var(--naranja-claro); white-space: nowrap; vertical-align: middle; }
-.bajada { margin: 0; color: #C9CFD9; font-size: 17px; max-width: 34em; }
-.botones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  font-family: var(--font); font-weight: 600; font-size: 16px; text-decoration: none;
-  border-radius: 12px; padding: 14px 26px; transition: background .15s, transform .15s;
-}
-.btn svg { width: 18px; height: 18px; flex: none; }
-.btn-primario { background: var(--naranja); color: var(--blanco); box-shadow: 0 6px 18px rgba(222, 84, 12, .35); }
-.btn-primario:hover { background: var(--naranja-claro); transform: translateY(-1px); }
-.btn-whatsapp { background: var(--wa); color: var(--blanco); }
-.btn-whatsapp:hover { background: var(--wa-hover); }
-.indicacion { margin: 4px 0 0; font-size: 14px; color: #C9CFD9; max-width: 36em; }
-.indicacion b { color: var(--blanco); font-weight: 600; }
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-52px;position:relative}
+.cifra{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:14px 8px;text-align:center;box-shadow:0 6px 18px rgba(10,22,40,.08)}
+.cifra b{display:block;font-size:28px;font-weight:800;line-height:1;color:var(--naranja)}
+.cifra span{display:block;margin-top:6px;font-size:12px;font-weight:600;color:var(--suave);line-height:1.25}
 
-/* Cuerpo */
-main .wrap { padding-block: 40px 24px; display: flex; flex-direction: column; gap: 24px; }
-.card {
-  background: var(--blanco); border: 1px solid var(--borde); border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(10, 22, 40, .06); padding: 28px 24px;
-}
-.etiqueta { margin: 0 0 4px; font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--gris); }
-h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text-wrap: balance; }
-.card > p { margin: 0; color: var(--texto-suave); }
-.card .btn-whatsapp { margin-top: 18px; }
+main .wrap{padding-block:0 8px;display:flex;flex-direction:column;gap:34px}
+.etiqueta{margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+h2{margin:0 0 16px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
 
-/* Lista de skills: tarjetas compactas numeradas, 2 columnas en pantallas anchas */
-.lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: sk; }
-.sk {
-  counter-increment: sk; display: flex; align-items: center; gap: 12px;
-  background: var(--arena); border: 1px solid var(--borde); border-left: 3px solid var(--naranja);
-  border-radius: 12px; padding: 10px 14px 10px 12px;
-  font-size: 14.5px; font-weight: 600; line-height: 1.35;
-}
-.sk::before {
-  content: counter(sk, decimal-leading-zero); flex: none;
-  width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center;
-  background: var(--noche); color: var(--naranja-claro); font-weight: 700; font-size: 13px;
-}
-/* Resumen de todo lo que trae la carpeta */
-.trae { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.trae li {
-  display: flex; align-items: center; gap: 14px; background: var(--noche); color: var(--blanco);
-  border-radius: 12px; padding: 14px 16px;
-}
-.trae b {
-  flex: none; width: 48px; height: 48px; border-radius: 10px; display: grid; place-items: center;
-  background: var(--naranja); color: var(--blanco); font-size: 22px; font-weight: 800;
-}
-.trae span { font-size: 13.5px; line-height: 1.45; color: #C9CFD9; }
-.trae strong { display: block; font-size: 15px; font-weight: 600; color: var(--blanco); }
-@media (min-width: 560px) { .trae { grid-template-columns: repeat(3, minmax(0, 1fr)); } .trae li { flex-direction: column; align-items: flex-start; } }
-@media (min-width: 560px) { .lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.skills{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px;counter-reset:s}
+.skills li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:11px 14px;font-weight:500;font-size:15px;line-height:1.35}
+.skills li:before{content:counter(s);width:34px;height:34px;border-radius:9px;background:var(--noche);color:var(--blanco);display:grid;place-items:center;font-weight:700;font-size:14px}
 
-/* Cierre */
-.cierre { background: var(--noche); color: var(--blanco); margin-top: 16px; }
-.cierre .wrap { padding-block: 36px; display: flex; flex-direction: column; gap: 18px; }
-.firma { font-size: 18px; font-weight: 600; }
-.firma a { color: var(--naranja-claro); text-decoration: none; font-weight: 500; }
-.contacto { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-.contacto a {
-  display: flex; flex-direction: column; gap: 2px; text-decoration: none;
-  background: var(--medio); border-radius: 12px; padding: 12px 14px; min-width: 0;
-}
-.contacto a:hover { background: #26385A; }
-.contacto small { font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--gris); }
-.contacto b { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; display: inline-flex; align-items: center; gap: 6px; }
-.pie { font-size: 12px; color: var(--gris); margin: 0; }
+.pasos{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.paso{display:grid;grid-template-columns:44px 1fr;gap:14px;padding-bottom:22px;position:relative}
+.paso:last-child{padding-bottom:0}
+.paso:not(:last-child):after{content:"";position:absolute;left:21px;top:48px;bottom:4px;width:2px;background:var(--borde)}
+.num{width:44px;height:44px;border-radius:50%;background:var(--naranja);color:var(--blanco);display:grid;place-items:center;font-weight:800;font-size:18px}
+.paso h3{margin:2px 0 2px;font-size:17px;font-weight:700}
+.paso p{margin:0;color:var(--suave);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{background:var(--blanco);border:1px solid var(--borde);border-radius:999px;padding:3px 11px;font-size:13px;font-weight:600}
+.chip.o{border-color:var(--naranja);color:var(--naranja)}
 
-@media (max-width: 420px) {
-  .contacto { grid-template-columns: 1fr; }
-  .botones .btn, .card .btn-whatsapp { width: 100%; }
+.final{background:var(--noche);color:var(--blanco);border-radius:20px;padding:28px 22px;display:flex;flex-direction:column;gap:14px;text-align:center}
+.final h2{margin:0;color:var(--blanco)}
+.final p{margin:0;color:#C9CFD9}
+footer{padding:26px 0 8px;text-align:center;font-size:13px;color:var(--gris)}
+footer a{color:var(--suave);font-weight:600;text-decoration:none;margin:0 6px}
+footer .links{margin-bottom:6px}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:10;background:rgba(10,22,40,.96);backdrop-filter:blur(6px);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.barra .btn{max-width:600px;margin:0 auto;padding:14px 20px;font-size:16px}
+
+@media (min-width:700px){
+  .skills{grid-template-columns:1fr 1fr}
+  .hero .wrap{padding-block:48px 64px}
+  .barra{display:none}
+  body{padding-bottom:0}
+  .btn{width:auto;align-self:flex-start;padding-inline:34px}
+  .final .btn{align-self:center}
 }
-@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn-primario:hover { transform: none; } }
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}html{scroll-behavior:auto}}
 </style>
   <!-- Microsoft Clarity (crecia360) -->
   <script type="text/javascript">
@@ -161,82 +98,68 @@ h2 { margin: 0 0 20px; font-size: 22px; font-weight: 700; line-height: 1.3; text
   <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.660-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.410.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26C2.16 6.46 6.6 2.03 12.06 2.03c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.440 9.88-9.89 9.88Zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.180-1.24-6.16-3.48-8.41Z"/></symbol>
 </svg>
 
-<nav class="tira" aria-label="Contacto">
-  <div class="wrap">
-    <a href="https://crecia360.com" target="_blank" rel="noopener noreferrer">crecia360.com</a>
-    <a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a>
-    <a href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20ventas%20%28LI%20750%29.%20Gracias.%20Mi%20nombre%20es%20...%20De%20antemano%20mil%20gracias" target="_blank" rel="noopener noreferrer"><svg class="ico-wa" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
-    <a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener noreferrer">Agenda tu cita</a>
-  </div>
-</nav>
-
 <header class="hero">
   <div class="wrap">
-    <span class="badge">Grupo 750 · Ventas</span>
+    <div class="marca">Crecia360 · <b>Ventas</b></div>
     <h1>10 skills de <em>ventas</em> para usar en Claude <span class="ver">v1.2</span></h1>
-    <p class="bajada">Una skill = una tarea comercial resuelta, siempre con la misma estructura. Cada skill trae su playbook en PDF con prompts listos, un ejemplo completo y un checklist.</p>
-    <div class="botones">
-      <a class="btn btn-whatsapp" href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20ventas%20%28LI%20750%29.%20Gracias.%20Mi%20nombre%20es%20...%20De%20antemano%20mil%20gracias" target="_blank" rel="noopener noreferrer">
-        <svg aria-hidden="true"><use href="#wa"/></svg>
-        Sí, quiero las skills
-      </a>
-    </div>
-    <p class="indicacion">Escríbeme por WhatsApp con el botón y te envío el acceso al grupo de Ventas. En la descripción del grupo está la carpeta con las 10 skills: entra primero a <b>empieza-aqui-guias</b>, ahí están los playbooks 1, 2 y 3 y el Excel para medir cuánto tiempo te ahorra cada skill con tus números.</p>
+    <p class="bajada">Cada skill resuelve una tarea comercial con prompts listos, un ejemplo completo y un checklist.</p>
+    <a class="btn" href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20ventas%20%28LI%20750%29.%20Gracias.%20Mi%20nombre%20es%20...%20De%20antemano%20mil%20gracias" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Sí, quiero las skills</a>
+    <p class="micro">Te respondo por WhatsApp y te paso el acceso</p>
   </div>
 </header>
 
 <main>
   <div class="wrap">
-    <section class="card" aria-labelledby="t-skills">
-      <p class="etiqueta">Skills</p>
-      <h2 id="t-skills">Las 10 skills del grupo</h2>
-      <ul class="lista">
-        <li class="sk">Propuestas comerciales claras en minutos</li>
-        <li class="sk">El plan de cada cuenta clave</li>
-        <li class="sk">Tus deals resumidos en un memo</li>
-        <li class="sk">Notas, acuerdos y correo de seguimiento el mismo día</li>
-        <li class="sk">Llega preparado a cada reunión</li>
-        <li class="sk">Preguntas de descubrimiento</li>
-        <li class="sk">Próximos pasos con responsable y fecha</li>
-        <li class="sk">Agenda, mensajes clave y objeciones esperadas</li>
-        <li class="sk">Resumen de llamadas con decisiones y tareas</li>
-        <li class="sk">Guiones de llamada de apertura a cierre</li>
-      </ul>
+    <div class="cifras" aria-label="Lo que incluye">
+      <div class="cifra"><b>10</b><span>skills con su playbook en PDF</span></div>
+      <div class="cifra"><b>3</b><span>guías para empezar</span></div>
+      <div class="cifra"><b>1</b><span>Excel de ahorro</span></div>
+    </div>
+
+    <section aria-labelledby="t-skills">
+      <p class="etiqueta">Las skills</p>
+      <h2 id="t-skills">Lo que vas a poder hacer con Claude</h2>
+      <ol class="skills">
+        <li>Propuestas comerciales claras en minutos</li>
+        <li>El plan de cada cuenta clave</li>
+        <li>Tus deals resumidos en un memo</li>
+        <li>Notas, acuerdos y correo de seguimiento el mismo día</li>
+        <li>Llega preparado a cada reunión</li>
+        <li>Preguntas de descubrimiento</li>
+        <li>Próximos pasos con responsable y fecha</li>
+        <li>Agenda, mensajes clave y objeciones esperadas</li>
+        <li>Resumen de llamadas con decisiones y tareas</li>
+        <li>Guiones de llamada de apertura a cierre</li>
+      </ol>
     </section>
 
-    <section class="card" aria-labelledby="t-trae">
-      <p class="etiqueta">Incluye</p>
-      <h2 id="t-trae">Todo lo que te llevas</h2>
-      <ul class="trae">
-        <li><b>10</b><span><strong>Skills y PDF</strong>Cada skill en su propio .zip y con su playbook en PDF: prompts listos, un ejemplo completo y un checklist.</span></li>
-        <li><b>3</b><span><strong>Guías para empezar</strong>Arranca en 15 minutos, los 10 puntos del post y cómo llenar el Excel.</span></li>
-        <li><b>1</b><span><strong>Excel de ahorro</strong>Mide cuánto tiempo te ahorra cada skill con tus propios números.</span></li>
-      </ul>
+    <section aria-labelledby="t-como">
+      <p class="etiqueta">Cómo recibirlas</p>
+      <h2 id="t-como">Tres pasos y listo</h2>
+      <ol class="pasos">
+        <li class="paso"><div class="num" aria-hidden="true">1</div><div><h3>Escríbeme por WhatsApp</h3><p>Toca el botón y mándame el mensaje que ya está listo.</p></div></li>
+        <li class="paso"><div class="num" aria-hidden="true">2</div><div><h3>Te envío el acceso al grupo de Ventas</h3><p>En la descripción del grupo está la carpeta con las 10 skills.</p></div></li>
+        <li class="paso"><div class="num" aria-hidden="true">3</div><div><h3>Empieza por la carpeta de guías</h3><p>Entra primero a <b>empieza-aqui-guias</b>:</p>
+          <div class="chips"><span class="chip o">Playbook 1</span><span class="chip o">Playbook 2</span><span class="chip o">Playbook 3</span><span class="chip">Excel de ahorro</span></div>
+          <p style="margin-top:8px">El Excel mide cuánto tiempo te ahorra cada skill con tus números.</p></div></li>
+      </ol>
     </section>
 
-    <section class="card" aria-labelledby="t-com">
-      <p class="etiqueta">Comunidad</p>
-      <h2 id="t-com">Pide tu acceso al grupo de WhatsApp de Ventas</h2>
-      <p>Escríbeme y te envío el link del grupo. Ahí compartimos más skills y novedades para vender mejor con Claude.</p>
-      <a class="btn btn-whatsapp" href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20ventas%20%28LI%20750%29.%20Gracias.%20Mi%20nombre%20es%20...%20De%20antemano%20mil%20gracias" target="_blank" rel="noopener noreferrer">
-        <svg aria-hidden="true"><use href="#wa"/></svg>
-        Escribir por WhatsApp
-      </a>
+    <section class="final" aria-labelledby="t-fin">
+      <h2 id="t-fin">Pide tu acceso al grupo de Ventas</h2>
+      <p>Ahí compartimos más skills y novedades para vender mejor con Claude.</p>
+      <a class="btn" href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20ventas%20%28LI%20750%29.%20Gracias.%20Mi%20nombre%20es%20...%20De%20antemano%20mil%20gracias" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Escribir por WhatsApp</a>
     </section>
   </div>
 </main>
 
-<footer class="cierre">
+<footer>
   <div class="wrap">
-    <div class="firma">Eduardo Hernández · <a href="https://crecia360.com" target="_blank" rel="noopener noreferrer">crecia360.com</a></div>
-    <div class="contacto">
-      <a href="https://crecia360.com" target="_blank" rel="noopener noreferrer"><small>Web</small><b>crecia360.com</b></a>
-      <a href="mailto:crecia360@gmail.com"><small>Correo</small><b>crecia360@gmail.com</b></a>
-      <a href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20ventas%20%28LI%20750%29.%20Gracias.%20Mi%20nombre%20es%20...%20De%20antemano%20mil%20gracias" target="_blank" rel="noopener noreferrer"><small>WhatsApp</small><b><svg class="ico-wa" aria-hidden="true"><use href="#wa"/></svg>Pide tu acceso</b></a>
-      <a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener noreferrer"><small>Reunión</small><b>Agenda tu cita</b></a>
-    </div>
-    <p class="pie">Crecia360 · Grupo 750 · 10 skills de ventas</p>
+    <div class="links"><a href="https://crecia360.com" target="_blank" rel="noopener noreferrer">crecia360.com</a><a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a><a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener noreferrer">Agenda tu cita</a></div>
+    Eduardo Hernández · Crecia360 · Grupo 750 · 10 skills de ventas
   </div>
 </footer>
+
+<div class="barra"><a class="btn" href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20ventas%20%28LI%20750%29.%20Gracias.%20Mi%20nombre%20es%20...%20De%20antemano%20mil%20gracias" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Sí, quiero las skills</a></div>
 </body>
 </html>
