@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Pide por WhatsApp 10 skills de Claude de negocios, listas para subir a Claude y ahorrar tiempo en tu trabajo. Regalo de Crecia360.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="10 skills de negocios para usar en Claude">
+<meta property="og:description" content="Pide por WhatsApp 10 skills de Claude de negocios, listas para subir a Claude y ahorrar tiempo en tu trabajo. Regalo de Crecia360.">
+<meta property="og:url" content="https://crecia360.com/skills-grupo-negocios-707">
+<meta property="og:image" content="https://crecia360.com/assets/og-crecia360.jpg">
+<meta property="og:locale" content="es_PE">
+<link rel="canonical" href="https://crecia360.com/skills-grupo-negocios-707">
+<link rel="icon" href="/favicon.ico">
+<title>10 skills de negocios para usar en Claude v1.1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--naranja:#DE540C;--naranja-claro:#FF7A3D;--noche:#0A1628;--medio:#1E2D45;--arena:#F5F0EC;--blanco:#fff;--borde:#E8E3DF;--gris:#8A8FA0;--texto:#1A1A2E;--suave:#4A4A5E;--wa:#25D366;--wa-h:#1EBE5A;--font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--arena);color:var(--texto);font-family:var(--font);font-size:16px;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding-inline:20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;font-family:var(--font);font-weight:700;font-size:17px;text-decoration:none;background:var(--wa);color:var(--noche);border-radius:14px;padding:16px 22px;box-shadow:0 8px 22px rgba(37,211,102,.32);transition:background .15s,transform .15s}
+.btn:hover{background:var(--wa-h);transform:translateY(-1px)}
+.btn svg{width:22px;height:22px;flex:none}
+a:focus-visible{outline:3px solid var(--naranja-claro);outline-offset:3px}
+
+.hero{background:var(--noche);color:var(--blanco);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(222,84,12,.35),transparent 70%)}
+.hero .wrap{position:relative;padding-block:30px 72px;display:flex;flex-direction:column;gap:14px}
+.marca{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C9CFD9}
+.marca b{color:var(--naranja-claro)}
+h1{margin:0;font-size:clamp(30px,8.4vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--naranja)}
+.ver{display:inline-block;font-size:.4em;font-weight:700;color:var(--naranja-claro);vertical-align:middle;border:1px solid var(--naranja);border-radius:999px;padding:2px 9px;margin-left:6px;letter-spacing:0}
+.bajada{margin:0;color:#C9CFD9;font-size:17px;max-width:30em}
+.hero .btn{margin-top:6px}
+.micro{margin:0;text-align:center;font-size:13px;color:#9AA3B5}
+
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-48px;position:relative}
+.cifra{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:14px 8px;text-align:center;box-shadow:0 6px 18px rgba(10,22,40,.08)}
+.cifra b{display:block;font-size:28px;font-weight:800;line-height:1;color:var(--naranja)}
+.cifra span{display:block;margin-top:6px;font-size:12px;font-weight:600;color:var(--suave);line-height:1.25}
+
+main .wrap{padding-block:0 8px;display:flex;flex-direction:column;gap:38px}
+.etiqueta{margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+h2{margin:0 0 16px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+
+.skills{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:10px;counter-reset:s}
+.skills li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:12px 14px;font-weight:600;font-size:15px;line-height:1.35;box-shadow:0 4px 14px rgba(10,22,40,.05)}
+.skills li:before{content:counter(s);width:34px;height:34px;border-radius:9px;background:var(--noche);color:var(--blanco);display:grid;place-items:center;font-weight:700;font-size:14px}
+
+.pasos{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.paso{display:grid;grid-template-columns:40px 1fr;gap:14px;background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px;box-shadow:0 4px 14px rgba(10,22,40,.05)}
+.num{width:40px;height:40px;border-radius:50%;background:var(--naranja);color:var(--blanco);display:grid;place-items:center;font-weight:800;font-size:17px}
+.paso h3{margin:6px 0 4px;font-size:17px;font-weight:700;line-height:1.3}
+.paso p{margin:0;color:var(--suave);font-size:15px}
+.ruta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;margin:8px 0}
+.ruta span{background:var(--arena);border:1px solid var(--borde);border-radius:999px;padding:2px 10px;font-size:13px;font-weight:600;color:var(--texto)}
+.ruta i{font-style:normal;color:var(--naranja);font-weight:700;font-size:13px}
+
+.final{background:var(--noche);color:var(--blanco);border-radius:20px;padding:28px 22px;display:flex;flex-direction:column;gap:14px;text-align:center;position:relative;overflow:hidden}
+.final:before{content:"";position:absolute;right:-70px;top:-70px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(222,84,12,.28),transparent 70%)}
+.final>*{position:relative}
+.final h2{margin:0;color:var(--blanco)}
+.final p{margin:0;color:#C9CFD9}
+footer{padding:28px 0 32px;text-align:center;font-size:13px;color:var(--gris)}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;margin-bottom:8px}
+footer .links a{color:var(--suave);font-weight:600;font-size:13px;text-decoration:none}
+footer .links a:hover{color:var(--naranja)}
+footer .btn{margin-top:18px}
+
+@media (min-width:520px){.skills{grid-template-columns:1fr 1fr}}
+@media (min-width:700px){
+  .hero .wrap{padding-block:48px 88px}
+  .btn{width:auto;align-self:flex-start;padding-inline:34px}
+  .final .btn{align-self:center}
+  footer .btn{display:inline-flex}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+  <!-- Microsoft Clarity (crecia360) -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "zbo3ouocyq");
+  </script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26C2.16 6.46 6.6 2.03 12.06 2.03c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.89 9.88Zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41Z"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="marca">Crecia360 · <b>Negocios</b></div>
+    <h1>10 skills de <em>negocios</em> para usar en Claude <span class="ver">v1.1</span></h1>
+    <p class="bajada">Pide acceso por WhatsApp y recibe las 10 skills de negocios, listas para subir a Claude y ahorrar tiempo en tu trabajo.</p>
+    <a class="btn" href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20negocios%20%28lk%29.%20Mil%20gracias%20por%20anticipado." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Sí, quiero las skills</a>
+    <p class="micro">Te respondo por WhatsApp y te paso el acceso</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="cifras" aria-label="Lo que incluye">
+      <div class="cifra"><b>10</b><span>skills del grupo</span></div>
+      <div class="cifra"><b>1</b><span>carpeta con todo</span></div>
+      <div class="cifra"><b>Gratis</b><span>un regalo de Crecia360</span></div>
+    </div>
+
+    <section aria-labelledby="t-skills">
+      <p class="etiqueta">Las skills</p>
+      <h2 id="t-skills">Las 10 skills del grupo</h2>
+      <ol class="skills">
+        <li>Correos de prospección que sí se leen</li>
+        <li>El brief de cada cuenta antes de reunirte</li>
+        <li>Tus prospectos calificados y priorizados</li>
+        <li>Tu lista de empresas objetivo</li>
+        <li>Un correo personalizado para cada contacto</li>
+        <li>Posibles socios comerciales bien evaluados</li>
+        <li>Propuestas de alianza claras y completas</li>
+        <li>Tus canales de venta comparados</li>
+        <li>Un plan de apoyo para tu canal</li>
+        <li>Tus distribuidores comparados en un tablero</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="t-como">
+      <p class="etiqueta">Cómo recibirlas</p>
+      <h2 id="t-como">Tres pasos y listo</h2>
+      <ol class="pasos">
+        <li class="paso"><div class="num" aria-hidden="true">1</div><div><h3>Escríbeme por WhatsApp</h3><p>Toca el botón y mándame el mensaje que ya está listo.</p></div></li>
+        <li class="paso"><div class="num" aria-hidden="true">2</div><div><h3>Te envío el acceso al grupo de negocios</h3><p>En la descripción del grupo está la carpeta con las 10 skills.</p></div></li>
+        <li class="paso"><div class="num" aria-hidden="true">3</div><div><h3>Sube la que quieras a Claude</h3><p>En Claude, ve a:</p>
+          <div class="ruta"><span>Personalizar</span><i>›</i><span>Habilidades</span><i>›</i><span>Tuyo</span><i>›</i><span>Agregar (+)</span><i>›</i><span>Subir habilidad</span></div>
+          <p>Y selecciona el archivo de la skill tal cual, sin descomprimirlo.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="final" aria-labelledby="t-fin">
+      <h2 id="t-fin">Pide tu acceso al grupo de negocios</h2>
+      <p>Ahí compartimos más skills y novedades de negocios para usar con Claude.</p>
+      <a class="btn" href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20negocios%20%28lk%29.%20Mil%20gracias%20por%20anticipado." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Escribir por WhatsApp</a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links"><a href="https://crecia360.com" target="_blank" rel="noopener noreferrer">crecia360.com</a><a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a><a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener noreferrer">Agenda tu cita</a></div>
+    Eduardo Hernández · Crecia360 · Grupo 707 · 10 skills de negocios
+    <div><a class="btn" href="https://wa.me/51937597103?text=Hola%20Eduardo%20Hernandez%2C%20por%20favor%20dame%20acceso%20a%20las%20skills%20de%20negocios%20%28lk%29.%20Mil%20gracias%20por%20anticipado." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Sí, quiero las skills</a></div>
+  </div>
+</footer>
+</body>
+</html>
