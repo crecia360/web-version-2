@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Curso gratuito de IA básica de Crecia360: aprende con Valeria y su ayudante de cocina cómo piensa la IA y cómo darle instrucciones claras, con 17 ejercicios para copiar y pegar en Claude.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cómo piensa la IA y cómo darle instrucciones claras">
+<meta property="og:description" content="Curso de IA básica de Crecia360: 6 módulos y 17 ejercicios para copiar y pegar en Claude, de lo más simple a lo más completo.">
+<meta property="og:url" content="https://crecia360.com/curso-ia-basico">
+<meta property="og:image" content="https://crecia360.com/assets/og-crecia360.jpg">
+<meta property="og:locale" content="es_PE">
+<link rel="canonical" href="https://crecia360.com/curso-ia-basico">
+<link rel="icon" href="/favicon.ico">
+<title>Curso IA básico · Crecia360</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--naranja:#DE540C;--naranja-claro:#FF7A3D;--noche:#0A1628;--medio:#1E2D45;--arena:#F5F0EC;--blanco:#fff;--borde:#E8E3DF;--gris:#8A8FA0;--texto:#1A1A2E;--suave:#4A4A5E;--wa:#25D366;--wa-h:#4BE083;--font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--arena);color:var(--texto);font-family:var(--font);font-size:16px;line-height:1.6;overflow-wrap:break-word}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:52px;font-family:var(--font);font-weight:700;font-size:17px;text-decoration:none;background:var(--wa);color:var(--noche);border-radius:14px;padding:16px 22px;box-shadow:0 8px 22px rgba(37,211,102,.32);transition:background .15s,transform .15s;text-align:center}
+.btn:hover{background:var(--wa-h);transform:translateY(-1px)}
+.btn svg{width:22px;height:22px;flex:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--naranja-claro);outline-offset:3px}
+
+/* Encabezado */
+.hero{background:var(--noche);color:var(--blanco);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(222,84,12,.35),transparent 70%)}
+.hero .wrap{position:relative;padding-block:30px 40px;display:flex;flex-direction:column;gap:14px}
+.marca{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C9CFD9}
+.marca b{color:var(--naranja-claro)}
+h1{margin:0;font-size:clamp(28px,8vw,44px);line-height:1.1;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--naranja)}
+.bajada{margin:0;color:#C9CFD9;font-size:17px;max-width:34em}
+.micro{margin:0;font-size:13px;color:#9AA3B5}
+
+/* Índice */
+.indice{background:var(--medio);border-radius:14px;padding:14px;margin-top:6px}
+.indice p{margin:0 0 8px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C9CFD9}
+.indice ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.indice a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04);color:var(--blanco);text-decoration:none;font-size:14px;font-weight:600}
+.indice a:hover{border-color:var(--naranja-claro);color:var(--naranja-claro)}
+
+/* Estructura */
+main .wrap{padding-block:34px 8px;display:flex;flex-direction:column;gap:44px}
+section{scroll-margin-top:16px}
+.bloque{display:flex;flex-direction:column;gap:16px}
+.etiqueta{margin:0;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+h2{margin:0;font-size:clamp(23px,6vw,28px);line-height:1.2;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+h3{margin:0;font-size:18px;line-height:1.3;font-weight:700;text-wrap:balance}
+h4{margin:0 0 4px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--naranja)}
+p{margin:0}
+.lead{color:var(--suave);font-size:16px}
+.tit-mod{display:flex;flex-direction:column;gap:4px}
+
+.tarjetas{display:grid;grid-template-columns:1fr;gap:10px}
+.tarjeta{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px}
+.tarjeta h3{font-size:16px;margin-bottom:4px}
+.tarjeta p{color:var(--suave);font-size:15px}
+.tarjeta ul{margin:0;padding-left:20px;color:var(--suave);font-size:15px}
+.tarjeta li+li{margin-top:4px}
+
+.lista-check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.lista-check li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:12px 14px;font-size:15px}
+.lista-check li:before{content:"✓";width:26px;height:26px;border-radius:8px;background:var(--naranja);color:var(--blanco);display:grid;place-items:center;font-weight:700;font-size:14px}
+
+.nota{background:#FCE9DE;border:1px solid #F3C9B1;border-left:5px solid var(--naranja);border-radius:12px;padding:14px 16px;font-size:15px}
+.nota b{color:#9A3A07}
+.recuadro{background:var(--noche);color:var(--blanco);border-radius:16px;padding:18px}
+.recuadro h3{color:var(--naranja-claro);font-size:17px;margin-bottom:6px}
+.recuadro p{color:#DCE1EA;font-size:15px}
+.recuadro p+p{margin-top:8px}
+
+/* Tabla cocina ↔ IA */
+.tabla{width:100%;border-collapse:separate;border-spacing:0;background:var(--blanco);border:1px solid var(--borde);border-radius:14px;overflow:hidden;font-size:15px}
+.tabla th{background:var(--noche);color:var(--blanco);text-align:left;padding:10px 12px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.tabla td{padding:11px 12px;border-top:1px solid var(--borde);vertical-align:top}
+.tabla td:first-child{font-weight:700;width:38%}
+
+/* Pasos numerados */
+.pasos3{display:grid;grid-template-columns:1fr;gap:10px}
+.paso3{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px;display:grid;grid-template-columns:44px 1fr;gap:12px}
+.num{width:44px;height:44px;border-radius:50%;background:var(--naranja);color:var(--blanco);display:grid;place-items:center;font-weight:800;font-size:18px}
+.paso3 h3{font-size:17px;margin:8px 0 4px}
+.paso3 p{color:var(--suave);font-size:15px}
+.paso3 p+p{margin-top:6px}
+
+/* Ejercicios */
+.ej{background:var(--blanco);border:1px solid var(--borde);border-radius:18px;padding:18px 16px;display:flex;flex-direction:column;gap:14px;box-shadow:0 6px 18px rgba(10,22,40,.05);scroll-margin-top:16px}
+.ej-cab{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ej-num{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blanco);background:var(--naranja);border-radius:999px;padding:4px 11px}
+.tag{font-size:12px;font-weight:600;border-radius:999px;padding:3px 10px;border:1px solid var(--borde);background:var(--arena);color:var(--suave)}
+.tag.chat{border-color:var(--noche);background:var(--noche);color:var(--blanco)}
+.tag.mismo{border-color:var(--naranja);background:#FCE9DE;color:#9A3A07}
+.tag.notas{border-color:#B9C2D0;background:#EEF1F5;color:var(--medio)}
+.instr{color:var(--suave);font-size:15px}
+.tec{display:grid;grid-template-columns:1fr;gap:10px}
+.tec>div{background:var(--arena);border-radius:12px;padding:12px 14px}
+.tec p{font-size:15px;color:var(--texto)}
+
+.prompt{background:var(--noche);color:var(--blanco);border-left:5px solid var(--naranja);border-radius:12px;padding:12px 14px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.prompt-cab{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.prompt-cab span{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--naranja-claro)}
+.prompt-txt{margin:0;font-size:15px;line-height:1.6;color:#F1F3F7;white-space:pre-wrap;overflow-wrap:anywhere}
+.copiar{flex:none;min-height:44px;min-width:96px;padding:8px 16px;border:0;border-radius:10px;background:var(--naranja);color:var(--blanco);font-family:var(--font);font-weight:700;font-size:15px;cursor:pointer;transition:background .15s}
+.copiar:hover{background:#C94A08}
+.copiar.ok{background:var(--wa);color:var(--noche)}
+.prompt.vago{border-left-color:#8A8FA0}
+.prompt.vago .prompt-cab span{color:#C9CFD9}
+.duo{display:grid;grid-template-columns:1fr;gap:12px}
+.en-notas{background:#EEF1F5;border-radius:12px;padding:12px 14px;font-size:15px}
+.en-notas h4{color:var(--medio)}
+.despues{background:var(--arena);border-radius:12px;padding:12px 14px;font-size:15px}
+.despues ul{margin:0;padding-left:20px}
+.despues li+li{margin-top:4px}
+
+.grupos{display:grid;grid-template-columns:1fr;gap:10px}
+.grupo{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:14px 16px}
+.grupo b{display:block;color:var(--naranja);font-size:14px;margin-bottom:2px}
+.grupo span{font-size:15px}
+.tec-titulo{margin-top:6px}
+
+/* Recorrido */
+.recorrido{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:10px}
+.recorrido li{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:14px 16px}
+.recorrido li.aqui{border:2px solid var(--naranja)}
+.recorrido small{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+.recorrido b{display:block;font-size:17px}
+.recorrido span{display:block;color:var(--suave);font-size:14px}
+
+.final{background:var(--noche);color:var(--blanco);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;gap:14px;text-align:center}
+.final h2{margin:0;color:var(--blanco)}
+.final p{margin:0;color:#C9CFD9}
+footer{padding:26px 0 calc(16px + env(safe-area-inset-bottom));text-align:center;font-size:13px;color:var(--gris)}
+footer a{color:var(--suave);font-weight:600;text-decoration:none;margin:0 6px;display:inline-block;padding:10px 0}
+footer .links{margin-bottom:2px}
+
+@media (min-width:700px){
+  .hero .wrap{padding-block:48px 56px}
+  .tarjetas{grid-template-columns:1fr 1fr}
+  .duo{grid-template-columns:1fr 1fr;align-items:start}
+  .tec{grid-template-columns:1fr 1fr}
+  .pasos3{grid-template-columns:repeat(3,1fr)}
+  .pasos3 .paso3{grid-template-columns:1fr}
+  .grupos{grid-template-columns:1fr 1fr}
+  .recorrido{grid-template-columns:repeat(4,1fr)}
+  .ej{padding:22px}
+  .final .btn{width:auto;align-self:center;padding-inline:34px}
+}
+@media (prefers-reduced-motion:reduce){.btn,.copiar{transition:none}.btn:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+  <!-- Microsoft Clarity (crecia360) -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "zbo3ouocyq");
+  </script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.660-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.070 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.410.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26C2.16 6.46 6.6 2.03 12.06 2.03c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.440 9.88-9.890 9.88Zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.180-1.24-6.16-3.48-8.41Z"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="marca">Crecia360 · <b>Curso</b></div>
+    <h1>Cómo piensa la IA y cómo darle <em>instrucciones claras</em></h1>
+    <p class="bajada">Aprende con Valeria, una emprendedora, y su ayudante de cocina a escribir pedidos que la IA entienda a la primera. Teoría corta y ejercicios completos para copiar y pegar en Claude, de lo más simple a lo más completo.</p>
+    <p class="micro">Curso 1 · IA básica con Valeria · 6 módulos y 17 ejercicios</p>
+    <nav class="indice" aria-label="Índice del curso">
+      <p>Índice</p>
+      <ul>
+        <li><a href="#antes">Antes de empezar</a></li>
+        <li><a href="#modulo-1">Módulo 1</a></li>
+        <li><a href="#modulo-2">Módulo 2</a></li>
+        <li><a href="#modulo-3">Módulo 3</a></li>
+        <li><a href="#modulo-4">Módulo 4</a></li>
+        <li><a href="#modulo-5">Módulo 5</a></li>
+        <li><a href="#modulo-6">Módulo 6</a></li>
+        <li><a href="#cierre">Cierre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <!-- QUÉ LOGRARÁS -->
+    <section class="bloque" id="logras" aria-labelledby="t-logras">
+      <p class="etiqueta">Qué lograrás</p>
+      <h2 id="t-logras">Al terminar, sabrás pedirle bien a cualquier IA</h2>
+      <div class="tarjetas">
+        <div class="tarjeta"><h4>Resultado</h4><h3>Un prompt propio bien armado</h3><p>Terminas con un pedido real de tu trabajo, escrito con contexto, tarea y formato, probado en Claude.</p></div>
+        <div class="tarjeta"><h4>Para quién</h4><h3>Quien recién empieza con IA</h3><p>Si nunca has usado IA o solo chateas de vez en cuando, este curso es para ti.</p></div>
+        <div class="tarjeta"><h4>Cómo es</h4><h3>6 módulos y 17 ejercicios</h3><p>Cada idea viene con su ejercicio: un prompt completo para copiar, pegar en Claude y ver qué pasa.</p></div>
+        <div class="tarjeta"><h4>Qué necesitas</h4><h3>Claude abierto y tus notas</h3><p>Claude (claude.ai) en otra pestaña y un cuaderno o archivo de notas para anotar lo que descubras.</p></div>
+      </div>
+    </section>
+
+    <!-- ANTES DE EMPEZAR -->
+    <section class="bloque" id="antes" aria-labelledby="t-antes">
+      <p class="etiqueta">Antes de empezar</p>
+      <h2 id="t-antes">Prepara esto y conoce la regla del chat</h2>
+      <ul class="lista-check">
+        <li>Claude abierto en otra pestaña (claude.ai) o la IA que prefieras.</li>
+        <li>Un cuaderno o un archivo de notas para tus ejercicios.</li>
+        <li>Una tarea real de tu trabajo en la que quieras ahorrar tiempo.</li>
+        <li>Unos 15 minutos tranquilos por módulo.</li>
+      </ul>
+      <div class="recuadro">
+        <h3>La regla del chat</h3>
+        <p>Abre un chat nuevo para cada ejercicio. Así la respuesta depende solo de ese prompt.</p>
+        <p>Cuando el ejercicio diga “Mismo chat”, sigue en la misma conversación.</p>
+      </div>
+    </section>
+
+    <!-- EL HILO DEL CURSO -->
+    <section class="bloque" id="valeria" aria-labelledby="t-valeria">
+      <p class="etiqueta">El hilo del curso</p>
+      <h2 id="t-valeria">Conoce a Valeria y a su ayudante de cocina</h2>
+      <p class="lead">Valeria es una emprendedora con un negocio. Quiere automatizar sus tareas, pero primero entiende cómo piensa la IA. Para explicarlo usamos la cocina, que todos entendemos.</p>
+      <table class="tabla">
+        <thead><tr><th scope="col">En la cocina</th><th scope="col">En la IA</th></tr></thead>
+        <tbody>
+          <tr><td>Ingredientes</td><td>Lo que le entregas a la IA: datos, contexto, archivos</td></tr>
+          <tr><td>Receta</td><td>El prompt, es decir, tu instrucción</td></tr>
+          <tr><td>Cocina</td><td>Lo que hace la IA con tu prompt</td></tr>
+          <tr><td>Plato</td><td>La respuesta</td></tr>
+          <tr><td>Probar el plato</td><td>Revisar y verificar la respuesta</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- MÓDULO 1 -->
+    <section class="bloque" id="modulo-1" aria-labelledby="t-m1">
+      <p class="etiqueta">Módulo 1</p>
+      <h2 id="t-m1">La IA es tu ayudante, tú sigues decidiendo</h2>
+      <div class="tarjetas">
+        <div class="tarjeta"><h4>La escena</h4><p>Valeria tiene un negocio y hoy cuenta con un ayudante. Como en una cocina, cada uno tiene su parte: él redacta borradores, resume documentos, ordena datos y propone ideas. Ella decide qué se hace, da las indicaciones y revisa cada resultado antes de entregarlo.</p></div>
+        <div class="tarjeta"><h4>Lo que puede hacer por ti</h4>
+          <ul>
+            <li>Redactar correos, mensajes y avisos</li>
+            <li>Resumir un texto largo o una reunión</li>
+            <li>Explicar un tema en palabras simples</li>
+            <li>Organizar listas, planes y horarios</li>
+            <li>Proponer ideas y alternativas</li>
+            <li>Traducir o cambiar el tono de un texto</li>
+          </ul>
+        </div>
+      </div>
+      <p class="nota"><b>Para recordar:</b> la IA no reemplaza tu criterio, lo amplifica. Te quita lo repetitivo para que te quedes con lo que importa: decidir y probar el plato.</p>
+
+      <article class="ej" id="ejercicio-1" aria-labelledby="t-e1">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 1</span><span class="tag notas">En tus notas</span></div>
+        <h3 id="t-e1">Tus tareas para delegar</h3>
+        <p class="instr">Abre tus notas (o tu cuaderno) y responde por escrito. Todavía no necesitas Claude.</p>
+        <div class="pasos3" style="grid-template-columns:1fr">
+          <div class="paso3"><div class="num" aria-hidden="true">1</div><div><h3>Una pregunta</h3><p>¿Qué tarea quisieras eliminar hoy día? Escríbela tal como la vives.</p></div></div>
+          <div class="paso3"><div class="num" aria-hidden="true">2</div><div><h3>Tres tareas repetitivas</h3><p>Anota tres tareas de tu semana que le entregarías a un ayudante.</p></div></div>
+        </div>
+        <p class="en-notas"><b>Ejemplos para inspirarte:</b> responder los mismos mensajes de clientes por WhatsApp · ordenar una lista de pedidos o de gastos · resumir un correo largo o una reunión · armar el borrador de una cotización.</p>
+      </article>
+    </section>
+
+    <!-- MÓDULO 2 -->
+    <section class="bloque" id="modulo-2" aria-labelledby="t-m2">
+      <p class="etiqueta">Módulo 2</p>
+      <h2 id="t-m2">Cómo piensa la IA por dentro</h2>
+      <div class="tarjetas">
+        <div class="tarjeta"><h4>Cómo escribe</h4><h3>Palabra por palabra</h3>
+          <p>Cada palabra nueva depende de todas las anteriores: tu prompt y lo que ya escribió. A esto se le llama modelo autorregresivo.</p>
+          <p style="margin-top:8px"><b>Pedido vago:</b> hay muchas continuaciones posibles y elige una genérica. “Haz algo rico” puede ser cualquier plato.</p>
+          <p style="margin-top:8px"><b>Pedido claro:</b> quedan pocas continuaciones razonables y sale lo que esperabas.</p>
+        </div>
+        <div class="tarjeta"><h4>Por qué cambian las respuestas</h4><h3>Hay algo de azar</h3>
+          <p>La misma pregunta puede dar respuestas distintas, y eso no es un error. Es como pedir una ensalada de verduras: cada persona la prepara a su manera, con otras verduras, otro aliño y otros cortes. Si no dices cómo la quieres, cada una la hace como cree mejor.</p>
+          <p style="margin-top:8px"><b>Por eso la respuesta se prueba antes de servirla.</b></p>
+        </div>
+      </div>
+
+      <article class="ej" id="ejercicio-2" aria-labelledby="t-e2">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 2</span><span class="tag chat">Chat nuevo para cada prompt</span></div>
+        <h3 id="t-e2">Pide lo mismo de dos maneras</h3>
+        <p class="instr">Copia el prompt vago y pégalo en un chat nuevo de Claude. Luego copia el claro en otro chat nuevo. Compara las dos respuestas.</p>
+        <div class="duo">
+          <div class="prompt vago"><div class="prompt-cab"><span>Prompt vago</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Escribe un mensaje para mis clientes.</p></div>
+          <div class="prompt"><div class="prompt-cab"><span>Prompt claro</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Tengo un negocio pequeño y quiero avisar a mis clientes que desde el lunes también atendemos los sábados, de 9 de la mañana a 1 de la tarde. Escribe un mensaje de WhatsApp alegre, de máximo 40 palabras, con un emoji y una invitación a visitarnos.</p></div>
+        </div>
+        <div class="en-notas"><h4>En tus notas</h4><p>¿Qué tuvo que inventar la IA en el prompt vago? ¿Qué cambió con el claro?</p></div>
+      </article>
+    </section>
+
+    <!-- MÓDULO 3 -->
+    <section class="bloque" id="modulo-3" aria-labelledby="t-m3">
+      <p class="etiqueta">Módulo 3</p>
+      <h2 id="t-m3">Un buen prompt: contexto, tarea y formato</h2>
+      <p class="lead">Tu prompt es lo único que controlas. Úsalo con esta lista de control de tres partes: cuantas más incluyas, menos tiene que adivinar la IA.</p>
+      <div class="pasos3">
+        <div class="paso3"><div class="num" aria-hidden="true">1</div><div><h3>Contexto</h3><p>¿Quién soy y para quién es esto?</p><p><b>En la cocina:</b> para quién cocino y qué hay en la despensa.</p></div></div>
+        <div class="paso3"><div class="num" aria-hidden="true">2</div><div><h3>Tarea</h3><p>¿Qué quiero exactamente?</p><p><b>En la cocina:</b> el plato que quiero preparar.</p></div></div>
+        <div class="paso3"><div class="num" aria-hidden="true">3</div><div><h3>Formato</h3><p>¿Cómo lo quiero ver? Largo, tono y estructura.</p><p><b>En la cocina:</b> cómo se sirve, porción y presentación.</p></div></div>
+      </div>
+
+      <h3 class="tec-titulo">Antes y después, con una receta</h3>
+      <div class="tarjetas">
+        <div class="tarjeta"><h4>Vago</h4><p>“Prepara una ensalada.”</p></div>
+        <div class="tarjeta"><h4>Con el método</h4><p>“Cocino para ocho invitados y dos son vegetarianos (contexto). Prepara una ensalada de verduras como entrada (tarea). Que sea fresca, con aliño de limón, en porciones individuales y servida en platos pequeños (formato).”</p></div>
+      </div>
+      <p class="lead">Plantilla para copiar y completar cada vez que le pidas algo importante a la IA:</p>
+      <div class="prompt" id="plantilla"><div class="prompt-cab"><span>Plantilla</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Soy [tu rol o situación]. Necesito que [la tarea concreta]. Es para [quién lo va a leer o usar]. Que sea [tono, largo, estructura].</p></div>
+
+      <article class="ej" id="ejercicio-3" aria-labelledby="t-e3">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 3</span><span class="tag">Contexto, tarea y formato</span><span class="tag chat">Chat nuevo para cada prompt</span></div>
+        <h3 id="t-e3">Responder a un cliente interesado</h3>
+        <div class="duo">
+          <div class="prompt vago"><div class="prompt-cab"><span>Prompt vago</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Hazme un resumen de este correo: “Hola, vi su publicación en Instagram y me interesa su servicio para mi empresa, somos 12 personas. ¿Podrían enviarme más información, el precio y en cuánto tiempo podríamos empezar? Nos gustaría arrancar en marzo. Muchas gracias.”</p></div>
+          <div class="prompt"><div class="prompt-cab"><span>Prompt claro</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Tengo un negocio pequeño y un posible cliente me escribió este correo (contexto). Resúmelo en 3 puntos y dime qué información debo enviarle en mi respuesta (tarea). Usa viñetas y un tono directo (formato). Correo: “Hola, vi su publicación en Instagram y me interesa su servicio para mi empresa, somos 12 personas. ¿Podrían enviarme más información, el precio y en cuánto tiempo podríamos empezar? Nos gustaría arrancar en marzo. Muchas gracias.”</p></div>
+        </div>
+        <div class="en-notas"><h4>En tus notas</h4><p>¿Cuál de las dos respuestas te ayuda más a contestarle al cliente? ¿Por qué?</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-4" aria-labelledby="t-e4">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 4</span><span class="tag">Contexto, tarea y formato</span><span class="tag chat">Chat nuevo para cada prompt</span></div>
+        <h3 id="t-e4">Dar la bienvenida a un cliente nuevo</h3>
+        <div class="duo">
+          <div class="prompt vago"><div class="prompt-cab"><span>Prompt vago</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Escribe un mensaje de bienvenida para un cliente nuevo.</p></div>
+          <div class="prompt"><div class="prompt-cab"><span>Prompt claro</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Soy dueña de un negocio pequeño y hoy empieza a trabajar con nosotros un cliente nuevo, la empresa Andina Foods (contexto). Escribe un mensaje de bienvenida por WhatsApp que le agradezca su confianza, le presente a su persona de contacto, Lucía, y le explique que el primer paso es una reunión de 30 minutos esta semana (tarea). Que sea amable, profesional, de máximo 80 palabras y en tres párrafos cortos (formato).</p></div>
+        </div>
+        <div class="en-notas"><h4>Ahora con tu caso</h4><p>Usa la plantilla del módulo 3 y escribe un prompt así para una tarea real de tu trabajo.</p></div>
+      </article>
+    </section>
+
+    <!-- MÓDULO 4 -->
+    <section class="bloque" id="modulo-4" aria-labelledby="t-m4">
+      <p class="etiqueta">Módulo 4</p>
+      <h2 id="t-m4">Diez técnicas para pedir mejor</h2>
+      <p class="lead">Cada técnica reduce las opciones de la IA de una forma distinta. A continuación tienes una por tarjeta, con su idea de cocina y un ejercicio completo para pegar en Claude.</p>
+      <div class="grupos">
+        <div class="grupo"><b>1 a 3</b><span>Ve al grano · Delimitadores · Ejemplos</span></div>
+        <div class="grupo"><b>4 a 6</b><span>Público objetivo · Dividir tareas · Instrucciones en positivo</span></div>
+        <div class="grupo"><b>7 a 8</b><span>Asignar un rol · Que te pregunte</span></div>
+        <div class="grupo"><b>9 a 10</b><span>Paso a paso · Corregir sin cambiar el estilo</span></div>
+      </div>
+      <p class="nota">Por internet circulan trucos como ofrecerle propinas a la IA o amenazarla con castigos. No hacen falta y no son confiables: una buena receta funciona mejor.</p>
+
+      <article class="ej" id="ejercicio-5" aria-labelledby="t-e5">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 5</span><span class="tag">Técnica 1 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e5">Ve al grano: ideas para ahorrar tiempo en tu semana</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Pide lo que necesitas desde la primera línea, sin rodeos ni cortesías largas. Cuanto más directo es el pedido, menos se distrae la IA.</p></div><div><h4>En la cocina</h4><p>Pide el plato, sin rodeos.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Dame 7 ideas concretas para ahorrar tiempo en las tareas repetitivas de un negocio pequeño, como responder mensajes de clientes, preparar cotizaciones y organizar la agenda. Escribe cada idea en una sola línea y empieza por la que puedo aplicar hoy mismo.</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-6" aria-labelledby="t-e6">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 6</span><span class="tag">Técnica 2 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e6">Delimitadores: traducir un correo para un cliente</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Usa comillas triples, // o etiquetas para separar el texto con el que debe trabajar la IA de tus instrucciones. Así no confunde lo que debe hacer con lo que debe transformar.</p></div><div><h4>En la cocina</h4><p>Separa los ingredientes de la receta.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Traduce al inglés el texto que está entre comillas triples, con un tono profesional y amable. No traduzcas el nombre de la empresa. Texto: “““Hola Michael, gracias por la reunión de hoy. Como acordamos, te envío la propuesta de Andina Foods con las tres opciones de servicio. Quedo atenta a tus comentarios para coordinar la siguiente llamada.”””</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-7" aria-labelledby="t-e7">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 7</span><span class="tag">Técnica 3 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e7">Ejemplos: publicaciones para redes con tu estilo</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Muéstrale de 1 a 3 ejemplos del resultado que esperas. La IA imita el estilo, el largo y el tono de tus ejemplos.</p></div><div><h4>En la cocina</h4><p>Muestra una foto del plato que quieres.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Escribe 3 publicaciones cortas para redes sociales sobre los beneficios de organizarse mejor en un negocio pequeño. Sigue el mismo estilo de estos dos ejemplos. Ejemplo 1: “Antes dedicaba 5 horas a la semana a responder correos. Hoy son 40 minutos. ¿El secreto? Plantillas y un buen ayudante.” Ejemplo 2: “Ya no copio datos a mano. Ahora uso ese tiempo para hablar con mis clientes.” Cada publicación debe tener máximo 50 palabras y terminar con una pregunta para el lector.</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-8" aria-labelledby="t-e8">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 8</span><span class="tag">Técnica 4 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e8">Público objetivo: entender el flujo de caja</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Dile para quién es la respuesta. Cambian las palabras, los ejemplos y la profundidad de la explicación.</p></div><div><h4>En la cocina</h4><p>No se cocina igual para niños que para adultos.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Explícame qué es el flujo de caja como si nunca hubiera llevado las cuentas de un negocio. Usa un ejemplo sencillo de un negocio que vende 100 productos al mes, palabras simples y máximo 150 palabras. Termina con tres preguntas que debería hacerme cada mes para saber si mi flujo de caja va bien.</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-9" aria-labelledby="t-e9">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 9</span><span class="tag">Técnica 5 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e9">Dividir tareas: ordenar tus posibles clientes y escribirles</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Pide el trabajo en pasos numerados. Cada paso usa el resultado del anterior y el resultado final sale más ordenado.</p></div><div><h4>En la cocina</h4><p>Una receta paso a paso, no todo junto en la olla.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Te paso una lista de posibles clientes. Paso 1: ordénalos del más al menos prometedor según su interés, y explica en una línea por qué. Paso 2: para los 3 primeros, escribe un mensaje de seguimiento por WhatsApp, cálido y de máximo 40 palabras. Lista: 1) Rosa Pérez, pidió precios por Instagram. 2) Jorge Ruiz, descargó nuestra guía gratuita. 3) Marta Díaz, pidió una demostración. 4) Pedro Lima, sigue nuestra página. 5) Ana Torres, asistió a nuestra charla y dejó una pregunta.</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-10" aria-labelledby="t-e10">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 10</span><span class="tag">Técnica 6 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e10">Instrucciones en positivo: agradecer una primera compra</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Di lo que sí quieres en lugar de lo que no quieres. La IA sigue mejor una indicación clara que una prohibición.</p></div><div><h4>En la cocina</h4><p>Di qué sí quieres en el plato.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Escribe un mensaje de WhatsApp para agradecer a una clienta que hizo su primera compra en mi negocio. Usa un tono cálido y cercano, dile que estoy disponible para cualquier consulta y termina invitándola a seguirnos en Instagram. Que tenga máximo 50 palabras y un emoji.</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-11" aria-labelledby="t-e11">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 11</span><span class="tag">Técnica 7 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e11">Asignar un rol: plan para conseguir clientes nuevos</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Pídele que actúe como un experto. Responde con el enfoque, las prioridades y el vocabulario de ese rol.</p></div><div><h4>En la cocina</h4><p>Pedírselo a un chef especializado en ese tipo de cocina.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Actúa como un asesor comercial con experiencia en negocios pequeños de Latinoamérica. Tengo un negocio pequeño y quiero conseguir 5 clientes nuevos este mes. Prepárame un plan de 4 semanas en una tabla con: semana, acción concreta, canal (WhatsApp, correo, redes sociales o recomendaciones) y tiempo por día. Que todas las acciones se puedan hacer en menos de 1 hora diaria.</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-12" aria-labelledby="t-e12">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 12</span><span class="tag">Técnica 8 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e12">Que te pregunte: plan para lanzar un servicio</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Cuando no sabes qué datos darle, pídele que te pregunte primero, una pregunta a la vez. Así no inventa lo que le falta.</p></div><div><h4>En la cocina</h4><p>El buen cocinero pregunta por alergias antes de cocinar.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Quiero lanzar un servicio nuevo en mi negocio el próximo mes y necesito un plan de promoción sencillo. Antes de proponerme nada, hazme preguntas, una por una, sobre el servicio, mi cliente ideal, mi presupuesto y los canales que uso. Cuando tengas suficiente información, dame un plan de 4 semanas en una tabla con la acción, el canal y el mensaje principal de cada semana.</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-13" aria-labelledby="t-e13">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 13</span><span class="tag">Técnica 9 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e13">Paso a paso: calcular tu meta de ventas</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Para cálculos o razonamientos, pídele que piense paso a paso y muestre cada cálculo. Así puedes revisar dónde se equivoca.</p></div><div><h4>En la cocina</h4><p>Pedir que explique cada paso mientras cocina.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Piensa paso a paso. En octubre mi negocio vendió 120 unidades a S/ 45 cada una. Cada unidad me cuesta S/ 15 en materiales y mis gastos fijos del mes son S/ 1,800. Quiero ganar S/ 3,000 en noviembre con el mismo precio y los mismos costos. Calcula mi ganancia de octubre y cuántas unidades necesito vender en noviembre para llegar a la meta. Muestra cada cálculo en una línea y termina con dos ideas para vender esas unidades.</p></div>
+      </article>
+
+      <article class="ej" id="ejercicio-14" aria-labelledby="t-e14">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 14</span><span class="tag">Técnica 10 de 10</span><span class="tag chat">Chat nuevo</span></div>
+        <h3 id="t-e14">Corregir sin cambiar el estilo: pulir un anuncio para tus clientes</h3>
+        <div class="tec"><div><h4>Qué es</h4><p>Pide mejoras puntuales y que mantenga tu tono y tus ideas. Así el texto sigue sonando a ti.</p></div><div><h4>En la cocina</h4><p>Ajustar la sal sin cambiar la receta.</p></div></div>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Corrige la ortografía y la gramática de este texto manteniendo su tono cercano y entusiasta. No agregues ni quites ideas. Al final, dime en una lista qué cambiaste. Texto: “Hola a todos!! estamos felices de contarles que este mes cumplimos 3 años, gracias a ustedes que nos an acompañado desde el principio. por eso tenemos un regalo especial para cada cliente que nos visite esta semana, los esperamos con mucho cariño”</p></div>
+      </article>
+    </section>
+
+    <!-- MÓDULO 5 -->
+    <section class="bloque" id="modulo-5" aria-labelledby="t-m5">
+      <p class="etiqueta">Módulo 5</p>
+      <h2 id="t-m5">La primera respuesta casi nunca es perfecta: itera</h2>
+      <div class="tarjetas">
+        <div class="tarjeta"><h4>Tres formas de mejorarla</h4>
+          <ul>
+            <li><b>Pedir más:</b> “amplía el segundo punto”.</li>
+            <li><b>Dar feedback específico:</b> en vez de “no me gusta”, “hazlo más corto y menos formal”.</li>
+            <li><b>Redirigir:</b> “en realidad me refería a X, no a Y”.</li>
+          </ul>
+        </div>
+        <div class="tarjeta"><h4>Dale más ingredientes</h4>
+          <ul>
+            <li><b>Un archivo:</b> documento, nota, imagen u hoja de cálculo.</li>
+            <li><b>Un ejemplo:</b> pega cómo se ve un buen resultado.</li>
+            <li><b>Tus preferencias:</b> tono y cómo te gusta recibir las cosas.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="nota">Un prompt es el comienzo de una conversación, no una única oportunidad. Para decidir qué contar, pregúntate: <b>¿qué necesitaría saber un compañero nuevo para hacer bien esta tarea?</b></p>
+
+      <article class="ej" id="ejercicio-15" aria-labelledby="t-e15">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 15</span><span class="tag">Iterar</span><span class="tag mismo">Mismo chat</span></div>
+        <h3 id="t-e15">Mejora una propuesta en cuatro mensajes</h3>
+        <p class="instr">Abre un chat nuevo y pega el primer mensaje. Después, en el mismo chat, envía los otros tres, uno por uno, y mira cómo mejora.</p>
+        <div class="prompt"><div class="prompt-cab"><span>Mensaje 1 · Chat nuevo</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Tengo un negocio pequeño y una empresa de 50 personas me pidió una cotización de mis servicios. Escribe una propuesta breve con: un saludo, tres paquetes (básico, estándar y completo) con un precio por paquete entre S/ 1,500 y S/ 4,000, qué incluye cada uno y un cierre que invite a agendar una llamada. Máximo 200 palabras.</p></div>
+        <div class="prompt"><div class="prompt-cab"><span>Mensaje 2 · Pedir más</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Amplía el paquete estándar con un ejemplo de cómo trabajaríamos mes a mes.</p></div>
+        <div class="prompt"><div class="prompt-cab"><span>Mensaje 3 · Feedback específico</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Hazla un poco menos formal y agrega una línea sobre nuestra garantía de satisfacción.</p></div>
+        <div class="prompt"><div class="prompt-cab"><span>Mensaje 4 · Redirigir</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">En realidad la empresa tiene 80 personas, no 50. Ajusta la propuesta.</p></div>
+      </article>
+    </section>
+
+    <!-- MÓDULO 6 -->
+    <section class="bloque" id="modulo-6" aria-labelledby="t-m6">
+      <p class="etiqueta">Módulo 6</p>
+      <h2 id="t-m6">La IA puede sonar segura y estar equivocada</h2>
+      <p class="lead">A veces da una respuesta convincente pero incompleta, desactualizada o inventada. Eso se llama alucinación: la IA predice lo que suena bien, no consulta siempre una fuente verificada.</p>
+      <div class="recuadro">
+        <h3>Regla de oro</h3>
+        <p>Usa a la IA como espacio de trabajo, no como fuente de la verdad. Igual que Valeria prueba cada plato antes de servirlo, tú revisas la respuesta antes de usarla.</p>
+      </div>
+      <p class="nota"><b>Lo que viene:</b> en los siguientes cursos aprenderás a reducir las alucinaciones dándole contexto, tus propios archivos y proyectos con sus propias instrucciones.</p>
+
+      <h3 class="tec-titulo">Cuándo verificar y qué cuidar</h3>
+      <div class="tarjetas">
+        <div class="tarjeta"><h4>Verifica siempre</h4><p>Precios y cifras, fechas y plazos, leyes y normas, nombres poco comunes y datos de salud.</p></div>
+        <div class="tarjeta"><h4>Confía más</h4><p>Al redactar un mensaje, resumir algo que tú le diste, organizar ideas o explicar un concepto general.</p></div>
+        <div class="tarjeta"><h4>Sesgos</h4><p>Puedes pedir explícitamente respuestas imparciales y sin estereotipos.</p></div>
+        <div class="tarjeta"><h4>Privacidad</h4><p>No compartas contraseñas, números de tarjeta, documentos de identidad completos ni datos de otras personas sin su consentimiento. Sí puedes compartir textos propios, borradores, ideas y preguntas generales.</p></div>
+      </div>
+
+      <article class="ej" id="ejercicio-16" aria-labelledby="t-e16">
+        <div class="ej-cab"><span class="ej-num">Ejercicio 16</span><span class="tag notas">En tus notas</span></div>
+        <h3 id="t-e16">¿Confío o verifico?</h3>
+        <p>Clasifica en “confío, con una revisión rápida” o “verifico siempre”:</p>
+        <ol style="margin:0;padding-left:22px;font-size:15px">
+          <li>un mensaje de bienvenida para clientes nuevos,</li>
+          <li>el precio actual de un producto,</li>
+          <li>resumir un texto que tú le pasaste,</li>
+          <li>el plazo legal de un trámite,</li>
+          <li>ordenar tus tareas de la semana,</li>
+          <li>la dosis de un medicamento.</li>
+        </ol>
+        <details class="en-notas">
+          <summary style="cursor:pointer;font-weight:700;min-height:28px">Ver respuestas</summary>
+          <p style="margin-top:6px">Respuestas: confías con revisión en 1, 3 y 5; verificas siempre en 2, 4 y 6.</p>
+        </details>
+      </article>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="bloque" id="cierre" aria-labelledby="t-cierre">
+      <p class="etiqueta">Cierre</p>
+      <h2 id="t-cierre">Todo lo que haces con la IA es un IPS</h2>
+      <p class="lead">Ingreso, Proceso, Salida: la sigla que te llevas de este curso y que usarás en todo lo que viene.</p>
+      <div class="pasos3">
+        <div class="paso3"><div class="num" aria-hidden="true">I</div><div><h3>Ingreso</h3><p>Lo que le entregas: tu prompt, con contexto, tarea y formato.</p><p><b>En la cocina:</b> los ingredientes y la receta.</p></div></div>
+        <div class="paso3"><div class="num" aria-hidden="true">P</div><div><h3>Proceso</h3><p>Lo que hace la IA: escribe palabra por palabra y, ante un pedido vago, completa los huecos a su manera.</p><p><b>En la cocina:</b> lo que hace el ayudante.</p></div></div>
+        <div class="paso3"><div class="num" aria-hidden="true">S</div><div><h3>Salida</h3><p>Lo que recibes: la respuesta. Tú la pruebas: mejoras conversando y verificas lo importante.</p><p><b>En la cocina:</b> el plato.</p></div></div>
+      </div>
+      <p class="nota">La IA es como un ayudante de cocina: hace lo repetitivo, y tú decides y pruebas el plato.</p>
+
+      <h3 class="tec-titulo">Antes de seguir: cada chat nuevo empieza de cero</h3>
+      <div class="tarjetas">
+        <div class="tarjeta"><h4>Dentro de un chat</h4><h3>La IA recuerda la conversación</h3><p>Todo lo que le dijiste en ese chat sigue ahí. Por eso puedes pedirle “hazlo más corto” y sabe de qué hablas.</p></div>
+        <div class="tarjeta"><h4>En un chat nuevo</h4><h3>No recuerda lo que le dijiste en otro</h3><p>Empieza sin tu contexto. Por eso, en cada chat nuevo vuelves a darle tus instrucciones: quién eres, para quién es y cómo lo quieres.</p></div>
+      </div>
+      <div class="recuadro">
+        <h3>Es repetitivo a propósito</h3>
+        <p>Al principio repetir tu contexto te enseña a armar una buena receta. Después, en el curso de Claude, aprenderás a guardarlo en un proyecto o en una skill, con sus propias instrucciones, para no repetirlo cada vez.</p>
+      </div>
+
+      <article class="ej" id="ejercicio-17" aria-labelledby="t-e17">
+        <div class="ej-cab"><span class="ej-num">Ejercicio final · 17</span><span class="tag">Todas las técnicas</span><span class="tag chat">Chat nuevo</span><span class="tag mismo">Luego mismo chat</span></div>
+        <h3 id="t-e17">Un prompt que junta todo</h3>
+        <div class="prompt"><div class="prompt-cab"><span>Copia y pega en Claude</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Actúa como un consultor comercial para negocios pequeños (rol). Tengo un negocio pequeño y mañana me reúno con la gerente de una empresa de 40 personas que está interesada en contratarnos (contexto). Prepárame una guía para la reunión (tarea) con: 1) cinco preguntas para entender sus necesidades, 2) tres beneficios de mi servicio, uno por línea, 3) cómo presentar el precio de forma positiva y 4) un cierre para acordar el siguiente paso. Usa títulos, viñetas y un tono seguro y amable, en máximo una página (formato). Si te falta información importante, pregúntame antes de empezar (que te pregunte).</p></div>
+        <div class="despues"><h4>Después, en el mismo chat</h4>
+          <ul>
+            <li>Responde sus preguntas.</li>
+            <li>Mejora la guía en tres rondas: pide más, da feedback y redirige.</li>
+            <li>Verifica los datos que lo necesiten.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="ej" id="tu-turno" aria-labelledby="t-turno">
+        <div class="ej-cab"><span class="ej-num">Tu turno</span></div>
+        <h3 id="t-turno">Ahora escribe tu propio prompt</h3>
+        <ul class="lista-check">
+          <li>Elige una tarea real de tu trabajo.</li>
+          <li>Escribe el prompt con contexto, tarea y formato.</li>
+          <li>Pégalo en un chat nuevo de Claude y mejóralo en tres rondas.</li>
+          <li>Verifica los datos que lo necesiten.</li>
+          <li>Guárdalo en tus notas: lo usarás en el curso de Claude.</li>
+        </ul>
+        <div class="prompt"><div class="prompt-cab"><span>Tu plantilla</span><button type="button" class="copiar">Copiar</button></div><p class="prompt-txt">Soy [tu rol o situación]. Necesito que [la tarea concreta]. Es para [quién lo va a leer o usar]. Que sea [tono, largo, estructura].</p></div>
+      </article>
+    </section>
+
+    <!-- SIGUIENTE PASO -->
+    <section class="bloque" id="siguiente" aria-labelledby="t-sig">
+      <p class="etiqueta">Siguiente paso</p>
+      <h2 id="t-sig">Ya sabes darle una buena receta a la IA</h2>
+      <p class="lead">En el curso de Claude aprenderás a guardar tu contexto en proyectos y skills para no repetirlo. El camino sigue con procesos y con la automatización de las tareas de tu área para ahorrar tiempo y dinero.</p>
+      <ol class="recorrido">
+        <li class="aqui"><small>Estás aquí</small><b>IA básica</b><span>Cómo piensa la IA y cómo pedirle bien.</span></li>
+        <li><small>Sigue</small><b>Claude</b><span>Proyectos y skills con su propio contexto.</span></li>
+        <li><small>Luego</small><b>Procesos</b><span>Mapeas lo que haces hoy y cómo debería quedar.</span></li>
+        <li><small>Meta</small><b>Automatización</b><span>Skills, plugins o agentes que ahorran tiempo y dinero.</span></li>
+      </ol>
+    </section>
+
+    <!-- CONFIRMACIÓN -->
+    <section class="final" aria-labelledby="t-fin">
+      <h2 id="t-fin">¿Terminaste el curso?</h2>
+      <p>Avísame por WhatsApp y seguimos con el siguiente paso.</p>
+      <a class="btn" href="https://wa.me/51937597103?text=Hola%20Eduardo%2C%20confirmo%20que%20he%20terminado%20el%20curso%20IA%20b%C3%A1sico%20%28todo%20claro%29.%20Voy%20a%20continuar%2C%20muchas%20gracias." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Confirmar que terminé el curso</a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links"><a href="https://crecia360.com" target="_blank" rel="noopener noreferrer">crecia360.com</a><a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a><a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener noreferrer">Agenda tu cita</a></div>
+    Eduardo Hernández · Crecia360 · Curso 1 · IA básica con Valeria
+  </div>
+</footer>
+
+<div class="sr-only" aria-live="polite" id="aviso" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></div>
+<script>
+(function(){
+  var aviso=document.getElementById('aviso');
+  function copiarTexto(t){
+    if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t);}
+    return new Promise(function(ok,mal){
+      var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');
+      ta.style.position='fixed';ta.style.top='0';ta.style.left='0';ta.style.opacity='0';ta.style.fontSize='16px';
+      document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,t.length);
+      var r=false;try{r=document.execCommand('copy');}catch(e){}
+      document.body.removeChild(ta);r?ok():mal();
+    });
+  }
+  document.querySelectorAll('.copiar').forEach(function(b){
+    b.setAttribute('aria-label','Copiar prompt');
+    b.addEventListener('click',function(){
+      var txt=b.closest('.prompt').querySelector('.prompt-txt').textContent.trim();
+      copiarTexto(txt).then(function(){
+        b.textContent='¡Copiado!';b.classList.add('ok');aviso.textContent='Prompt copiado';
+        clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='Copiar';b.classList.remove('ok');aviso.textContent='';},2000);
+      },function(){b.textContent='Mantén presionado el texto';setTimeout(function(){b.textContent='Copiar';},2000);});
+    });
+  });
+})();
+</script>
+</body>
+</html>
