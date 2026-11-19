@@ -125,6 +125,18 @@ p{margin:0}
 .grupo span{font-size:15px}
 .tec-titulo{margin-top:6px}
 
+
+/* Encabezado de módulo */
+.mod{padding-top:8px;border-top:2px dashed #D9CFC7}
+.mod-cab{background:var(--noche);color:var(--blanco);border-radius:18px;padding:18px 16px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(10,22,40,.18)}
+.mod-cab:after{content:"";position:absolute;right:-60px;bottom:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(222,84,12,.3),transparent 70%)}
+.mod-num{width:64px;height:64px;border-radius:16px;background:var(--naranja);color:var(--blanco);display:grid;place-items:center;font-size:34px;font-weight:800;line-height:1}
+.mod-eti{margin:0 0 2px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja-claro)}
+.mod-cab h2{color:var(--blanco);position:relative;z-index:1}
+.mod-barra{margin-top:10px;height:6px;border-radius:99px;background:rgba(255,255,255,.14);overflow:hidden}
+.mod-barra i{display:block;height:100%;background:var(--naranja);border-radius:99px}
+@media (min-width:700px){.mod-cab{padding:22px 24px;gap:20px}.mod-num{width:76px;height:76px;font-size:40px}}
+
 /* Recorrido */
 .recorrido{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:10px}
 .recorrido li{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:14px 16px}
@@ -240,9 +252,8 @@ footer .links{margin-bottom:2px}
     </section>
 
     <!-- MÓDULO 1 -->
-    <section class="bloque" id="modulo-1" aria-labelledby="t-m1">
-      <p class="etiqueta">Módulo 1</p>
-      <h2 id="t-m1">La IA es tu ayudante, tú sigues decidiendo</h2>
+    <section class="bloque mod" id="modulo-1" aria-labelledby="t-m1">
+      <header class="mod-cab"><span class="mod-num" aria-hidden="true">1</span><div><p class="mod-eti">Módulo 1 de 6</p><h2 id="t-m1">La IA es tu ayudante, tú sigues decidiendo</h2><div class="mod-barra" aria-hidden="true"><i style="width:16%"></i></div></div></header>
       <div class="tarjetas">
         <div class="tarjeta"><h4>La escena</h4><p>Valeria tiene un negocio y hoy cuenta con un ayudante. Como en una cocina, cada uno tiene su parte: él redacta borradores, resume documentos, ordena datos y propone ideas. Ella decide qué se hace, da las indicaciones y revisa cada resultado antes de entregarlo.</p></div>
         <div class="tarjeta"><h4>Lo que puede hacer por ti</h4>
@@ -271,9 +282,8 @@ footer .links{margin-bottom:2px}
     </section>
 
     <!-- MÓDULO 2 -->
-    <section class="bloque" id="modulo-2" aria-labelledby="t-m2">
-      <p class="etiqueta">Módulo 2</p>
-      <h2 id="t-m2">Cómo piensa la IA por dentro</h2>
+    <section class="bloque mod" id="modulo-2" aria-labelledby="t-m2">
+      <header class="mod-cab"><span class="mod-num" aria-hidden="true">2</span><div><p class="mod-eti">Módulo 2 de 6</p><h2 id="t-m2">Cómo piensa la IA por dentro</h2><div class="mod-barra" aria-hidden="true"><i style="width:33%"></i></div></div></header>
       <div class="tarjetas">
         <div class="tarjeta"><h4>Cómo escribe</h4><h3>Palabra por palabra</h3>
           <p>Cada palabra nueva depende de todas las anteriores: tu prompt y lo que ya escribió. A esto se le llama modelo autorregresivo.</p>
@@ -299,9 +309,8 @@ footer .links{margin-bottom:2px}
     </section>
 
     <!-- MÓDULO 3 -->
-    <section class="bloque" id="modulo-3" aria-labelledby="t-m3">
-      <p class="etiqueta">Módulo 3</p>
-      <h2 id="t-m3">Un buen prompt: contexto, tarea y formato</h2>
+    <section class="bloque mod" id="modulo-3" aria-labelledby="t-m3">
+      <header class="mod-cab"><span class="mod-num" aria-hidden="true">3</span><div><p class="mod-eti">Módulo 3 de 6</p><h2 id="t-m3">Un buen prompt: contexto, tarea y formato</h2><div class="mod-barra" aria-hidden="true"><i style="width:50%"></i></div></div></header>
       <p class="lead">Tu prompt es lo único que controlas. Úsalo con esta lista de control de tres partes: cuantas más incluyas, menos tiene que adivinar la IA.</p>
       <div class="pasos3">
         <div class="paso3"><div class="num" aria-hidden="true">1</div><div><h3>Contexto</h3><p>¿Quién soy y para quién es esto?</p><p><b>En la cocina:</b> para quién cocino y qué hay en la despensa.</p></div></div>
@@ -339,9 +348,8 @@ footer .links{margin-bottom:2px}
     </section>
 
     <!-- MÓDULO 4 -->
-    <section class="bloque" id="modulo-4" aria-labelledby="t-m4">
-      <p class="etiqueta">Módulo 4</p>
-      <h2 id="t-m4">Diez técnicas para pedir mejor</h2>
+    <section class="bloque mod" id="modulo-4" aria-labelledby="t-m4">
+      <header class="mod-cab"><span class="mod-num" aria-hidden="true">4</span><div><p class="mod-eti">Módulo 4 de 6</p><h2 id="t-m4">Diez técnicas para pedir mejor</h2><div class="mod-barra" aria-hidden="true"><i style="width:66%"></i></div></div></header>
       <p class="lead">Cada técnica reduce las opciones de la IA de una forma distinta. A continuación tienes una por tarjeta, con su idea de cocina y un ejercicio completo para pegar en Claude.</p>
       <div class="grupos">
         <div class="grupo"><b>1 a 3</b><span>Ve al grano · Delimitadores · Ejemplos</span></div>
@@ -423,9 +431,8 @@ footer .links{margin-bottom:2px}
     </section>
 
     <!-- MÓDULO 5 -->
-    <section class="bloque" id="modulo-5" aria-labelledby="t-m5">
-      <p class="etiqueta">Módulo 5</p>
-      <h2 id="t-m5">La primera respuesta casi nunca es perfecta: itera</h2>
+    <section class="bloque mod" id="modulo-5" aria-labelledby="t-m5">
+      <header class="mod-cab"><span class="mod-num" aria-hidden="true">5</span><div><p class="mod-eti">Módulo 5 de 6</p><h2 id="t-m5">La primera respuesta casi nunca es perfecta: itera</h2><div class="mod-barra" aria-hidden="true"><i style="width:83%"></i></div></div></header>
       <div class="tarjetas">
         <div class="tarjeta"><h4>Tres formas de mejorarla</h4>
           <ul>
@@ -456,9 +463,8 @@ footer .links{margin-bottom:2px}
     </section>
 
     <!-- MÓDULO 6 -->
-    <section class="bloque" id="modulo-6" aria-labelledby="t-m6">
-      <p class="etiqueta">Módulo 6</p>
-      <h2 id="t-m6">La IA puede sonar segura y estar equivocada</h2>
+    <section class="bloque mod" id="modulo-6" aria-labelledby="t-m6">
+      <header class="mod-cab"><span class="mod-num" aria-hidden="true">6</span><div><p class="mod-eti">Módulo 6 de 6</p><h2 id="t-m6">La IA puede sonar segura y estar equivocada</h2><div class="mod-barra" aria-hidden="true"><i style="width:100%"></i></div></div></header>
       <p class="lead">A veces da una respuesta convincente pero incompleta, desactualizada o inventada. Eso se llama alucinación: la IA predice lo que suena bien, no consulta siempre una fuente verificada.</p>
       <div class="recuadro">
         <h3>Regla de oro</h3>
