@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Mini-curso gratuito: descarga 10 skills de ventas, súbelas a Claude, programa la skill 66 como tarea diaria y mide en un Excel cuánto tiempo te ahorra.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Skills de ventas con Claude · Mini-curso gratuito">
+<meta property="og:description" content="Mini-curso gratuito: descarga 10 skills de ventas, súbelas a Claude, programa la skill 66 como tarea diaria y mide en un Excel cuánto tiempo te ahorra.">
+<meta property="og:url" content="https://crecia360.com/curso-skills-grupo-ventas">
+<meta property="og:image" content="https://crecia360.com/assets/og-crecia360.jpg">
+<meta property="og:locale" content="es_PE">
+<link rel="canonical" href="https://crecia360.com/curso-skills-grupo-ventas">
+<link rel="icon" href="/favicon.ico">
+<title>Skills de ventas con Claude · Mini-curso gratuito · Crecia360</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--naranja:#DE540C;--naranja-claro:#FF7A3D;--naranja-h:#C44A0A;--noche:#0A1628;--medio:#1E2D45;--arena:#F5F0EC;--blanco:#fff;--borde:#E8E3DF;--gris:#8A8FA0;--texto:#1A1A2E;--suave:#4A4A5E;--wa:#25D366;--wa-h:#4BE083;--font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--arena);color:var(--texto);font-family:var(--font);font-size:16px;line-height:1.55;padding-bottom:84px}
+a{color:inherit}
+.wrap{max-width:680px;margin:0 auto;padding-inline:20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;font-family:var(--font);font-weight:700;font-size:17px;text-decoration:none;border-radius:14px;padding:15px 22px;transition:background .15s,transform .15s;text-align:center;line-height:1.25}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-drive{background:var(--naranja);color:var(--blanco);box-shadow:0 8px 22px rgba(222,84,12,.32)}
+.btn-drive:hover{background:var(--naranja-h)}
+.btn-wa{background:var(--wa);color:var(--noche);box-shadow:0 8px 22px rgba(37,211,102,.32)}
+.btn-wa:hover{background:var(--wa-h)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--naranja-claro);outline-offset:3px}
+
+.hero{background:var(--noche);color:var(--blanco);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(222,84,12,.35),transparent 70%)}
+.hero .wrap{position:relative;padding-block:30px 96px;display:flex;flex-direction:column;gap:14px}
+.marca{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C9CFD9}
+.marca b{color:var(--naranja-claro)}
+h1{margin:0;font-size:clamp(28px,7.8vw,42px);line-height:1.1;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--naranja)}
+.ver{font-size:.4em;font-weight:700;color:var(--naranja-claro);vertical-align:middle;border:1px solid var(--naranja);border-radius:999px;padding:2px 9px;margin-left:6px;letter-spacing:0;white-space:nowrap}
+.bajada{margin:0;color:#C9CFD9;font-size:17px;max-width:32em}
+
+.video{margin-top:-72px;position:relative;border-radius:16px;overflow:hidden;background:var(--medio);box-shadow:0 12px 30px rgba(10,22,40,.25);aspect-ratio:16/9;scroll-margin-top:16px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video .reservado{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#C9CFD9;padding:20px;font-size:14px}
+.video .reservado b{display:block;color:var(--blanco);font-size:16px;margin-bottom:4px}
+.video .play{width:56px;height:56px;border-radius:50%;background:var(--naranja);display:grid;place-items:center;margin:0 auto 10px}
+.video .play svg{width:22px;height:22px;fill:var(--blanco);margin-left:3px}
+
+.descarga{display:flex;flex-direction:column;gap:10px}
+.nota{margin:0;font-size:14px;color:var(--suave);text-align:center}
+.nota code{font-family:inherit;font-weight:700;color:var(--texto);background:var(--blanco);border:1px solid var(--borde);border-radius:6px;padding:1px 6px;white-space:nowrap}
+
+main .wrap{padding-block:22px 8px;display:flex;flex-direction:column;gap:38px}
+.etiqueta{margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+h2{margin:0 0 16px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+h3{margin:0 0 4px;font-size:17px;font-weight:700;line-height:1.3}
+
+.tarjetas{display:grid;grid-template-columns:1fr;gap:10px}
+.tarjeta{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px 18px}
+.tarjeta .ico{width:38px;height:38px;border-radius:10px;background:var(--noche);color:var(--naranja-claro);display:grid;place-items:center;margin-bottom:10px}
+.tarjeta .ico svg{width:20px;height:20px}
+.tarjeta p{margin:0;color:var(--suave);font-size:15px}
+
+.ruta{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.parte{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px 16px 16px 14px}
+.num{width:44px;height:44px;border-radius:50%;background:var(--naranja);color:var(--blanco);display:grid;place-items:center;font-weight:800;font-size:18px}
+.parte p{margin:0;color:var(--suave);font-size:15px}
+.tiempo{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:6px;padding:0 14px;border-radius:999px;background:var(--noche);color:var(--blanco);font-weight:700;font-size:14px;text-decoration:none}
+.tiempo:hover{background:var(--medio)}
+.tiempo svg{width:14px;height:14px;fill:var(--naranja-claro)}
+
+.tabla{width:100%;border-collapse:separate;border-spacing:0;background:var(--blanco);border:1px solid var(--borde);border-radius:14px;overflow:hidden;font-size:14px}
+.tabla th,.tabla td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--borde);vertical-align:top}
+.tabla tr:last-child td{border-bottom:0}
+.tabla thead th{background:var(--noche);color:var(--blanco);font-weight:600;font-size:13px}
+.tabla td:first-child{font-weight:700;width:26%}
+.tabla td:last-child{width:1%}
+.pill{display:inline-block;border-radius:999px;padding:2px 10px;font-weight:600;font-size:13px;white-space:nowrap}
+.pill.libre{background:#E6F7EC;color:#156B36}
+.pill.pago{background:#FDEBDF;color:#9A3A07}
+.pill.sin{background:#EEF0F4;color:var(--suave)}
+.aviso{margin:12px 0 0;background:var(--blanco);border-left:4px solid var(--naranja);border-radius:10px;padding:12px 14px;font-size:15px;color:var(--suave)}
+.aviso b{color:var(--texto)}
+
+.lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.lista li{display:grid;grid-template-columns:22px 1fr;gap:10px;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:12px 14px;font-size:15px}
+.lista li svg{width:20px;height:20px;fill:var(--naranja);margin-top:2px}
+
+.skills{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.skills li{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:center;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:10px 12px;font-weight:500;font-size:14px;line-height:1.3}
+.skills li span{width:38px;height:38px;border-radius:9px;background:var(--noche);color:var(--blanco);display:grid;place-items:center;font-weight:700;font-size:14px}
+.skills li.destacada{border-color:var(--naranja)}
+.skills li.destacada span{background:var(--naranja)}
+
+.final{background:var(--noche);color:var(--blanco);border-radius:20px;padding:28px 22px;display:flex;flex-direction:column;gap:14px;text-align:center}
+.final h2{margin:0;color:var(--blanco)}
+.final p{margin:0;color:#C9CFD9}
+.final .sep{height:1px;background:rgba(255,255,255,.12);margin:8px 0}
+.final .correo{color:var(--blanco);font-weight:700;text-decoration:underline;text-decoration-color:var(--naranja);text-underline-offset:4px;display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+footer{padding:26px 0 8px;text-align:center;font-size:13px;color:var(--gris)}
+footer a{color:var(--suave);font-weight:600;text-decoration:none;margin:0 6px;display:inline-block;padding:6px 0}
+footer .links{margin-bottom:6px}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:10;background:rgba(10,22,40,.96);backdrop-filter:blur(6px);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.barra .btn{max-width:600px;margin:0 auto;padding:13px 20px;font-size:16px}
+
+@media (min-width:700px){
+  .tarjetas{grid-template-columns:1fr 1fr}
+  .skills{grid-template-columns:1fr 1fr}
+  .hero .wrap{padding-block:48px 112px}
+  .barra{display:none}
+  body{padding-bottom:0}
+  .descarga .btn{width:auto;align-self:center;padding-inline:34px}
+  .final .btn{width:auto;align-self:center;padding-inline:34px}
+}
+@media (max-width:380px){.skills{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+  <!-- Microsoft Clarity (crecia360) -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "zbo3ouocyq");
+  </script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26C2.16 6.46 6.6 2.03 12.06 2.03c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.89 9.88Zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41Z"/></symbol>
+  <symbol id="drive" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1ZM5 19a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H5Z"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.74 8.65-8.64 1.4 1.4L9.55 17.6Z"/></symbol>
+  <symbol id="playi" viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5Z"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="marca">Crecia360 · <b>Mini-curso gratuito</b></div>
+    <h1>Skills de <em>ventas</em> con Claude: de la descarga a la tarea diaria <span class="ver">v1.3</span></h1>
+    <p class="bajada">En unos 13 minutos de video dejas listas tus 10 skills de ventas en Claude y programas una para que trabaje por ti cada día.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section aria-label="Video del curso">
+      <div class="video" id="video" data-video-id="WZkmMSLkFh0">
+        <div class="reservado"><div><div class="play" aria-hidden="true"><svg><use href="#playi"/></svg></div><b>Video del curso</b>Si no carga, míralo en <a href="https://youtu.be/WZkmMSLkFh0" target="_blank" rel="noopener noreferrer">YouTube</a>.</div></div>
+      </div>
+    </section>
+
+    <section class="descarga" aria-label="Descarga">
+      <a class="btn btn-drive" href="https://drive.google.com/drive/folders/16VfjahMDE5ffnY01d4zj1cp2eydBZltN?usp=sharing" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#drive"/></svg>Descargar las skills (Google Drive)</a>
+      <p class="nota">Descarga las carpetas <b>skills</b> y <b>procesos</b> y pégalas juntas en tu disco, en una carpeta <code>crecia360\ventas</code></p>
+    </section>
+
+    <section aria-labelledby="t-logras">
+      <p class="etiqueta">Qué lograrás</p>
+      <h2 id="t-logras">Una skill de ventas que trabaja por ti todos los días</h2>
+      <div class="tarjetas">
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 2.3 6.6 3.7L12 11.7 5.4 8 12 4.3ZM5 9.7l6 3.4v6.6l-6-3.3V9.7Zm8 10v-6.6l6-3.4v6.7l-6 3.3Z"/></svg></div><h3>Resultado</h3><p>Tus 10 skills dentro de Claude y la skill 66 convertida en una tarea que lee tus notas de reunión y deja el seguimiento listo.</p></div>
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm1-13h-2v6l5 3 1-1.7-4-2.3V7Z"/></svg></div><h3>Tiempo</h3><p>Unos 40 minutos en total si lo haces a la par del video, en 5 partes cortas. Puedes parar al final de cada una.</p></div>
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-6v2h3v2H7v-2h3v-2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v9h16V6H4Z"/></svg></div><h3>Necesitas</h3><p>El enlace de Drive del curso, una computadora con Windows y la app de escritorio de Claude.</p></div>
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2Z"/></svg></div><h3>Un tip</h3><p>El nombre de las carpetas no lleva versión. La versión va dentro de cada skill, así tus tareas programadas no se rompen cuando actualices.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="t-ruta">
+      <p class="etiqueta">La ruta</p>
+      <h2 id="t-ruta">5 partes, un solo círculo</h2>
+      <ol class="ruta">
+        <li class="parte"><div class="num" aria-hidden="true">1</div><div><h3>Descargar las skills desde Drive</h3><p>Bajas las carpetas skills y procesos en un solo zip y lo extraes en crecia360\ventas.</p><a class="tiempo" href="#video" data-t="0"><svg aria-hidden="true"><use href="#playi"/></svg>Ver desde 0:00</a></div></li>
+        <li class="parte"><div class="num" aria-hidden="true">2</div><div><h3>Subir las 10 skills a Claude</h3><p>En Plugins pulsas Agregar → Subir plugin y eliges los 10 zips, sin descomprimirlos.</p><a class="tiempo" href="#video" data-t="86"><svg aria-hidden="true"><use href="#playi"/></svg>Ver desde 1:26</a></div></li>
+        <li class="parte"><div class="num" aria-hidden="true">3</div><div><h3>Probar la skill 66 a mano</h3><p>Le das una nota de reunión y Claude entrega el resumen, los acuerdos y un borrador de correo de seguimiento.</p><a class="tiempo" href="#video" data-t="179"><svg aria-hidden="true"><use href="#playi"/></svg>Ver desde 2:59</a></div></li>
+        <li class="parte"><div class="num" aria-hidden="true">4</div><div><h3>Programar la skill 66 como tarea diaria</h3><p>Creas una tarea que corre sola cada día a las 6:00 a.m.: procesa tus notas y deja el seguimiento en salida.</p><a class="tiempo" href="#video" data-t="248"><svg aria-hidden="true"><use href="#playi"/></svg>Ver desde 4:08</a></div></li>
+        <li class="parte"><div class="num" aria-hidden="true">5</div><div><h3>Excel: cuánto ahorras y por qué la 66</h3><p>Pones tus datos en el Excel de ranking y ves cuánto tiempo y dinero te ahorra cada skill.</p><a class="tiempo" href="#video" data-t="506"><svg aria-hidden="true"><use href="#playi"/></svg>Ver desde 8:26</a></div></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="t-plan">
+      <p class="etiqueta">Antes de empezar</p>
+      <h2 id="t-plan">Qué plan de Claude necesitas</h2>
+      <table class="tabla">
+        <thead><tr><th scope="col">Parte</th><th scope="col">Qué haces</th><th scope="col">Plan</th></tr></thead>
+        <tbody>
+          <tr><td>1 · Descargar</td><td>Bajas las skills y los procesos desde Drive</td><td><span class="pill libre">Cualquiera</span></td></tr>
+          <tr><td>2 · Subir</td><td>Subes los 10 zips en Plugins</td><td><span class="pill libre">Cualquiera</span></td></tr>
+          <tr><td>3 · Probar</td><td>Usas la skill 66 con una nota de reunión</td><td><span class="pill libre">Cualquiera</span></td></tr>
+          <tr><td>4 · Programar</td><td>La 66 corre sola cada día a las 6:00 a.m.</td><td><span class="pill pago">De pago</span></td></tr>
+          <tr><td>5 · Excel</td><td>Calculas cuánto ahorras</td><td><span class="pill sin">No usa Claude</span></td></tr>
+        </tbody>
+      </table>
+      <p class="aviso">Las partes 1 a 3 funcionan con <b>cualquier plan</b>, incluido el gratuito. Solo la tarea programada de la parte 4 necesita un plan de pago (Pro, Max, Team o Enterprise). Si usas el plan gratuito, la skill 66 funciona igual: la lanzas tú cuando tengas una nota.</p>
+    </section>
+
+    <section aria-labelledby="t-drive">
+      <p class="etiqueta">La carpeta de Drive</p>
+      <h2 id="t-drive">Qué incluye</h2>
+      <ul class="lista">
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span><b>Las 10 skills</b> en zips, listas para subir a Claude.</span></li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span><b>Una carpeta por skill</b> con su PDF de guía, un ejemplo y las carpetas entrada, salida y procesados.</span></li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span><b>El Excel “skills de ventas ranking”</b> para medir cuánto te ahorra cada skill.</span></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="t-skills">
+      <p class="etiqueta">Las skills</p>
+      <h2 id="t-skills">Las 10 skills de ventas</h2>
+      <ul class="skills">
+        <li><span>52</span>Propuestas comerciales</li>
+        <li><span>53</span>Plan de cuenta corporativa</li>
+        <li><span>58</span>Resumen de deals</li>
+        <li class="destacada"><span>66</span>Notas y seguimiento</li>
+        <li><span>67</span>Preparación de reuniones</li>
+        <li><span>68</span>Preguntas de descubrimiento</li>
+        <li><span>69</span>Próximos pasos</li>
+        <li><span>70</span>Preparar reuniones comerciales</li>
+        <li><span>71</span>Resumir llamadas y reuniones</li>
+        <li><span>73</span>Guiones de llamadas</li>
+      </ul>
+    </section>
+
+    <section class="final" aria-labelledby="t-fin">
+      <h2 id="t-fin">¿Quieres aprender más?</h2>
+      <p>Únete a la lista de espera de Skool.</p>
+      <a class="btn btn-wa" href="https://chat.whatsapp.com/CCxrh966sgiK4ha515cBk6" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>Unirme a la lista de espera</a>
+      <div class="sep" aria-hidden="true"></div>
+      <p>¿Quieres implementarlo en tu empresa?</p>
+      <a class="correo" href="mailto:crecia360@gmail.com">Escríbeme</a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links"><a href="https://crecia360.com" target="_blank" rel="noopener noreferrer">crecia360.com</a><a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a><a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener noreferrer">Agenda tu cita</a></div>
+    Eduardo Hernández · Crecia360 · Mini-curso skills de ventas v1.3
+  </div>
+</footer>
+
+<div class="barra"><a class="btn btn-drive" href="https://drive.google.com/drive/folders/16VfjahMDE5ffnY01d4zj1cp2eydBZltN?usp=sharing" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#drive"/></svg>Descargar las skills</a></div>
+
+<script>
+(function(){
+  var box=document.getElementById('video');
+  var id=(box.getAttribute('data-video-id')||'').trim();
+  function cargar(t,auto){
+    if(!id) return;
+    var src='https://www.youtube-nocookie.com/embed/'+id+'?rel=0&start='+(t||0)+(auto?'&autoplay=1':'');
+    box.innerHTML='<iframe src="'+src+'" title="Video del mini-curso de skills de ventas con Claude" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+  }
+  cargar(0,false);
+  document.querySelectorAll('.tiempo').forEach(function(a){
+    a.addEventListener('click',function(){ cargar(parseInt(a.getAttribute('data-t'),10)||0,true); });
+  });
+})();
+</script>
+</body>
+</html>
