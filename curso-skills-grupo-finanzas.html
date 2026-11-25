@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Skills de finanzas con Claude — curso gratis | Crecia360</title>
+<meta name="description" content="Curso gratis: descarga 10 skills de finanzas, súbelas a Claude, prueba la skill 321 de variaciones del presupuesto, prográmala y mide tu ahorro.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Crecia360">
+<meta property="og:title" content="Skills de finanzas con Claude — curso gratis | Crecia360">
+<meta property="og:description" content="Curso gratis: descarga 10 skills de finanzas, súbelas a Claude, prueba la skill 321 de variaciones del presupuesto, prográmala y mide tu ahorro.">
+<meta property="og:url" content="https://crecia360.com/curso-skills-grupo-finanzas">
+<meta property="og:image" content="https://crecia360.com/assets/og-crecia360.jpg">
+<meta property="og:image:alt" content="Crecia360 · Consultoría e IA para empresas">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://crecia360.com/curso-skills-grupo-finanzas">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--naranja:#DE540C;--naranja-claro:#FF7A3D;--naranja-h:#C44A0A;--noche:#0A1628;--medio:#1E2D45;--arena:#F5F0EC;--blanco:#fff;--borde:#E8E3DF;--gris:#8A8FA0;--texto:#1A1A2E;--suave:#4A4A5E;--wa:#25D366;--wa-h:#4BE083;--font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--arena);color:var(--texto);font-family:var(--font);font-size:16px;line-height:1.55;padding-bottom:84px}
+a{color:inherit}
+.wrap{max-width:680px;margin:0 auto;padding-inline:20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;font-family:var(--font);font-weight:700;font-size:17px;text-decoration:none;border-radius:14px;padding:15px 22px;transition:background .15s,transform .15s;text-align:center;line-height:1.25}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-drive{background:var(--naranja);color:var(--blanco);box-shadow:0 8px 22px rgba(222,84,12,.32)}
+.btn-drive:hover{background:var(--naranja-h)}
+.btn-wa{background:var(--wa);color:var(--noche);box-shadow:0 8px 22px rgba(37,211,102,.32)}
+.btn-wa:hover{background:var(--wa-h)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--naranja-claro);outline-offset:3px}
+
+.hero{background:var(--noche);color:var(--blanco);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(222,84,12,.35),transparent 70%)}
+.hero .wrap{position:relative;padding-block:30px 96px;display:flex;flex-direction:column;gap:14px}
+.marca{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C9CFD9}
+.marca b{color:var(--naranja-claro)}
+h1{margin:0;font-size:clamp(28px,7.8vw,42px);line-height:1.1;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--naranja-claro)}
+.ver{font-size:.4em;font-weight:700;color:var(--naranja-claro);vertical-align:middle;border:1px solid var(--naranja);border-radius:999px;padding:2px 9px;margin-left:6px;letter-spacing:0;white-space:nowrap}
+.bajada{margin:0;color:#C9CFD9;font-size:17px;max-width:32em}
+
+.descarga{margin-top:-72px;position:relative;background:var(--blanco);border-radius:16px;box-shadow:0 12px 30px rgba(10,22,40,.18);padding:22px 20px;display:flex;flex-direction:column;gap:12px}
+.descarga .etiqueta{text-align:center;margin:0}
+.nota{margin:0;font-size:14px;color:var(--suave);text-align:center}
+.nota code{font-family:inherit;font-weight:700;color:var(--texto);background:var(--arena);border:1px solid var(--borde);border-radius:6px;padding:1px 6px;white-space:nowrap}
+.enlace{margin:0;font-size:13px;color:var(--suave);text-align:center;overflow-wrap:anywhere}
+.enlace a{color:var(--naranja-h);font-weight:600}
+
+main .wrap{padding-block:22px 8px;display:flex;flex-direction:column;gap:38px}
+.etiqueta{margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja-h)}
+h2{margin:0 0 16px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+h3{margin:0 0 4px;font-size:17px;font-weight:700;line-height:1.3}
+.intro{margin:-6px 0 16px;color:var(--suave);font-size:15px}
+
+.tarjetas{display:grid;grid-template-columns:1fr;gap:10px}
+.tarjeta{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px 18px}
+.tarjeta .ico{width:38px;height:38px;border-radius:10px;background:var(--noche);color:var(--naranja-claro);display:grid;place-items:center;margin-bottom:10px}
+.tarjeta .ico svg{width:20px;height:20px}
+.tarjeta p{margin:0;color:var(--suave);font-size:15px}
+
+.ruta{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.parte{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px 16px 16px 14px}
+.num{width:44px;height:44px;border-radius:50%;background:var(--naranja);color:var(--blanco);display:grid;place-items:center;font-weight:800;font-size:18px}
+.parte p{margin:0;color:var(--suave);font-size:15px}
+.parte-cuerpo{min-width:0}
+.detalle{margin:12px 0 0 -58px}
+.detalle summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1.5px solid var(--naranja);color:var(--naranja-h);border-radius:12px;font-weight:700;font-size:15px;padding:8px 14px}
+.detalle summary::-webkit-details-marker{display:none}
+.detalle summary:after{content:"";width:8px;height:8px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .15s}
+.detalle[open] summary:after{transform:rotate(-135deg) translateY(-2px)}
+.detalle summary:hover{background:#FDF1EA}
+.pasos-det{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.pp{background:var(--arena);border-radius:12px;padding:14px}
+.pp-cab{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:start;margin-bottom:6px}
+.pp-n{width:30px;height:30px;border-radius:8px;background:var(--noche);color:var(--blanco);display:grid;place-items:center;font-weight:700;font-size:14px}
+.pp h4{margin:4px 0 0;font-size:16px;font-weight:700;line-height:1.3}
+.pp-t{font-size:12px;font-weight:600;color:var(--suave);white-space:nowrap;margin-top:6px}
+.pp p{margin:0;font-size:15px;color:var(--texto);overflow-wrap:anywhere}
+.pp .ojo{margin-top:8px;background:#FDF1EA;border-left:3px solid var(--naranja);border-radius:8px;padding:8px 10px;font-size:14px;color:#7A2F06}
+.pp img{display:block;width:100%;height:auto;margin-top:10px;border-radius:10px;border:1px solid var(--borde);background:var(--blanco)}
+.mini3{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
+.mini3 div{background:var(--blanco);border:1px solid var(--borde);border-radius:10px;padding:10px 12px;font-size:14px;color:var(--suave)}
+.mini3 b{display:block;color:var(--texto);font-size:15px;margin-bottom:2px}
+.saber{margin-top:12px;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:14px}
+.saber h4{margin:0 0 4px;font-size:17px}
+.saber .mini3 div{background:var(--arena);border:0}
+.detalle>.aviso{margin-top:12px}
+
+.cifras{display:grid;grid-template-columns:1fr;gap:10px}
+.cifra{background:var(--noche);color:var(--blanco);border-radius:14px;padding:18px;display:grid;grid-template-columns:minmax(96px,auto) minmax(0,1fr);gap:14px;align-items:center}
+.cifra b{font-size:38px;font-weight:800;line-height:1;color:var(--naranja-claro)}
+.cifra span{font-size:14px;color:#C9CFD9;line-height:1.4}
+
+.check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.check li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:center;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:12px 14px;font-size:15px;font-weight:500}
+.check li span{width:26px;height:26px;border-radius:7px;border:2px solid var(--naranja)}
+
+.tabla{width:100%;border-collapse:separate;border-spacing:0;background:var(--blanco);border:1px solid var(--borde);border-radius:14px;overflow:hidden;font-size:14px}
+.tabla th,.tabla td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--borde);vertical-align:top}
+.tabla tr:last-child td{border-bottom:0}
+.tabla thead th{background:var(--noche);color:var(--blanco);font-weight:600;font-size:13px}
+.tabla td:first-child{font-weight:700}
+.tabla{table-layout:fixed}
+.tabla td{overflow-wrap:break-word}
+.tabla thead th:nth-child(1){width:27%}.tabla thead th:nth-child(2){width:45%}.tabla thead th:nth-child(3){width:28%}
+.tabla code{font-family:inherit;font-weight:600}
+@media (max-width:560px){
+  .tabla,.tabla tbody,.tabla tr,.tabla td{display:block;width:auto!important}
+  .tabla thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .tabla tr{padding:12px 14px;border-bottom:1px solid var(--borde)}
+  .tabla tr:last-child{border-bottom:0}
+  .tabla td{padding:0;border:0}
+  .tabla td:first-child{font-size:15px;color:var(--naranja-h)}
+  .tabla td:nth-child(2){margin:2px 0 8px;font-size:14px}
+}
+.pill{display:inline-block;border-radius:999px;padding:2px 10px;font-weight:600;font-size:13px}
+.pill.libre{background:#E6F7EC;color:#156B36}
+.pill.pago{background:#FDEBDF;color:#9A3A07}
+.pill.sin{background:#EEF0F4;color:var(--suave)}
+.aviso{margin:12px 0 0;background:var(--blanco);border-left:4px solid var(--naranja);border-radius:10px;padding:12px 14px;font-size:15px;color:var(--suave)}
+.aviso b{color:var(--texto)}
+
+.lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.lista li{display:grid;grid-template-columns:22px 1fr;gap:10px;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:12px 14px;font-size:15px}
+.lista li svg{width:20px;height:20px;fill:var(--naranja);margin-top:2px}
+.lista code{font-family:inherit;font-weight:700;color:var(--texto);background:var(--arena);border-radius:6px;padding:1px 6px}
+
+.skills{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.skills li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;align-items:start;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:12px 14px}
+.skills li>span{width:38px;height:38px;border-radius:9px;background:var(--noche);color:var(--blanco);display:grid;place-items:center;font-weight:700;font-size:15px}
+.skills code{display:block;font-family:inherit;font-weight:700;font-size:13px;color:var(--texto);overflow-wrap:anywhere;line-height:1.35}
+.skills p{margin:3px 0 0;font-size:14px;color:var(--suave);line-height:1.45}
+.skills li.destacada{border:2px solid var(--naranja)}
+.skills li.destacada>span{background:var(--naranja)}
+.skills .tag{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:#9A3A07;background:#FDEBDF;border-radius:999px;padding:1px 9px}
+
+.final{background:var(--noche);color:var(--blanco);border-radius:20px;padding:28px 22px;display:flex;flex-direction:column;gap:14px;text-align:center}
+.final h2{margin:0;color:var(--blanco)}
+.final p{margin:0;color:#C9CFD9}
+.final .sep{height:1px;background:rgba(255,255,255,.12);margin:8px 0}
+.final .contacto{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px}
+.final .correo{color:var(--blanco);font-weight:700;text-decoration:underline;text-decoration-color:var(--naranja);text-underline-offset:4px;display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+footer{padding:26px 0 8px;text-align:center;font-size:13px;color:#6B7080}
+footer a{color:var(--suave);font-weight:600;text-decoration:none;margin:0 6px;display:inline-block;padding:6px 0}
+footer .links{margin-bottom:6px}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:10;background:rgba(10,22,40,.96);backdrop-filter:blur(6px);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.barra .btn{max-width:600px;margin:0 auto;padding:13px 20px;font-size:16px}
+
+@media (min-width:700px){
+  .tarjetas{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .detalle{margin-left:0}
+  .mini3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cifras{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cifra{display:block;text-align:center}
+  .cifra span{display:block;margin-top:8px}
+  .hero .wrap{padding-block:48px 112px}
+  .barra{display:none}
+  body{padding-bottom:0}
+  .descarga .btn{width:auto;align-self:center;padding-inline:34px}
+  .final .btn{width:auto;align-self:center;padding-inline:34px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+  <!-- Microsoft Clarity (crecia360) -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "zbo3ouocyq");
+  </script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26C2.16 6.46 6.6 2.03 12.06 2.03c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.89 9.88Zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41Z"/></symbol>
+  <symbol id="drive" viewBox="0 0 24 24"><path fill="currentColor" d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2Z"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.74 8.65-8.64 1.4 1.4L9.55 17.6Z"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="marca">Crecia360 · <b>Curso gratuito</b></div>
+    <h1>Skills de finanzas con Claude: de la descarga a la <em>tarea diaria</em> <span class="ver">v1.1</span></h1>
+    <p class="bajada">Descarga las 10 skills, súbelas a Claude, prueba la skill 321 que explica las variaciones del presupuesto, prográmala para que corra sola y mide cuánto tiempo te ahorra.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="descarga" aria-labelledby="t-drive-btn">
+      <p class="etiqueta" id="t-drive-btn">Descarga los archivos del curso</p>
+      <a class="btn btn-drive" href="https://drive.google.com/drive/folders/1GJJXmChgdxJpx24LLa_PZ97HqNeLEttX?usp=sharing" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#drive"/></svg>Abrir carpeta en Google Drive →</a>
+      <p class="enlace">Si el botón no abre, copia este enlace en tu navegador:<br><a href="https://drive.google.com/drive/folders/1GJJXmChgdxJpx24LLa_PZ97HqNeLEttX?usp=sharing" target="_blank" rel="noopener">https://drive.google.com/drive/folders/1GJJXmChgdxJpx24LLa_PZ97HqNeLEttX?usp=sharing</a></p>
+      <p class="nota">Descarga las carpetas <b>skills</b> y <b>procesos</b> en tu disco, en una carpeta <code>crecia360\finanzas</code></p>
+    </section>
+
+    <section aria-labelledby="t-logras">
+      <p class="etiqueta">Qué lograrás</p>
+      <h2 id="t-logras">Una skill de finanzas que trabaja por ti todos los días</h2>
+      <div class="tarjetas">
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 2.3 6.6 3.7L12 11.7 5.4 8 12 4.3ZM5 9.7l6 3.4v6.6l-6-3.3V9.7Zm8 10v-6.6l6-3.4v6.7l-6 3.3Z"/></svg></div><h3>Resultado</h3><p>Tus 10 skills de finanzas en Claude y la skill 321 convertida en una tarea que lee tus cierres y deja lista la explicación de las variaciones para la gerencia.</p></div>
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm1-13h-2v6l5 3 1-1.7-4-2.3V7Z"/></svg></div><h3>Tiempo</h3><p>Unos 40 minutos en total, en 5 partes cortas. Puedes parar al final de cada una.</p></div>
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-6v2h3v2H7v-2h3v-2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v9h16V6H4Z"/></svg></div><h3>Necesitas</h3><p>El enlace de Drive, una computadora con Windows y la app de escritorio de Claude.</p></div>
+      </div>
+      <p class="aviso"><b>Tip:</b> el nombre de las carpetas no lleva versión. La versión va dentro de cada skill y de cada documento, así tus tareas programadas no se rompen cuando actualices.</p>
+    </section>
+
+    <section aria-labelledby="t-ruta">
+      <p class="etiqueta">La ruta</p>
+      <h2 id="t-ruta">5 partes, un solo círculo</h2>
+      <table class="tabla">
+        <thead><tr><th scope="col">Parte</th><th scope="col">Qué haces</th><th scope="col">Plan de Claude</th></tr></thead>
+        <tbody>
+          <tr><td>1 · Descargar</td><td>Bajas las carpetas skills y procesos desde Drive a <code>crecia360\<wbr>finanzas</code> y extraes el zip</td><td><span class="pill libre">Cualquiera</span></td></tr>
+          <tr><td>2 · Subir</td><td>Subes los 10 zips en Plugins → Agregar → Subir plugin, sin descomprimirlos</td><td><span class="pill libre">Cualquiera</span></td></tr>
+          <tr><td>3 · Probar a mano</td><td>Usas la skill 321 con un cierre de ejemplo de la carpeta entrada</td><td><span class="pill libre">Cualquiera</span></td></tr>
+          <tr><td>4 · Programar</td><td>Creas la tarea diaria de la 321: lee entrada, deja el análisis en salida y mueve el original a procesados</td><td><span class="pill pago">De pago (Pro o superior)</span></td></tr>
+          <tr><td>5 · Excel</td><td>Calculas cuánto ahorras y ves por qué empezamos por la 321</td><td><span class="pill sin">No usa Claude</span></td></tr>
+        </tbody>
+      </table>
+      <p class="aviso">Según el Centro de ayuda de Claude, las tareas programadas están en los planes de pago (Pro, Max, Ultra, Team y Enterprise). Si usas el plan gratuito, quédate con la Parte 3.</p>
+      <p class="aviso"><b>Ojo con la ruta:</b> las instrucciones de la tarea traen la ruta <b>D:\crecia360\finanzas</b>. Si descargaste en C: u otro disco, cambia la letra antes de pegarlas.</p>
+    </section>
+
+    <section aria-labelledby="t-pasos">
+      <p class="etiqueta">Paso a paso</p>
+      <h2 id="t-pasos">Sigue cada parte con sus capturas</h2>
+      <p class="intro">Abre los pasos de cada parte y síguelos uno a uno, con las capturas de pantalla.</p>
+      <ol class="ruta">
+        <li class="parte" id="parte-1"><div class="num" aria-hidden="true">1</div><div class="parte-cuerpo"><h3>Descargar las skills desde Drive</h3><p>Bajas las carpetas skills y procesos desde Drive a crecia360\finanzas y extraes el zip.</p>
+          <details class="detalle"><summary>Ver los 8 pasos</summary>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Selecciona las 2 carpetas</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre el enlace de Drive del curso (Mi unidad › crecia360 › finanzas) y selecciona <b>procesos</b> y <b>skills</b> juntas. Arriba verás «2 seleccionados».</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte1-paso1.webp" width="1100" height="336" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 1: las carpetas procesos y skills seleccionadas en Google Drive">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Descarga y espera el zip</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Pulsa el icono de descarga. Drive comprime las 2 carpetas en un solo zip. Espera a que el navegador muestre el archivo <b>drive-download-…-001.zip</b> como descargado.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte1-paso2.webp" width="1018" height="420" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 2: botón de descarga de Google Drive y el zip descargado">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Ubica el zip en Descargas</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre Descargas. El archivo se llama <b>drive-download-…-001.zip</b> (≈1 MB). Clic derecho y elige <b>Cortar</b>.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte1-paso3.webp" width="1100" height="861" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 3: el zip descargado en la carpeta Descargas y la opción Cortar">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Pégalo en tu carpeta finanzas</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Crea <b>crecia360\finanzas</b> en tu disco (C o D), entra y pega el zip: clic derecho en el espacio vacío → <b>Pegar</b>.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte1-paso4.webp" width="1000" height="760" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 4: el zip pegado dentro de la carpeta crecia360\finanzas">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Extrae el zip</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Clic derecho en el zip → <b>Extraer todo…</b>. Importante: borra el nombre del zip al final de la ruta y deja solo <b>D:\crecia360\finanzas\</b> (o C:\crecia360\finanzas\ si usas el disco C). Luego pulsa <b>Extraer</b>.</p>
+            <p class="ojo">Si lo olvidas, las carpetas quedan una capa más abajo y las rutas de la tarea programada fallarán.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte1-paso5.webp" width="800" height="650" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 5: ventana Extraer todo con la ruta D:\crecia360\finanzas">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">6</span><h4>Revisa el resultado</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Dentro de <b>finanzas</b> deben aparecer las carpetas <b>procesos</b> y <b>skills</b>. Ya puedes borrar el zip original.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte1-paso6.webp" width="1100" height="508" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 6: las carpetas procesos y skills dentro de finanzas">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">7</span><h4>Qué hay en procesos</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>10 carpetas, una por skill, y el Excel <b>skills-de-finanzas-ranking.xlsx</b>. Cada carpeta trae su entrada con 2 ejemplos, salida, procesados y su PDF guía.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte1-paso7.webp" width="1100" height="592" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 7: las 10 carpetas de procesos y el Excel de ranking">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">8</span><h4>Qué hay en skills</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Los 10 zips de las skills, listos para subirlos a Claude en la Parte 2.</p>
+            <p class="ojo">No los descomprimas.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte1-paso8.webp" width="1100" height="550" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 8: los 10 zips dentro de la carpeta skills">
+          </li>
+          </ol>
+          </details></div></li>
+
+        <li class="parte" id="parte-2"><div class="num" aria-hidden="true">2</div><div class="parte-cuerpo"><h3>Subir las 10 skills a Claude</h3><p>Subes los 10 zips en Plugins → Agregar → Subir plugin, sin descomprimirlos.</p>
+          <details class="detalle"><summary>Ver los 7 pasos</summary>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Entra a Plugins y pulsa Agregar</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En la barra lateral de Claude abre <b>Plugins</b>. Arriba a la derecha pulsa <b>Agregar</b> y elige <b>Subir plugin</b>.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte2-paso1.webp" width="1100" height="401" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 1: sección Plugins de Claude con el botón Agregar y la opción Subir plugin">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Abre el cuadro para subir</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Se abre <b>Subir un plugin</b>. Haz clic en el recuadro para buscar los archivos (también puedes arrastrarlos). Puedes agregar varios a la vez.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte2-paso2.webp" width="1100" height="450" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 2: cuadro Subir un plugin">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Elige los 10 zips</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Entra a <b>crecia360\finanzas\skills</b>, selecciona los 10 archivos .zip (Ctrl + A) y pulsa <b>Abrir</b>.</p>
+            <p class="ojo">Sube solo los zips. No los descomprimas.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte2-paso3.webp" width="1100" height="706" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 3: los 10 zips seleccionados en la carpeta skills">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Sube los 10 plugins</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Claude muestra <b>Archivos de plugin · 10</b>. Revisa que estén todos y pulsa <b>Subir 10 plugins</b>.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte2-paso4.webp" width="1100" height="685" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 4: lista de 10 archivos de plugin y el botón Subir 10 plugins">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Espera el aviso</h4><span class="pp-t">⏱ 1–2 min</span></div>
+            <p>Cada skill se sube una tras otra. Al terminar aparece: «Se agregaron 10 plugins y están listos para usar».</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte2-paso5.webp" width="1100" height="685" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 5: aviso de que se agregaron los 10 plugins">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">6</span><h4>Comprueba que están</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En el buscador de Plugins escribe <b>finanzas</b>. Verás tus 10 skills marcadas como <b>Nuevo</b>, de la 321 a la 330.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte2-paso6.webp" width="1100" height="682" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 6: búsqueda de finanzas en Plugins con las 10 skills marcadas como Nuevo">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">7</span><h4>Mira la versión</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre la <b>Skill finanzas 321</b>. Verás <b>Agregado</b> y la descripción empieza con <b>(v1.1)</b>: así sabes en qué versión estás. Si vuelves a subir una skill, se reemplaza.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte2-paso7.webp" width="1100" height="450" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 7: detalle de la skill 321 con la versión v1.1">
+          </li>
+          </ol>
+          </details></div></li>
+
+        <li class="parte" id="parte-3"><div class="num" aria-hidden="true">3</div><div class="parte-cuerpo"><h3>Probar la skill 321 a mano</h3><p>Usas la skill 321 con un cierre de ejemplo de la carpeta entrada y te devuelve la explicación de las variaciones.</p>
+          <details class="detalle"><summary>Ver los 8 pasos</summary>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Abre la carpeta de la skill 321</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>crecia360\finanzas\procesos</b> entra a <b>skill-finanzas-321-explicar-variaciones-presupuestarias</b>. Verás entrada, la carpeta analisis, las instrucciones de la tarea y el PDF guía.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte3-paso1.webp" width="1100" height="508" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 1: carpeta de la skill 321 con entrada, analisis, instrucciones y PDF guía">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Copia un cierre de ejemplo</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Dentro de <b>entrada</b> hay 2 cierres de ejemplo (.txt) con presupuesto, real y contexto. Clic derecho sobre uno → <b>Copiar</b>. Es el archivo que le darás a Claude.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte3-paso2.webp" width="1100" height="423" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 2: los 2 cierres de ejemplo en la carpeta entrada">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Abre un chat nuevo y escribe /321</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Crea un chat nuevo. Escribe <b>/321</b> y aparece la skill <b>skill-finanzas-321-explicar-variaciones-presupuestarias</b>. Selecciónala.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte3-paso3.webp" width="1100" height="300" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 3: la skill 321 al escribir /321 en un chat nuevo">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Adjunta el cierre y envía</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Pega el archivo en el chat (Ctrl + V). Debe verse el cierre adjunto y, al lado, la skill. Añade «por favor analiza estas variaciones» y pulsa enviar.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte3-paso4.webp" width="1050" height="500" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 4: el cierre adjunto en el chat junto a la skill 321">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Lee la tabla de variaciones</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Claude carga la skill y entrega la tabla por partida: presupuesto, real, diferencia, %, si es favorable o desfavorable y si supera el umbral de materialidad.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte3-paso5.webp" width="1100" height="584" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 5: tabla de variaciones por partida">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">6</span><h4>Revisa las partidas materiales</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Para cada partida importante explica causa, efecto y si es permanente o de calendario. Donde el archivo no trae la causa, escribe «causa por confirmar».</p>
+            <p class="ojo">Claude no inventa motivos: lo que no está en tus datos queda marcado para que lo confirmes con el área.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte3-paso6.webp" width="1100" height="668" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 6: explicación de las partidas materiales">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">7</span><h4>Usa el resumen y las acciones</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Cierra con 3 mensajes para la gerencia y las acciones para corregir o ajustar el pronóstico. Puedes pedirle que lo arme como documento.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte3-paso7.webp" width="1100" height="643" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 7: resumen para la gerencia y acciones propuestas">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">8</span><h4>Guarda y archiva</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Para dejar la carpeta ordenada, repite esto con cada cierre. Es lo mismo que luego hará la tarea programada sola.</p>
+            <div class="mini3">
+              <div><b>1 · Guarda en salida</b>Pega el resultado en un archivo dentro de salida. Nombre: el del archivo + -variaciones-AAAA-MM-DD.</div>
+              <div><b>2 · Mueve el original</b>Pasa el cierre de entrada a procesados. Así entrada queda vacía y no se repite.</div>
+              <div><b>3 · Confirma y comparte</b>Completa las «causas por confirmar» con cada área y comparte la lectura con la gerencia.</div>
+            </div>
+          </li>
+          </ol>
+          <p class="aviso">Con esto ya usas la skill 321 en el plan gratuito. Si quieres que corra sola, sigue con la Parte 4.</p>
+          </details></div></li>
+
+        <li class="parte" id="parte-4"><div class="num" aria-hidden="true">4</div><div class="parte-cuerpo"><h3>Programar la skill 321 como tarea diaria</h3><p>Creas la tarea diaria de la 321: lee entrada, deja el análisis en salida y mueve el original a procesados.</p>
+          <details class="detalle"><summary>Ver los 15 pasos</summary>
+          <div class="saber" style="margin-top:14px"><p class="etiqueta">Para saber</p><h4>Cómo funciona cada día</h4>
+            <div class="mini3">
+              <div><b>Dónde corre</b>En tu computadora, porque activaste Requerir esta computadora. Debe estar encendida y con la app de Claude abierta a la hora de la tarea.</div>
+              <div><b>Qué haces tú</b>Dejas el cierre del mes o trimestre (.txt, .docx, .xlsx o .pdf con presupuesto, real y contexto) en entrada. Nada más.</div>
+              <div><b>Qué hace Claude</b>Aplica la skill 321 a cada archivo, guarda el análisis en salida, mueve el original a procesados y no envía nada por ti.</div>
+            </div>
+            <p class="aviso"><b>Plan de pago:</b> según el Centro de ayuda de Claude, las tareas programadas están en los planes Pro, Max, Ultra, Team y Enterprise. En el plan gratuito sigue con la Parte 3 cada vez que tengas un cierre.</p>
+          </div>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Abre las instrucciones de la tarea</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En la carpeta de la skill 321 abre <b>skill-finanzas-321-explicar-variaciones-presupuestarias-instrucciones-tarea-programada-v-1.1.txt</b>. Arriba explica cómo crear la tarea; abajo están las instrucciones.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso1.webp" width="1100" height="580" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 1: archivo de instrucciones de la tarea programada">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Copia desde INSTRUCCIONES</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Selecciona todo el texto desde la palabra <b>INSTRUCCIONES</b> hasta el final y cópialo (Ctrl + C).</p>
+            <p class="ojo">Ojo con la ruta: las instrucciones traen D:\crecia360\finanzas. Si descargaste la carpeta en el disco C (u otro), antes de pegarlas cambia la D: por tu letra, por ejemplo C:\crecia360\finanzas.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso2.webp" width="1100" height="580" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 2: el texto seleccionado desde INSTRUCCIONES">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Programadas → Nueva tarea</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En la barra lateral abre <b>Programadas</b>. Arriba a la derecha pulsa <b>Nueva tarea</b>. Se abre <b>Nueva tarea programada</b>.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso3.webp" width="1100" height="402" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 3: sección Programadas con el botón Nueva tarea">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Ponle nombre y pega las instrucciones</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>En <b>Nombre</b> escribe <b>tarea-finanzas-crecia360-explicar-variaciones-presupuestarias</b>. En <b>Instrucciones</b> pega el texto (Ctrl + V).</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso4.webp" width="960" height="950" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 4: campos Nombre e Instrucciones de la nueva tarea">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Elige Diario y la hora</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>Activador</b> deja Programación, elige <b>Diario</b> y la hora. El txt sugiere 6:00 a. m.; en el ejemplo se usó 11:00. Luego abre <b>Configuración avanzada</b>.</p>
+            <p class="ojo">Claude avisa que las tareas a la hora en punto pueden empezar unos minutos tarde.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso5.webp" width="960" height="950" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 5: activador diario con la hora elegida">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">6</span><h4>Activa Requerir esta computadora</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>Configuración avanzada</b> activa <b>Requerir esta computadora</b>: la tarea necesita tus carpetas, así que corre en tu PC.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso6.webp" width="960" height="950" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 6: opción Requerir esta computadora activada">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">7</span><h4>Elige la carpeta entrada</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>Carpeta local</b> pulsa el botón, entra a la carpeta de la skill 321, elige <b>entrada</b> y pulsa <b>Seleccionar carpeta</b>.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso7.webp" width="1100" height="715" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 7: selección de la carpeta entrada de la skill 321">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">8</span><h4>Permite modificar archivos en entrada</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Claude pregunta «¿Permitir que Claude modifique archivos en entrada?». Pulsa <b>Permitir siempre</b>: la tarea tiene que mover los cierres ya procesados.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso8.webp" width="1000" height="550" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 8: aviso para permitir que Claude modifique archivos en entrada">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">9</span><h4>Crea la tarea y permite el acceso</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Pulsa <b>Crear</b>. Aparece «Allow the scheduled task … to access this folder on every run?». Pulsa <b>Allow</b>.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso9.webp" width="1000" height="650" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 9: aviso para autorizar el acceso a la carpeta en cada ejecución">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">10</span><h4>La tarea ya existe</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Aparece el aviso «tarea-finanzas-crecia360-explicar-variaciones-presupuestarias creada» y la tarjeta nueva en Tareas programadas, con la marca <b>Nuevo</b>.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso10.webp" width="1100" height="677" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 10: la tarea creada en Tareas programadas">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">11</span><h4>Pruébala con Ejecutar ahora</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre la tarea. Verás la próxima ejecución, la carpeta y la frecuencia. Para probarla hoy, pulsa <b>Ejecutar ahora</b>.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso11.webp" width="1100" height="495" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 11: detalle de la tarea con el botón Ejecutar ahora">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">12</span><h4>Permite la carpeta de trabajo</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Para escribir en salida y mover a procesados, Claude pide acceso a la carpeta completa de la skill. Lee el motivo y pulsa <b>Allow</b>.</p>
+            <p class="ojo">Solo entrada estaba conectada. La carpeta de trabajo se autoriza aquí, una vez. En una ejecución sin nadie delante, Claude puede quedarse esperando este permiso: apruébalo al abrir la app.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso12.webp" width="1000" height="650" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 12: aviso para autorizar la carpeta de trabajo de la skill">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">13</span><h4>Lee el resultado</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Claude resume: «Procesé 2 archivos de entrada y los dos análisis están en la subcarpeta salida», nombra los 2 archivos y lista los puntos pendientes que debes confirmar.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso13.webp" width="1080" height="840" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 13: resumen de Claude tras ejecutar la tarea">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">14</span><h4>Confirma salida y procesados</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre la carpeta de la skill: ahí están <b>salida</b> con los 2 análisis y <b>procesados</b> con los cierres originales.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso14.webp" width="1100" height="388" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 14: las carpetas salida y procesados con sus archivos">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">15</span><h4>Entrada quedó vacía</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>La carpeta <b>entrada</b> quedó vacía y lista para el próximo cierre. Mañana la tarea correrá sola a la hora que elegiste.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte4-paso15.webp" width="1100" height="388" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 15: la carpeta entrada vacía">
+          </li>
+          </ol>
+          </details></div></li>
+
+        <li class="parte" id="parte-5"><div class="num" aria-hidden="true">5</div><div class="parte-cuerpo"><h3>Excel: cuánto ahorras y por qué la 321</h3><p>Completas tus datos en skills-de-finanzas-ranking.xlsx y ves el ranking y cuánto te ahorra cada skill.</p>
+          <details class="detalle"><summary>Ver los 5 pasos</summary>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Abre el Excel y completa tus datos</h4><span class="pp-t">⏱ 3 min</span></div>
+            <p>En <b>procesos</b> abre <b>skills-de-finanzas-ranking.xlsx</b>. En <b>Datos de la persona</b> cambia solo las celdas amarillas: sueldo mensual, días y horas de trabajo, y el costo de Claude.</p>
+            <p class="ojo">Con estos datos el Excel calcula tu costo por hora (en el ejemplo, con un sueldo de US$4,000: US$18.18).</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte5-paso1.webp" width="1100" height="592" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 1: el Excel de ranking con las celdas amarillas de Datos de la persona">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Entiende los criterios</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>En la hoja <b>Criterios</b> ves qué significa cada puntaje de 1 a 5: frecuencia de uso, tiempo ahorrado, facilidad del input y calidad del resultado.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte5-paso2.webp" width="1100" height="528" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 2: hoja Criterios con el significado de cada puntaje">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Pon tus puntajes</h4><span class="pp-t">⏱ 3 min</span></div>
+            <p>En <b>Ranking y ahorro</b> pon tus puntajes, cuántas veces usas cada skill al mes y los minutos a mano y con Claude. El tiempo ahorrado y la puntuación se calculan solos.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte5-paso3.webp" width="1100" height="381" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 3: tabla de puntajes, usos al mes y minutos de las 10 skills">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Mira el ranking</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Más abajo, <b>Ranking de máximo a mínimo</b> se reordena solo. Las 3 primeras salen resaltadas. En el ejemplo, la skill 321 queda en el puesto 1.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte5-paso4.webp" width="1100" height="209" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 4: ranking de las skills de máximo a mínimo">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Lee el resumen del ahorro</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p><b>Resumen del ahorro</b> compara las 3 primeras skills con las 10: horas ahorradas, ahorro neto al mes y al año, y qué parte de tu sueldo representa.</p>
+            <img src="/assets/curso-skills-grupo-finanzas/parte5-paso5.webp" width="1100" height="372" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 5: resumen del ahorro mensual y anual">
+          </li>
+          </ol>
+          </details></div></li>
+
+      </ol>
+    </section>
+
+    <section aria-labelledby="t-drive">
+      <p class="etiqueta">La carpeta de Drive</p>
+      <h2 id="t-drive">Qué incluye</h2>
+      <ul class="lista">
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span><code>skills</code>: los 10 zips de las skills, para subir a Claude (no se descomprimen).</span></li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span><code>procesos</code>: una carpeta por skill (entrada con 2 ejemplos, salida, procesados y su PDF guía) y el Excel <code>skills-de-finanzas-ranking.xlsx</code>.</span></li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span>En la carpeta de la skill 321: las instrucciones de la tarea programada y el análisis AS-IS / TO-BE.</span></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="t-skills">
+      <p class="etiqueta">El pack</p>
+      <h2 id="t-skills">Las 10 skills de finanzas</h2>
+      <p class="intro">El curso programa solo la skill 321. Las otras 9 las usas a mano en un chat, igual que en la Parte 3.</p>
+      <ul class="skills">
+        <li class="destacada"><span>321</span><div><code>skill-finanzas-321-explicar-variaciones-presupuestarias</code><p>Explicar variaciones presupuestarias.</p><span class="tag">La que programas en el curso</span></div></li>
+        <li><span>322</span><div><code>skill-finanzas-322-preparar-plantilla-supuestos-presupuesto</code><p>Preparar plantilla de supuestos del presupuesto.</p></div></li>
+        <li><span>323</span><div><code>skill-finanzas-323-consolidar-presupuestos-varias-areas</code><p>Consolidar presupuestos de varias áreas.</p></div></li>
+        <li><span>324</span><div><code>skill-finanzas-324-modelado-y-escenarios</code><p>Modelado y escenarios.</p></div></li>
+        <li><span>325</span><div><code>skill-finanzas-325-elaborar-proyeccion-ingresos-gastos</code><p>Elaborar proyección de ingresos y gastos.</p></div></li>
+        <li><span>326</span><div><code>skill-finanzas-326-calcular-comentar-kpis-gestion-area</code><p>Calcular y comentar KPIs de gestión.</p></div></li>
+        <li><span>327</span><div><code>skill-finanzas-327-explicar-desviaciones-entre-real-meta</code><p>Explicar desviaciones entre real y meta.</p></div></li>
+        <li><span>328</span><div><code>skill-finanzas-328-resumir-condiciones-prestamos-covenants</code><p>Resumir condiciones de préstamos y covenants.</p></div></li>
+        <li><span>329</span><div><code>skill-finanzas-329-calendarizar-vencimientos-pagos-deuda</code><p>Calendarizar vencimientos y pagos de deuda.</p></div></li>
+        <li><span>330</span><div><code>skill-finanzas-330-comparar-propuestas-credito-tasas</code><p>Comparar propuestas de crédito y tasas.</p></div></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="t-por-que">
+      <p class="etiqueta">Por qué la 321</p>
+      <h2 id="t-por-que">Empezamos por la skill 321</h2>
+      <div class="cifras">
+        <div class="cifra"><b>1.º</b><span>en el ranking del ejemplo, con 18 de 20 puntos de puntuación.</span></div>
+        <div class="cifra"><b>4,7 h</b><span>ahorradas al mes en el ejemplo: 4 cierres de 90 minutos que pasan a 20.</span></div>
+        <div class="cifra"><b>US$85</b><span>de ahorro mensual estimado en el ejemplo, con un costo por hora de US$18.18.</span></div>
+      </div>
+      <p class="aviso"><b>Son cifras de ejemplo</b> del Excel del curso. Además, la 321 es la más fácil de automatizar: la entrada es un solo archivo con presupuesto, real y contexto, y el resultado se revisa en minutos. Cambia tus datos en el Excel y mira si tu primera skill también es la 321.</p>
+    </section>
+
+    <section aria-labelledby="t-check">
+      <p class="etiqueta">Checklist final</p>
+      <h2 id="t-check">Tu círculo, completo</h2>
+      <ul class="check">
+        <li><span aria-hidden="true"></span>Tengo crecia360\finanzas con las carpetas skills y procesos</li>
+        <li><span aria-hidden="true"></span>Subí los 10 zips y los veo en Plugins con la versión (v1.1)</li>
+        <li><span aria-hidden="true"></span>Probé la skill 321 a mano con un cierre de ejemplo</li>
+        <li><span aria-hidden="true"></span>Creé la tarea diaria y la probé con Ejecutar ahora</li>
+        <li><span aria-hidden="true"></span>Abrí el Excel y entendí mi ahorro</li>
+      </ul>
+    </section>
+
+    <section class="final" aria-labelledby="t-fin">
+      <h2 id="t-fin">Siguiente paso</h2>
+      <p>Si deseas aprender más, únete a la lista de espera de Skool.</p>
+      <a class="btn btn-wa" href="https://chat.whatsapp.com/CCxrh966sgiK4ha515cBk6" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Únete a la lista de espera de Skool →</a>
+      <div class="sep" aria-hidden="true"></div>
+      <p>Y si deseas implementarlo en tu empresa, escríbeme.</p>
+      <div class="contacto">
+        <a class="correo" href="mailto:crecia360@gmail.com">crecia360@gmail.com</a>
+        <a class="correo" href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener">Agenda tu cita</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links"><a href="https://crecia360.com" target="_blank" rel="noopener">crecia360.com</a><a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a><a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener">Agenda tu cita</a></div>
+    Eduardo Hernández · Crecia360 · Skills de finanzas v1.1 · Curso v1.0
+  </div>
+</footer>
+
+<div class="barra"><a class="btn btn-drive" href="https://drive.google.com/drive/folders/1GJJXmChgdxJpx24LLa_PZ97HqNeLEttX?usp=sharing" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#drive"/></svg>Abrir carpeta en Google Drive →</a></div>
+</body>
+</html>
