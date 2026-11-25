@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Curso gratis: skills de negocios con Claude | Crecia360</title>
+<meta name="description" content="Curso gratis: descarga 10 skills de negocios, súbelas a Claude, prueba la skill 77 de correos de prospección, prográmala y mide cuánto tiempo te ahorra.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Crecia360">
+<meta property="og:title" content="Curso gratis: skills de negocios con Claude | Crecia360">
+<meta property="og:description" content="Curso gratis: descarga 10 skills de negocios, súbelas a Claude, prueba la skill 77 de correos de prospección, prográmala y mide cuánto tiempo te ahorra.">
+<meta property="og:url" content="https://crecia360.com/curso-skills-grupo-negocios">
+<meta property="og:image" content="https://crecia360.com/assets/og-crecia360.jpg">
+<meta property="og:image:alt" content="Crecia360 · Consultoría e IA para empresas">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://crecia360.com/curso-skills-grupo-negocios">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--naranja:#DE540C;--naranja-claro:#FF7A3D;--naranja-h:#C44A0A;--noche:#0A1628;--medio:#1E2D45;--arena:#F5F0EC;--blanco:#fff;--borde:#E8E3DF;--gris:#8A8FA0;--texto:#1A1A2E;--suave:#4A4A5E;--wa:#25D366;--wa-h:#4BE083;--font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--arena);color:var(--texto);font-family:var(--font);font-size:16px;line-height:1.55;padding-bottom:84px}
+a{color:inherit}
+.wrap{max-width:680px;margin:0 auto;padding-inline:20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;font-family:var(--font);font-weight:700;font-size:17px;text-decoration:none;border-radius:14px;padding:15px 22px;transition:background .15s,transform .15s;text-align:center;line-height:1.25}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-drive{background:var(--naranja);color:var(--blanco);box-shadow:0 8px 22px rgba(222,84,12,.32)}
+.btn-drive:hover{background:var(--naranja-h)}
+.btn-wa{background:var(--wa);color:var(--noche);box-shadow:0 8px 22px rgba(37,211,102,.32)}
+.btn-wa:hover{background:var(--wa-h)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--naranja-claro);outline-offset:3px}
+
+.hero{background:var(--noche);color:var(--blanco);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(222,84,12,.35),transparent 70%)}
+.hero .wrap{position:relative;padding-block:30px 96px;display:flex;flex-direction:column;gap:14px}
+.marca{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C9CFD9}
+.marca b{color:var(--naranja-claro)}
+h1{margin:0;font-size:clamp(28px,7.8vw,42px);line-height:1.1;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--naranja-claro)}
+.ver{font-size:.4em;font-weight:700;color:var(--naranja-claro);vertical-align:middle;border:1px solid var(--naranja);border-radius:999px;padding:2px 9px;margin-left:6px;letter-spacing:0;white-space:nowrap}
+.bajada{margin:0;color:#C9CFD9;font-size:17px;max-width:32em}
+
+.descarga{margin-top:-72px;position:relative;background:var(--blanco);border-radius:16px;box-shadow:0 12px 30px rgba(10,22,40,.18);padding:22px 20px;display:flex;flex-direction:column;gap:12px}
+.descarga .etiqueta{text-align:center;margin:0}
+.nota{margin:0;font-size:14px;color:var(--suave);text-align:center}
+.nota code{font-family:inherit;font-weight:700;color:var(--texto);background:var(--arena);border:1px solid var(--borde);border-radius:6px;padding:1px 6px;white-space:nowrap}
+.enlace{margin:0;font-size:13px;color:var(--suave);text-align:center;overflow-wrap:anywhere}
+.enlace a{color:var(--naranja-h);font-weight:600}
+
+main .wrap{padding-block:22px 8px;display:flex;flex-direction:column;gap:38px}
+.etiqueta{margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja-h)}
+h2{margin:0 0 16px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+h3{margin:0 0 4px;font-size:17px;font-weight:700;line-height:1.3}
+.intro{margin:-6px 0 16px;color:var(--suave);font-size:15px}
+
+.tarjetas{display:grid;grid-template-columns:1fr;gap:10px}
+.tarjeta{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px 18px}
+.tarjeta .ico{width:38px;height:38px;border-radius:10px;background:var(--noche);color:var(--naranja-claro);display:grid;place-items:center;margin-bottom:10px}
+.tarjeta .ico svg{width:20px;height:20px}
+.tarjeta p{margin:0;color:var(--suave);font-size:15px}
+
+.ruta{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.parte{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px 16px 16px 14px}
+.num{width:44px;height:44px;border-radius:50%;background:var(--naranja);color:var(--blanco);display:grid;place-items:center;font-weight:800;font-size:18px}
+.parte p{margin:0;color:var(--suave);font-size:15px}
+.parte-cuerpo{min-width:0}
+.detalle{margin:12px 0 0 -58px}
+.detalle summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1.5px solid var(--naranja);color:var(--naranja-h);border-radius:12px;font-weight:700;font-size:15px;padding:8px 14px}
+.detalle summary::-webkit-details-marker{display:none}
+.detalle summary:after{content:"";width:8px;height:8px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .15s}
+.detalle[open] summary:after{transform:rotate(-135deg) translateY(-2px)}
+.detalle summary:hover{background:#FDF1EA}
+.pasos-det{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.pp{background:var(--arena);border-radius:12px;padding:14px}
+.pp-cab{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:start;margin-bottom:6px}
+.pp-n{width:30px;height:30px;border-radius:8px;background:var(--noche);color:var(--blanco);display:grid;place-items:center;font-weight:700;font-size:14px}
+.pp h4{margin:4px 0 0;font-size:16px;font-weight:700;line-height:1.3}
+.pp-t{font-size:12px;font-weight:600;color:var(--suave);white-space:nowrap;margin-top:6px}
+.pp p{margin:0;font-size:15px;color:var(--texto);overflow-wrap:anywhere}
+.pp .ojo{margin-top:8px;background:#FDF1EA;border-left:3px solid var(--naranja);border-radius:8px;padding:8px 10px;font-size:14px;color:#7A2F06}
+.pp img{display:block;width:100%;height:auto;margin-top:10px;border-radius:10px;border:1px solid var(--borde);background:var(--blanco)}
+.mini3{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
+.mini3 div{background:var(--blanco);border:1px solid var(--borde);border-radius:10px;padding:10px 12px;font-size:14px;color:var(--suave)}
+.mini3 b{display:block;color:var(--texto);font-size:15px;margin-bottom:2px}
+.saber{margin-top:12px;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:14px}
+.saber h4{margin:0 0 4px;font-size:17px}
+.saber .mini3 div{background:var(--arena);border:0}
+.detalle>.aviso{margin-top:12px}
+
+.cifras{display:grid;grid-template-columns:1fr;gap:10px}
+.cifra{background:var(--noche);color:var(--blanco);border-radius:14px;padding:18px;display:grid;grid-template-columns:minmax(96px,auto) minmax(0,1fr);gap:14px;align-items:center}
+.cifra b{font-size:38px;font-weight:800;line-height:1;color:var(--naranja-claro)}
+.cifra span{font-size:14px;color:#C9CFD9;line-height:1.4}
+
+.check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.check li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:center;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:12px 14px;font-size:15px;font-weight:500}
+.check li span{width:26px;height:26px;border-radius:7px;border:2px solid var(--naranja)}
+
+.tabla{width:100%;border-collapse:separate;border-spacing:0;background:var(--blanco);border:1px solid var(--borde);border-radius:14px;overflow:hidden;font-size:14px}
+.tabla th,.tabla td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--borde);vertical-align:top}
+.tabla tr:last-child td{border-bottom:0}
+.tabla thead th{background:var(--noche);color:var(--blanco);font-weight:600;font-size:13px}
+.tabla td:first-child{font-weight:700}
+.tabla{table-layout:fixed}
+.tabla td{overflow-wrap:break-word}
+.tabla thead th:nth-child(1){width:27%}.tabla thead th:nth-child(2){width:45%}.tabla thead th:nth-child(3){width:28%}
+.tabla code{font-family:inherit;font-weight:600}
+@media (max-width:560px){
+  .tabla,.tabla tbody,.tabla tr,.tabla td{display:block;width:auto!important}
+  .tabla thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .tabla tr{padding:12px 14px;border-bottom:1px solid var(--borde)}
+  .tabla tr:last-child{border-bottom:0}
+  .tabla td{padding:0;border:0}
+  .tabla td:first-child{font-size:15px;color:var(--naranja-h)}
+  .tabla td:nth-child(2){margin:2px 0 8px;font-size:14px}
+}
+.pill{display:inline-block;border-radius:999px;padding:2px 10px;font-weight:600;font-size:13px}
+.pill.libre{background:#E6F7EC;color:#156B36}
+.pill.pago{background:#FDEBDF;color:#9A3A07}
+.pill.sin{background:#EEF0F4;color:var(--suave)}
+.aviso{margin:12px 0 0;background:var(--blanco);border-left:4px solid var(--naranja);border-radius:10px;padding:12px 14px;font-size:15px;color:var(--suave)}
+.aviso b{color:var(--texto)}
+
+.lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.lista li{display:grid;grid-template-columns:22px 1fr;gap:10px;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:12px 14px;font-size:15px}
+.lista li svg{width:20px;height:20px;fill:var(--naranja);margin-top:2px}
+.lista code{font-family:inherit;font-weight:700;color:var(--texto);background:var(--arena);border-radius:6px;padding:1px 6px}
+
+.skills{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.skills li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;align-items:start;background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:12px 14px}
+.skills li>span{width:38px;height:38px;border-radius:9px;background:var(--noche);color:var(--blanco);display:grid;place-items:center;font-weight:700;font-size:15px}
+.skills code{display:block;font-family:inherit;font-weight:700;font-size:13px;color:var(--texto);overflow-wrap:anywhere;line-height:1.35}
+.skills p{margin:3px 0 0;font-size:14px;color:var(--suave);line-height:1.45}
+.skills li.destacada{border:2px solid var(--naranja)}
+.skills li.destacada>span{background:var(--naranja)}
+.skills .tag{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:#9A3A07;background:#FDEBDF;border-radius:999px;padding:1px 9px}
+
+.final{background:var(--noche);color:var(--blanco);border-radius:20px;padding:28px 22px;display:flex;flex-direction:column;gap:14px;text-align:center}
+.final h2{margin:0;color:var(--blanco)}
+.final p{margin:0;color:#C9CFD9}
+.final .sep{height:1px;background:rgba(255,255,255,.12);margin:8px 0}
+.final .contacto{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px}
+.final .correo{color:var(--blanco);font-weight:700;text-decoration:underline;text-decoration-color:var(--naranja);text-underline-offset:4px;display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+footer{padding:26px 0 8px;text-align:center;font-size:13px;color:#6B7080}
+footer a{color:var(--suave);font-weight:600;text-decoration:none;margin:0 6px;display:inline-block;padding:6px 0}
+footer .links{margin-bottom:6px}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:10;background:rgba(10,22,40,.96);backdrop-filter:blur(6px);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.barra .btn{max-width:600px;margin:0 auto;padding:13px 20px;font-size:16px}
+
+@media (min-width:700px){
+  .tarjetas{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .detalle{margin-left:0}
+  .mini3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cifras{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cifra{display:block;text-align:center}
+  .cifra span{display:block;margin-top:8px}
+  .hero .wrap{padding-block:48px 112px}
+  .barra{display:none}
+  body{padding-bottom:0}
+  .descarga .btn{width:auto;align-self:center;padding-inline:34px}
+  .final .btn{width:auto;align-self:center;padding-inline:34px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+  <!-- Microsoft Clarity (crecia360) -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "zbo3ouocyq");
+  </script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26C2.16 6.46 6.6 2.03 12.06 2.03c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.89 9.88Zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41Z"/></symbol>
+  <symbol id="drive" viewBox="0 0 24 24"><path fill="currentColor" d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2Z"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.74 8.65-8.64 1.4 1.4L9.55 17.6Z"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="marca">Crecia360 · <b>Curso gratuito</b></div>
+    <h1>Skills de negocios con Claude: de la descarga a la <em>tarea diaria</em> <span class="ver">v1.1</span></h1>
+    <p class="bajada">Descarga las 10 skills, súbelas a Claude, prueba la skill 77 de correos de prospección, prográmala para que corra sola y mide cuánto tiempo te ahorra.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="descarga" aria-labelledby="t-drive-btn">
+      <p class="etiqueta" id="t-drive-btn">Descarga los archivos del curso</p>
+      <a class="btn btn-drive" href="https://drive.google.com/drive/folders/15hO8oX-wGz-JV0CiY9vQ9-XKQu1PDA2I?usp=sharing" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#drive"/></svg>Abrir carpeta en Google Drive →</a>
+      <p class="enlace">Si el botón no abre, copia este enlace en tu navegador:<br><a href="https://drive.google.com/drive/folders/15hO8oX-wGz-JV0CiY9vQ9-XKQu1PDA2I?usp=sharing" target="_blank" rel="noopener">https://drive.google.com/drive/folders/15hO8oX-wGz-JV0CiY9vQ9-XKQu1PDA2I?usp=sharing</a></p>
+      <p class="nota">Descarga las carpetas <b>skills</b> y <b>procesos</b> en tu disco, en una carpeta <code>crecia360\negocios</code></p>
+    </section>
+
+    <section aria-labelledby="t-logras">
+      <p class="etiqueta">Qué lograrás</p>
+      <h2 id="t-logras">Una skill de negocios que trabaja por ti todos los días</h2>
+      <div class="tarjetas">
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 2.3 6.6 3.7L12 11.7 5.4 8 12 4.3ZM5 9.7l6 3.4v6.6l-6-3.3V9.7Zm8 10v-6.6l6-3.4v6.7l-6 3.3Z"/></svg></div><h3>Resultado</h3><p>Tus 10 skills dentro de Claude y la skill 77 convertida en una tarea que lee tus pedidos de correo y deja los borradores listos.</p></div>
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm1-13h-2v6l5 3 1-1.7-4-2.3V7Z"/></svg></div><h3>Tiempo</h3><p>Unos 45 minutos en total, en 5 partes cortas. Puedes parar al final de cada una.</p></div>
+        <div class="tarjeta"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-6v2h3v2H7v-2h3v-2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v9h16V6H4Z"/></svg></div><h3>Necesitas</h3><p>El enlace de Drive del curso, una computadora con Windows y la app de escritorio de Claude.</p></div>
+      </div>
+      <p class="aviso"><b>Tip:</b> el nombre de las carpetas no lleva versión. La versión va dentro de cada skill y de cada documento, así tu tarea programada no se rompe cuando actualices.</p>
+    </section>
+
+    <section aria-labelledby="t-ruta">
+      <p class="etiqueta">La ruta</p>
+      <h2 id="t-ruta">5 partes, un solo círculo</h2>
+      <table class="tabla">
+        <thead><tr><th scope="col">Parte</th><th scope="col">Qué haces</th><th scope="col">Plan de Claude</th></tr></thead>
+        <tbody>
+          <tr><td>1 · Descargar</td><td>Bajas las skills y los procesos desde Drive a <code>crecia360\<wbr>negocios</code></td><td><span class="pill libre">Cualquiera</span></td></tr>
+          <tr><td>2 · Subir</td><td>Subes los 10 zips en Plugins</td><td><span class="pill libre">Cualquiera</span></td></tr>
+          <tr><td>3 · Probar a mano</td><td>Usas la skill 77 con un pedido de correo de ejemplo</td><td><span class="pill libre">Cualquiera</span></td></tr>
+          <tr><td>4 · Programar</td><td>La 77 corre sola cada día a la hora que elijas</td><td><span class="pill pago">De pago (Pro o superior)</span></td></tr>
+          <tr><td>5 · Excel</td><td>Calculas cuánto ahorras y por qué empezamos por la 77</td><td><span class="pill sin">No usa Claude</span></td></tr>
+        </tbody>
+      </table>
+      <p class="aviso">Las tareas programadas están disponibles en los planes de pago de Claude (Pro, Max, Team y Enterprise), según el Centro de ayuda de Claude. Si usas el plan gratuito, quédate con la Parte 3: la skill 77 funciona igual, pero la lanzas tú.</p>
+    </section>
+
+    <section aria-labelledby="t-pasos">
+      <p class="etiqueta">Paso a paso</p>
+      <h2 id="t-pasos">Sigue cada parte con sus capturas</h2>
+      <p class="intro">Abre los pasos de cada parte y síguelos uno a uno, con las capturas de pantalla.</p>
+      <ol class="ruta">
+        <li class="parte" id="parte-1"><div class="num" aria-hidden="true">1</div><div class="parte-cuerpo"><h3>Descargar las skills desde Drive</h3><p>Bajas las carpetas skills y procesos en un zip, lo llevas a crecia360\negocios y lo extraes ahí.</p>
+          <details class="detalle"><summary>Ver los 8 pasos</summary>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Selecciona las 2 carpetas</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre el enlace de Drive del curso y selecciona <b>procesos</b> y <b>skills</b> juntas (Ctrl + clic). Arriba verás «2 seleccionados».</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte1-paso1.webp" width="1100" height="387" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 1: las carpetas procesos y skills seleccionadas en Google Drive">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Descarga y espera el zip</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Pulsa el icono de descarga. Drive comprime las 2 carpetas en un solo zip. Espera el aviso «Descarga lista» antes de seguir.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte1-paso2.webp" width="1100" height="537" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 2: botón de descarga de Google Drive y aviso de descarga lista">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Ubica el zip en Descargas</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre Descargas. El archivo se llama <b>drive-download-…-001.zip</b> (≈1 MB). Clic derecho y elige <b>Cortar</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte1-paso3.webp" width="1100" height="697" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 3: el zip descargado en la carpeta Descargas y la opción Cortar">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Pégalo en tu carpeta negocios</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Crea <b>crecia360\negocios</b> en tu disco (C o D), entra y pega el zip: clic derecho en el espacio vacío → <b>Pegar</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte1-paso4.webp" width="1100" height="750" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 4: el zip pegado dentro de la carpeta crecia360\negocios">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Extrae el zip</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Clic derecho en el zip → <b>Extraer todo…</b>. Importante: borra el nombre del zip al final de la ruta y deja solo <b>D:\crecia360\negocios</b> (o C:\crecia360\negocios si usas el disco C). Luego pulsa <b>Extraer</b>.</p>
+            <p class="ojo">Si lo olvidas, las carpetas quedan una capa más abajo y las rutas de la tarea programada fallarán.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte1-paso5.webp" width="1100" height="660" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 5: ventana Extraer todo con la ruta D:\crecia360\negocios">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">6</span><h4>Revisa el resultado</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Dentro de <b>negocios</b> deben aparecer las carpetas <b>procesos</b> y <b>skills</b>. Ya puedes borrar el zip.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte1-paso6.webp" width="1100" height="587" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 6: las carpetas procesos y skills dentro de negocios">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">7</span><h4>Qué hay en procesos</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>10 carpetas, una por skill, y el Excel <b>skills-de-negocios-ranking.xlsx</b>. Cada carpeta trae entrada, salida, procesados y su PDF.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte1-paso7.webp" width="1100" height="587" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 7: las 10 carpetas de procesos y el Excel de ranking">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">8</span><h4>Qué hay en skills</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Los 10 zips de las skills, listos para subirlos a Claude en la Parte 2.</p>
+            <p class="ojo">No los descomprimas.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte1-paso8.webp" width="1100" height="587" loading="lazy" decoding="async" alt="Captura de la parte 1, paso 8: los 10 zips dentro de la carpeta skills">
+          </li>
+          </ol>
+          </details></div></li>
+
+        <li class="parte" id="parte-2"><div class="num" aria-hidden="true">2</div><div class="parte-cuerpo"><h3>Subir las 10 skills a Claude</h3><p>En Plugins pulsas Agregar → Subir plugin y eliges los 10 zips, sin descomprimirlos.</p>
+          <details class="detalle"><summary>Ver los 7 pasos</summary>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Entra a Plugins y pulsa Agregar</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En la barra lateral de Claude abre <b>Plugins</b>. Arriba a la derecha pulsa <b>Agregar</b> y elige <b>Subir plugin</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte2-paso1.webp" width="1100" height="575" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 1: sección Plugins de Claude con el botón Agregar y la opción Subir plugin">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Abre el cuadro para subir</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Se abre <b>Subir un plugin</b>. Haz clic en el recuadro para buscar los archivos (también puedes arrastrarlos). Puedes agregar varios a la vez.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte2-paso2.webp" width="1100" height="575" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 2: cuadro Subir un plugin">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Elige los 10 zips</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Entra a <b>crecia360\negocios\skills</b>, selecciona los 10 archivos .zip (Ctrl + A) y pulsa <b>Abrir</b>.</p>
+            <p class="ojo">Sube solo los zips. No los descomprimas.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte2-paso3.webp" width="1100" height="660" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 3: los 10 zips seleccionados en la carpeta skills">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Sube los 10 plugins</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Claude muestra <b>Archivos de plugin · 10</b>. Revisa que estén todos y pulsa <b>Subir 10 plugins</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte2-paso4.webp" width="1100" height="582" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 4: lista de 10 archivos de plugin y el botón Subir 10 plugins">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Espera a que suban</h4><span class="pp-t">⏱ 1–2 min</span></div>
+            <p>Cada skill pasa de <b>En espera</b> a agregada, una por una. Abajo verás el avance: «Subiendo 1 de 10…».</p>
+            <p class="ojo">No cierres la ventana.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte2-paso5.webp" width="1100" height="582" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 5: avance de la subida de las skills, una por una">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">6</span><h4>Comprueba que están</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En el buscador de Plugins escribe <b>negocios</b>. Verás tus 10 skills marcadas como <b>Nuevo</b>, empezando por la 77.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte2-paso6.webp" width="1100" height="582" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 6: búsqueda de negocios en Plugins con las 10 skills marcadas como Nuevo">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">7</span><h4>Mira por dentro una skill</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre <b>Skill negocios 77 redaccion correos prospeccion</b> y entra a <b>Archivos</b>. En <b>SKILL.md</b> ves cuándo se usa y qué información te pedirá.</p>
+            <p class="ojo">Revisa que la versión diga v1.1 · actual.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte2-paso7.webp" width="1100" height="575" loading="lazy" decoding="async" alt="Captura de la parte 2, paso 7: archivo SKILL.md de la skill 77 dentro de Plugins">
+          </li>
+          </ol>
+          </details></div></li>
+
+        <li class="parte" id="parte-3"><div class="num" aria-hidden="true">3</div><div class="parte-cuerpo"><h3>Probar la skill 77 a mano</h3><p>Le das a Claude un pedido de correo de ejemplo de la carpeta entrada y te devuelve 3 variantes listas para revisar.</p>
+          <details class="detalle"><summary>Ver los 8 pasos</summary>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Abre la carpeta de la skill 77</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>crecia360\negocios\procesos</b> entra a <b>skill-negocios-77-redaccion-correos-prospeccion</b>. Verás analisis, entrada, procesados y salida.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte3-paso1.webp" width="1100" height="595" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 1: carpeta de la skill 77 con analisis, entrada, procesados y salida">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Abre un pedido de ejemplo</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Dentro de <b>entrada</b> hay 2 pedidos de correo (.txt). Ábrelo con doble clic y selecciona todo el texto (Ctrl + A).</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte3-paso2.webp" width="1100" height="575" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 2: pedido de correo de ejemplo abierto con el texto seleccionado">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Copia el texto</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Clic derecho sobre el texto → <b>Copiar</b> (o Ctrl + C). Es lo que le darás a Claude.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte3-paso3.webp" width="1100" height="690" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 3: menú de clic derecho con la opción Copiar">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Abre un chat nuevo y escribe /</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Crea un chat nuevo. Escribe <b>/</b> y aparece la lista de skills. Escribe <b>negocios</b> y elige <b>skill-negocios-77-redaccion-correos-prospeccion</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte3-paso4.webp" width="1100" height="437" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 4: lista de skills al escribir / en un chat nuevo">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Pega el pedido y envía</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Pega el texto (Ctrl + V) después del nombre de la skill. Debe verse <b>/skill-negocios-77-redaccion-correos-prospeccion</b> y, a continuación, el pedido. Pulsa enviar.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte3-paso5.webp" width="1100" height="582" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 5: el pedido pegado después del nombre de la skill 77">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">6</span><h4>Lee las variantes</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Claude carga la skill y entrega 3 variantes del correo (pestañas A, B y C), cada una con asunto y cuerpo. Puedes <b>Copiar</b> o <b>Enviar por Gmail</b>.</p>
+            <p class="ojo">Claude no envía nada por ti: tú decides cuál usar y cuándo enviarla.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte3-paso6.webp" width="1100" height="582" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 6: las 3 variantes del correo en pestañas A, B y C">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">7</span><h4>Revisa el porqué y el siguiente toque</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Debajo verás por qué funciona cada variante, la recomendación de Claude y el siguiente toque: cuándo y cómo hacer el seguimiento si no responden.</p>
+            <p class="ojo">Claude no inventa cifras ni casos: si no los tiene, te los pide.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte3-paso7.webp" width="1100" height="582" loading="lazy" decoding="async" alt="Captura de la parte 3, paso 7: explicación de las variantes, recomendación y siguiente toque">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">8</span><h4>Guarda y archiva</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Para dejar la carpeta ordenada, repite esto con cada pedido. Es lo mismo que luego hará la tarea programada sola.</p>
+            <div class="mini3">
+              <div><b>1 · Guarda en salida</b>Pega la variante elegida en un .txt dentro de salida. Nombre: el del pedido + -correos.txt.</div>
+              <div><b>2 · Mueve el original</b>Pasa el pedido de entrada a procesados. Así entrada queda vacía y no se repite.</div>
+              <div><b>3 · Revisa y envía</b>Ajusta un detalle si hace falta y envíalo tú desde tu correo. Claude no envía nada por ti.</div>
+            </div>
+          </li>
+          </ol>
+          <p class="aviso">Con esto ya usas la skill 77 en el plan gratuito. Si quieres que corra sola, sigue con la Parte 4.</p>
+          </details></div></li>
+
+        <li class="parte" id="parte-4"><div class="num" aria-hidden="true">4</div><div class="parte-cuerpo"><h3>Programar la skill 77 como tarea diaria</h3><p>Creas la tarea tarea-negocios-crecia360-correo-de-prospeccion: corre cada día con la carpeta entrada y la pruebas con Ejecutar ahora.</p>
+          <details class="detalle"><summary>Ver los 17 pasos</summary>
+          <div class="saber" style="margin-top:14px"><p class="etiqueta">Para saber</p><h4>Cómo funciona cada día</h4>
+            <div class="mini3">
+              <div><b>Dónde corre</b>En tu computadora, porque activaste Requerir esta computadora. Debe estar encendida y con la app de Claude abierta a la hora programada.</div>
+              <div><b>Qué haces tú</b>Dejas tus pedidos de correo (.txt) en entrada: a quién va, objetivo, contexto y tono. Nada más.</div>
+              <div><b>Qué hace Claude</b>Redacta las variantes con la skill 77, guarda el resultado en salida, mueve el pedido a procesados y no envía correos.</div>
+            </div>
+            <p class="aviso"><b>Plan de pago:</b> las tareas programadas están en los planes Pro, Max, Team y Enterprise. En el plan gratuito sigue con la Parte 3 cada vez que tengas un pedido.</p>
+            <p class="aviso"><b>Ruta de ejemplo:</b> D:\crecia360\negocios. Si descargaste en C: u otro disco, cambia la letra en las instrucciones antes de pegarlas.</p>
+          </div>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Copia las instrucciones</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En la carpeta de la skill 77 abre <b>skill-negocios-77-redaccion-correos-prospeccion-instrucciones-tarea-programada-v-1.1.txt</b>. Selecciona todo el texto desde <b>INSTRUCCIONES</b> y cópialo (Ctrl + C).</p>
+            <p class="ojo">Ojo con la ruta: las instrucciones traen D:\crecia360\negocios. Si descargaste la carpeta en el disco C (u otro), antes de pegarlas cambia la D: por tu letra, por ejemplo C:\crecia360\negocios.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso1.webp" width="1100" height="580" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 1: archivo de instrucciones de la tarea programada">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Programadas → Nueva tarea</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En la barra lateral abre <b>Programadas</b>. Arriba a la derecha pulsa <b>Nueva tarea</b> y elige <b>Configurar manualmente</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso2.webp" width="1100" height="580" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 2: sección Programadas con el botón Nueva tarea">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Ponle nombre</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>Nombre</b> escribe <b>tarea-negocios-crecia360-correo-de-prospeccion</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso3.webp" width="1100" height="880" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 3: campo Nombre de la nueva tarea">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Pega las instrucciones</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>Instrucciones</b> pega el texto que copiaste (Ctrl + V). Debe empezar con «Usa la skill skill-negocios-77-redaccion-correos-prospeccion» y traer las 3 carpetas.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso4.webp" width="1100" height="880" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 4: campo Instrucciones con el texto pegado">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Elige Diario y la hora</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>Activador</b> deja Programación, elige <b>Diario</b> y escribe la hora (en el ejemplo, 08:00). Luego abre <b>Configuración avanzada</b>.</p>
+            <p class="ojo">Claude avisa que las tareas a la hora en punto pueden empezar unos minutos tarde.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso5.webp" width="1100" height="880" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 5: activador diario con la hora 08:00">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">6</span><h4>Activa Requerir esta computadora</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>Configuración avanzada → General</b> activa <b>Requerir esta computadora</b>: la tarea necesita tus carpetas.</p>
+            <p class="ojo">Con esta opción activa, la tarea solo corre mientras tu computadora está encendida y activa.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso6.webp" width="1100" height="880" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 6: opción Requerir esta computadora activada">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">7</span><h4>Elige la carpeta de trabajo</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>Carpeta local</b> pulsa el botón, entra a la carpeta de la skill 77, elige <b>entrada</b> y pulsa <b>Seleccionar carpeta</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso7.webp" width="1100" height="580" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 7: selección de la carpeta entrada de la skill 77">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">8</span><h4>Permite modificar entrada</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Claude pregunta: «¿Permitir que Claude modifique archivos en entrada?». Pulsa <b>Permitir</b> (o Permitir siempre).</p>
+            <p class="ojo">La tarea necesita mover los pedidos ya atendidos fuera de entrada.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso8.webp" width="1100" height="880" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 8: aviso para permitir que Claude modifique archivos en entrada">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">9</span><h4>Autoriza la carpeta y crea</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Aparece «Allow the scheduled task… to access this folder on every run?». Pulsa <b>Allow</b>. Comprueba que Carpeta local dice <b>entrada</b>; la tarea se crea.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso9.webp" width="1100" height="880" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 9: aviso para autorizar el acceso a la carpeta en cada ejecución">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">10</span><h4>La tarea ya existe</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Aparece el aviso «tarea-negocios-crecia360-correo-de-prospeccion creada» y la tarjeta en Tareas programadas: <b>Activo · Todos los días a las 8:00 a.m. · Esta computadora</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso10.webp" width="1100" height="580" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 10: la tarea creada en Tareas programadas">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">11</span><h4>Pruébala con Ejecutar ahora</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre la tarea. Verás la próxima ejecución, mañana a las 8:00 a.m. Para probarla hoy, pulsa <b>Ejecutar ahora</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso11.webp" width="1100" height="516" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 11: detalle de la tarea con el botón Ejecutar ahora">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">12</span><h4>Permite el acceso a las carpetas</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>La primera vez Claude pregunta: «Allow this scheduled task to access these 2 folders on every run?» (salida y procesados). Pulsa <b>Allow</b>.</p>
+            <p class="ojo">Solo entrada estaba conectada. Salida y procesados se autorizan aquí, una vez.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso12.webp" width="1100" height="688" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 12: aviso para autorizar las carpetas salida y procesados">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">13</span><h4>Permite mover los originales</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Para quitar los pedidos de entrada después de copiarlos a procesados, Claude pide permiso para eliminar archivos en esa carpeta. Pulsa <b>Permitir en esta sesión</b>.</p>
+            <p class="ojo">En una ejecución sin nadie delante, Claude puede quedarse esperando este permiso. Si pasa, apruébalo al abrir la app.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso13.webp" width="1100" height="688" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 13: aviso de permiso para eliminar archivos en entrada">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">14</span><h4>Lee el resultado</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Claude resume: «Atendí 2 pedidos con la skill 77», nombra los 2 archivos que dejó en salida y confirma que los originales están en procesados.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso14.webp" width="1100" height="688" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 14: resumen de Claude tras ejecutar la tarea">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">15</span><h4>Entrada quedó vacía</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>Abre la carpeta <b>entrada</b>: dice «Esta carpeta está vacía». Los pedidos ya fueron atendidos.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso15.webp" width="1100" height="496" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 15: la carpeta entrada vacía">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">16</span><h4>Confirma los archivos en salida</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>salida</b> están los 2 correos listos: <b>ejemplo-1-frio-distribuidora-correos.txt</b> y <b>ejemplo-2-follow-up-clinica-correos.txt</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso16.webp" width="1100" height="496" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 16: los 2 correos listos en la carpeta salida">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">17</span><h4>Y los originales en procesados</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>procesados</b> quedan los 2 pedidos originales. Mañana, la tarea repetirá esto con lo que dejes en entrada.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte4-paso17.webp" width="1100" height="496" loading="lazy" decoding="async" alt="Captura de la parte 4, paso 17: los 2 pedidos originales en la carpeta procesados">
+          </li>
+          </ol>
+          </details></div></li>
+
+        <li class="parte" id="parte-5"><div class="num" aria-hidden="true">5</div><div class="parte-cuerpo"><h3>Excel: cuánto ahorras y por qué la 77</h3><p>Completas tus datos en skills-de-negocios-ranking.xlsx y ves el ranking y cuánto te ahorra cada skill.</p>
+          <details class="detalle"><summary>Ver los 5 pasos</summary>
+          <ol class="pasos-det">
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">1</span><h4>Abre el Excel</h4><span class="pp-t">⏱ 1 min</span></div>
+            <p>En <b>crecia360\negocios\procesos</b> abre <b>skills-de-negocios-ranking.xlsx</b>. Si Excel muestra <b>Vista protegida</b>, pulsa <b>Habilitar edición</b>.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte5-paso1.webp" width="1100" height="619" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 1: el Excel de ranking abierto">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">2</span><h4>Completa tus datos</h4><span class="pp-t">⏱ 3 min</span></div>
+            <p>En <b>Datos de la persona</b> cambia solo las celdas amarillas: sueldo mensual, días y horas de trabajo, y el costo de Claude.</p>
+            <p class="ojo">Con estos datos el Excel calcula tu costo por hora (en el ejemplo, sueldo US$1,500 → US$6.82 la hora).</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte5-paso2.webp" width="1100" height="411" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 2: celdas amarillas de Datos de la persona">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">3</span><h4>Pon tus puntajes</h4><span class="pp-t">⏱ 3 min</span></div>
+            <p>En <b>Las 10 skills: puntaje y ahorro</b> pon tus puntajes de 1 a 5 y cuántas veces usas cada skill al mes. El Excel ordena solo la columna Posición. Aquí la skill 77 queda en el puesto 1.</p>
+            <p class="ojo">Qué significa cada puntaje lo ves en la hoja Criterios.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte5-paso3.webp" width="1100" height="297" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 3: tabla de puntajes y usos al mes de las 10 skills">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">4</span><h4>Mira el ranking</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p>Más abajo, <b>Ranking de máximo a mínimo</b> se reordena solo. Las 3 primeras salen resaltadas: 77, 79 y 81.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte5-paso4.webp" width="1100" height="387" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 4: ranking de las skills de máximo a mínimo">
+          </li>
+          <li class="pp"><div class="pp-cab"><span class="pp-n" aria-hidden="true">5</span><h4>Lee el resumen del ahorro</h4><span class="pp-t">⏱ 2 min</span></div>
+            <p><b>Resumen del ahorro</b> compara las 3 primeras skills con las 10: horas ahorradas, ahorro neto al mes y al año, y qué parte de tu sueldo representa.</p>
+            <img src="/assets/curso-skills-grupo-negocios/parte5-paso5.webp" width="900" height="412" loading="lazy" decoding="async" alt="Captura de la parte 5, paso 5: resumen del ahorro mensual y anual">
+          </li>
+          </ol>
+          </details></div></li>
+
+      </ol>
+    </section>
+
+    <section aria-labelledby="t-drive">
+      <p class="etiqueta">La carpeta de Drive</p>
+      <h2 id="t-drive">Qué incluye</h2>
+      <ul class="lista">
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span><code>skills</code>: los 10 zips para subir a Claude (no se descomprimen).</span></li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span><code>procesos</code>: 10 carpetas, una por skill, cada una con entrada, salida, procesados y su PDF guía.</span></li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span>La carpeta de la skill 77 trae además 2 pedidos de ejemplo en entrada, las instrucciones de la tarea programada y el análisis AS-IS / TO-BE.</span></li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg><span><code>skills-de-negocios-ranking.xlsx</code> (dentro de procesos): el Excel para medir tu ahorro.</span></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="t-skills">
+      <p class="etiqueta">El pack</p>
+      <h2 id="t-skills">Las 10 skills de negocios</h2>
+      <p class="intro">El curso programa solo la skill 77. Las otras 9 las usas a mano en un chat, igual que en la Parte 3.</p>
+      <ul class="skills">
+        <li class="destacada"><span>77</span><div><code>skill-negocios-77-redaccion-correos-prospeccion</code><p>Correos de prospección: en frío, seguimientos o recuperación de leads fríos.</p><span class="tag">La que programas en el curso</span></div></li>
+        <li><span>78</span><div><code>skill-negocios-78-investigacion-de-cuentas</code><p>Investigación de cuentas.</p></div></li>
+        <li><span>79</span><div><code>skill-negocios-79-calificar-prospectos</code><p>Calificar prospectos.</p></div></li>
+        <li><span>80</span><div><code>skill-negocios-80-investigar-empresas-objetivo</code><p>Investigar empresas objetivo.</p></div></li>
+        <li><span>81</span><div><code>skill-negocios-81-personalizar-correos</code><p>Personalizar correos.</p></div></li>
+        <li><span>82</span><div><code>skill-negocios-82-evaluar-posibles-socios-comerciales</code><p>Evaluar socios comerciales.</p></div></li>
+        <li><span>83</span><div><code>skill-negocios-83-redactar-propuesta-alianza</code><p>Redactar propuesta de alianza.</p></div></li>
+        <li><span>84</span><div><code>skill-negocios-84-comparar-desempeno-canales-venta</code><p>Comparar canales de venta.</p></div></li>
+        <li><span>85</span><div><code>skill-negocios-85-preparar-plan-apoyo-canal</code><p>Plan de apoyo al canal.</p></div></li>
+        <li><span>86</span><div><code>skill-negocios-86-evaluar-comparar-distribuidores</code><p>Evaluar y comparar distribuidores.</p></div></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="t-por-que">
+      <p class="etiqueta">Por qué la 77</p>
+      <h2 id="t-por-que">Empezamos por la skill 77</h2>
+      <div class="cifras">
+        <div class="cifra"><b>1.º</b><span>en el ranking del ejemplo, con 17 de 20 puntos de puntaje.</span></div>
+        <div class="cifra"><b>20</b><span>pedidos de correo al mes en el ejemplo: casi uno por día laboral.</span></div>
+        <div class="cifra"><b>US$39</b><span>de ahorro mensual estimado en el ejemplo, con 25 minutos a mano frente a 8 con Claude.</span></div>
+      </div>
+      <p class="aviso"><b>Son cifras de ejemplo</b> del Excel del curso. Además, la 77 es la más fácil de automatizar: la entrada es un solo archivo con el pedido y el resultado se revisa en un par de minutos. Pon tus datos en el Excel y mira si tu primera skill también es la 77.</p>
+    </section>
+
+    <section aria-labelledby="t-check">
+      <p class="etiqueta">Checklist final</p>
+      <h2 id="t-check">Tu círculo, completo</h2>
+      <ul class="check">
+        <li><span aria-hidden="true"></span>Tengo crecia360\negocios con las carpetas skills y procesos</li>
+        <li><span aria-hidden="true"></span>Subí los 10 zips y los veo en Plugins</li>
+        <li><span aria-hidden="true"></span>Probé la skill 77 a mano con un pedido de ejemplo</li>
+        <li><span aria-hidden="true"></span>Creé la tarea diaria y la probé con Ejecutar ahora</li>
+        <li><span aria-hidden="true"></span>Abrí el Excel y entendí mi ahorro</li>
+      </ul>
+    </section>
+
+    <section class="final" aria-labelledby="t-fin">
+      <h2 id="t-fin">Siguiente paso</h2>
+      <p>Si deseas aprender más, únete a la lista de espera de Skool.</p>
+      <a class="btn btn-wa" href="https://chat.whatsapp.com/CCxrh966sgiK4ha515cBk6" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Únete a la lista de espera de Skool →</a>
+      <div class="sep" aria-hidden="true"></div>
+      <p>Si deseas implementarlo en tu empresa, escríbeme.</p>
+      <div class="contacto">
+        <a class="correo" href="mailto:crecia360@gmail.com">crecia360@gmail.com</a>
+        <a class="correo" href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener">Agenda tu cita</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links"><a href="https://crecia360.com" target="_blank" rel="noopener">crecia360.com</a><a href="mailto:crecia360@gmail.com">crecia360@gmail.com</a><a href="https://calendar.app.google/SfC7FUMnGGWXdK3W8" target="_blank" rel="noopener">Agenda tu cita</a></div>
+    Eduardo Hernández · Crecia360 · Curso skills de negocios v1.1
+  </div>
+</footer>
+
+<div class="barra"><a class="btn btn-drive" href="https://drive.google.com/drive/folders/15hO8oX-wGz-JV0CiY9vQ9-XKQu1PDA2I?usp=sharing" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#drive"/></svg>Abrir carpeta en Google Drive →</a></div>
+</body>
+</html>
